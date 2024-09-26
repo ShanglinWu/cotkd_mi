@@ -1829,6 +1829,7 @@ def run_experiment(model_name, args, num_proof_steps, test_num_proof_steps, log_
                         preselected_properties = preselect_properties(
                             original_available_property_families, max_selections, seed)
                         # Generate trio questions
+                        random.seed(seed)
                         base_question = generate_question(curr_proof_steps, next_concept_names, args.ordering, args.ontology, "none", curr_deduction_rule,
                                                           args.proofs_only, args.DFS, curr_proof_width, args.no_adjectives, args.generate_non_atomic_steps, args.rule_types, seed=seed, preselected_properties=preselected_properties, available_property_families=available_property_families)
 

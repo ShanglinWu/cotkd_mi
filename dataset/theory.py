@@ -83,6 +83,7 @@ def generate_concept_properties(node, num_properties, available_properties, avai
 
 def generate_ontology(parent, level, available_concept_names, available_property_families, config, seed, select_property):
     # print("seed in gen onto func:"+str(seed))
+    random.seed(seed)
     if config.generate_distractor_branch:
         num_properties = max(2, config.proof_width) - 2
     else:
