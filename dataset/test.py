@@ -3,9 +3,7 @@ from syntax import *
 from proof import *
 from prompt import *
 from random import choice, choices, randrange, shuffle, seed, sample
-import random
 import numpy as np
-from copy import deepcopy
 from scipy.special import betaincinv
 import argparse
 import getpass
@@ -1167,23 +1165,25 @@ def parse_log(log):
     return (trial, too_long_responses, results, label_results, resume_position, parse_errors)
 
 
-def generate_question(num_deduction_steps, available_concept_names, formula_ordering="postorder", ontology="fictional", distractors="relevant", deduction_rule="ModusPonens", proofs_only=False, dfs_mode="none", proof_width=2, no_adjectives=False, generate_non_atomic_steps=False, num_rule_types=3, seed=1000000):
+def generate_question(num_deduction_steps, available_concept_names, formula_ordering="postorder", ontology="fictional", distractors="relevant", deduction_rule="ModusPonens", proofs_only=False, dfs_mode="none", proof_width=2, no_adjectives=False, generate_non_atomic_steps=False, num_rule_types=3):
     if num_deduction_steps < 2:
         # `num_deduction_steps` includes the axiom step
         raise ValueError("num_deduction_steps must be at least 2.")
+
+# --------------------------ontology selection----------------------------------
+    # for true ontology
     if ontology == "true":
         (true_theory, selected_entity, distractor_map) = sample_real_ontology(
             available_entity_names, num_deduction_steps)
         theory = [true_theory]
         if distractors == "irrelevant":
-            # # random.seed(seed)
             irrelevant_entity = choice(
                 [name for name in available_entity_names if name != selected_entity])
         else:
             irrelevant_entity = None
+    # for false ontology and Fictional ontology(I use fictional ontology which is default generated)
     else:
         if ontology == "false":
-            # # random.seed(seed)
             r = randrange(3)
             if r == 0:
                 available_concept_names = ["animal", "vertebrate", "mammal",
@@ -1194,18 +1194,20 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
             else:
                 available_concept_names = ["number", "real number", "integer", "natural number", "prime number",
                                            "Mersenne prime", "even number", "composite number", "negative number", "fraction"]
+        # ---> for fictional ontology, where the function start
         elif available_concept_names == None:
             available_concept_names = ["wumpus", "yumpus", "zumpus", "dumpus", "rompus", "numpus", "tumpus",
                                        "vumpus", "impus", "jompus", "gorpus", "shumpus", "lempus", "sterpus", "grimpus", "lorpus", "brimpus"]
         else:
             available_concept_names = available_concept_names.copy()
+        # Concept meanings ontology
         irrelevant_concept_names = ["timpus", "yimpus", "rempus", "fompus", "worpus", "terpus", "gerpus", "kerpus", "scrompus",
                                     "zhorpus", "bompus", "jelpus", "felpus", "chorpus", "hilpus", "storpus", "yerpus", "boompus", "gwompus", "rorpus", "quimpus"]
-        # # random.seed(seed)
         index = randrange(len(available_concept_names))
         distractor_concept = available_concept_names[index]
         del available_concept_names[index]
 
+        # 2 times 2 list
         available_property_families = [["blue", "red", "brown", "orange"],
                                        ["small", "large"],
                                        ["metallic", "wooden", "luminous", "liquid"],
@@ -1221,14 +1223,13 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
                                        ["slow", "moderate", "fast"],
                                        ["windy", "sunny", "overcast", "rainy", "snowy"]]
 
-        # # random.seed(seed)
         selected_entity = choice(available_entity_names)
         if distractors == "irrelevant":
-            # # random.seed(seed)
             irrelevant_entity = choice(
                 [name for name in available_entity_names if name != selected_entity])
         else:
             irrelevant_entity = None
+        # * Default deduction rule is ModusPomens
         if deduction_rule == "Composed":
             proof = generate_compositional_question(["ModusPonens", "AndIntro", "AndElim", "OrIntro", "OrElim",
                                                     "ProofByContra"], num_deduction_steps, available_concept_names, selected_entity, num_rule_types)
@@ -1257,7 +1258,6 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
                 if type(premises[0]) in [fol.FOLAnd, fol.FOLOr]:
                     if len(distractor_concepts) < len(premises[0].operands):
                         return (None, None, None, None, None, None)
-                    # # random.seed(seed)
                     selected_concepts = sample(
                         distractor_concepts, len(premises[0].operands))
                     if type(premises[0]) == fol.FOLAnd:
@@ -1269,18 +1269,17 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
                 else:
                     if len(distractor_concepts) == 0:
                         return (None, None, None, None, None, None)
-                    # # random.seed(seed)
                     new_premise = fol.FOLFuncApplication(choice(distractor_concepts), [
                                                          fol.FOLConstant(selected_entity)])
-                # # random.seed(seed)
                 premises.insert(randrange(0, len(premises)), new_premise)
         elif deduction_rule == "ProofByContra":
+            # * Because the question pairs during passing the theory should have same deduction rule, thus we replace the
+            # * theory straightfully.
+            # TODO: waiting for implementation
             # we only need a theory with one universally-quantified rule
-            # random.seed(seed)
             concept_names = sample(
                 available_concept_names, 2 + 2 * proof_width)
             if distractors == "irrelevant":
-                # random.seed(seed)
                 irrelevant_names = sample(
                     irrelevant_concept_names, 1 + proof_width)
             root = OntologyNode(concept_names[0], None)
@@ -1303,11 +1302,10 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
             else:
                 theory = [root]
         elif deduction_rule == "OrElim":
-            # random.seed(seed)
+            # TODO: waiting for implementation
             concept_names = sample(
                 available_concept_names, 2 + 2 * proof_width)
             if distractors == "irrelevant":
-                # random.seed(seed)
                 irrelevant_names = sample(
                     irrelevant_concept_names, proof_width)
             root = OntologyNode(concept_names[0], None)
@@ -1331,6 +1329,7 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
             else:
                 theory = [root]
         else:
+            # * Default deduction_rule is MonusPomens, go in this branch
             current_config = config
             current_config.stop_probability = 1 / (num_deduction_steps + 1)
             current_config.require_properties = (
@@ -1342,14 +1341,10 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
                 deduction_rule == "ModusPonens" or deduction_rule == "AndIntro" or deduction_rule == "OrIntro")
             current_config.generate_distractor_branch = (
                 distractors != "none") and (deduction_rule == "AndElim")
-            # * for each time's running, available_property_families change differently, need to fix
-            print("calling 1 from genque")
-            random.seed(seed)
             theory = generate_theory(
                 available_concept_names,
                 available_property_families,
-                current_config,
-                seed=seed)
+                current_config)
 
             if distractors == "irrelevant" and deduction_rule != "AndElim":
                 # disconnect the distractor ontologies from the main ontology
@@ -1363,7 +1358,6 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
                                 # disconnect 'child' from the current node
                                 if len(irrelevant_concept_names) == 0 or len(available_property_families) == 0:
                                     return (None, None, None, None, None, None)
-                                # random.seed(seed)
                                 index = randrange(
                                     len(irrelevant_concept_names))
                                 new_child = OntologyNode(
@@ -1374,17 +1368,15 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
                                     child)] = new_child
                                 new_child.parents.append(current)
 
-                                # random.seed(seed)
                                 index = randrange(
                                     len(available_property_families))
-                                print(index)
                                 available_properties = available_property_families[index]
                                 available_negative_properties = list(
                                     available_properties)
                                 del available_property_families[index]
 
-                                generate_concept_properties(new_child, len(child.properties) + len(
-                                    child.negated_properties), available_properties, available_negative_properties, current_config.generate_negation)
+                                generate_concept_properties(new_child, len(child.properties) + len(child.negated_properties),
+                                                            available_properties, available_negative_properties, current_config.generate_negation)
                             else:
                                 stack.append(child)
 
@@ -1396,26 +1388,24 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
                 current_config.max_child_count = 1
                 current_config.require_properties = True
                 current_config.generate_distractor_branch = False
-                # random.seed(seed)
-                # print(available_property_families)
-                print("calling 2 from genque")
-                random.seed(seed)
                 distractor_root = generate_theory(
                     sample(available_concept_names, 2),
                     available_property_families,
-                    current_config,
-                    seed)
+                    current_config)
                 if len(distractor_root[0].children) != 1:
                     return (None, None, None, None, None, None)
                 theory = theory + distractor_root
 
+
+# * Only need to modify the code up from here on building theory.
+
+# --------------------------formula generation----------------------------------
     if formula_ordering == "random":
         if deduction_rule == "Composed":
             formulas = theory[:]
         else:
-            formulas = get_formulas(
-                theory, [], ordering="preorder", deduction_rule=deduction_rule, seed=seed)
-        # random.seed(seed)
+            formulas = get_formulas(theory, [], ordering="preorder",
+                                    deduction_rule=deduction_rule)
         shuffle(formulas)
     else:
         if deduction_rule == "Composed":
@@ -1423,13 +1413,15 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
                 formulas = reversed(theory)
             elif formula_ordering == "random":
                 formulas = theory[:]
-                # random.seed(seed)
                 shuffle(formulas)
             else:
                 formulas = theory[:]
         else:
             formulas = get_formulas(
-                theory, [], ordering=formula_ordering, deduction_rule=deduction_rule, seed=seed)
+                theory, [], ordering=formula_ordering, deduction_rule=deduction_rule)
+
+
+# --------------------------sentense generation------------------------------------
     sentences = []
     for formula in formulas:
         sentences.append(inflect(yield_tokens(formula_to_clause(
@@ -1442,9 +1434,11 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
             raise Exception("Parsed sentence does not match original logical form:\n  Sentence: \"{}\"\n  Original: {}\n  Parsed:   {}".format(
                 sentences[-1], fol.fol_to_tptp(formula), fol.fol_to_tptp(parsed_lf)))
 
+
+# -------------------------question generation----------------------------------------
     if deduction_rule == "ProofByContra":
-        (premises, conclusion, proof, num_steps, linearized_proof) = generate_de_morgans_question(
-            theory, selected_entity, irrelevant_entity, distractor_concept, num_deduction_steps, proof_width, distractors)
+        (premises, conclusion, proof, num_steps, linearized_proof) = generate_de_morgans_question(theory,
+                                                                                                  selected_entity, irrelevant_entity, distractor_concept, num_deduction_steps, proof_width, distractors)
     elif deduction_rule == "OrElim":
         (premises, conclusion, proof, num_steps, linearized_proof) = generate_proof_by_cases_question(
             theory, selected_entity, irrelevant_entity, num_deduction_steps, proof_width, distractors)
@@ -1479,7 +1473,6 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
                         if len(irrelevant_concept_names) == 0:
                             error = True
                             return None
-                        # random.seed(seed)
                         index = randrange(len(irrelevant_concept_names))
                         new_predicate = irrelevant_concept_names[index]
                         del irrelevant_concept_names[index]
@@ -1525,7 +1518,6 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
     if distractors != "none" and not proofs_only and distractor_lf != None:
         distractor_sentence = inflect(yield_tokens(formula_to_clause(
             distractor_lf, morphology, no_adjectives)), end_punctuation='.')
-        # random.seed(seed)
         index = randrange(len(formulas) + 1)
         formulas.insert(index, distractor_lf)
         sentences.insert(index, distractor_sentence)
@@ -1554,6 +1546,8 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
         query = 'True or false: ' + inflect(yield_tokens(formula_to_clause(
             question, morphology, no_adjectives)), end_punctuation='.')
 
+
+# -----------------------------------cot generation---------------------------------------
     # print the chain-of-thought and answer
     chain_of_thought = []
     for k in range(len(proof_formulas)):
@@ -1589,7 +1583,8 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
             chain_of_thought[-2] = chain_of_thought[-2] + '\n\n'
         if type(proof_formula) == fol.FOLFuncApplication and proof_formula.function == "START_OVER":
             chain_of_thought[-1] = chain_of_thought[-1] + '\n'
-    return (question_text, query, formulas + premises, chain_of_thought, str(expected_answer), linearized_proof)
+    return (question_text, query, formulas + premises, chain_of_thought, str(expected_answer), linearized_proof, theory)
+    # (question_i, query_i, _, chain_of_thought_i, answer_i, proof_i,theory) = generate_question(curr_proof_steps, next_concept_names, args.ordering, args.ontology, args.distractors, curr_deduction_rule, args.proofs_only, args.DFS, curr_proof_width, args.no_adjectives, args.generate_non_atomic_steps, args.rule_types)
 
 
 def run_experiment(model_name, args, num_proof_steps, test_num_proof_steps, log_file):
@@ -1605,9 +1600,9 @@ def run_experiment(model_name, args, num_proof_steps, test_num_proof_steps, log_
     elif model_name not in ['dummy', 'json']:
         raise ValueError('Unrecognized model_name "' + model_name + '"')
 
-    # # # set the random seed for reproducibility
-    # random.seed(args.seed)
-    # np.random.seed(args.seed)
+    # set the random seed for reproducibility
+    seed(args.seed)
+    np.random.seed(args.seed)
 
     trial = 0
     too_long_responses = 0
@@ -1672,9 +1667,7 @@ def run_experiment(model_name, args, num_proof_steps, test_num_proof_steps, log_
                     ["daumpus", "thorpus", "borpus", "rofpus", "bempus",
                         "dulpus", "harpus", "lirpus", "yompus", "stopus"]
                 ]'''
-            random.seed(args.seed)
             shuffle(available_concept_names)
-            random.seed()
         else:
             raise Exception(
                 "Only the fictional ontology type is suppoted when `disjoint_concept_names` is set.")
@@ -1783,40 +1776,24 @@ def run_experiment(model_name, args, num_proof_steps, test_num_proof_steps, log_
                     # For more details, please read our paper!
 
                     while True:
-
-                        seed = random.randint(0, 1000000)
-                        # print("the init seed is" + str(seed))
-
                         next_concept_names = (None if available_concept_names ==
                                               None else available_concept_names[i])
-
-                        random.seed(seed)
                         # Generate trio questions
-                        base_question = generate_question(curr_proof_steps, next_concept_names, args.ordering, args.ontology, "none", curr_deduction_rule,
-                                                          args.proofs_only, args.DFS, curr_proof_width, args.no_adjectives, args.generate_non_atomic_steps, args.rule_types, seed=seed)
-
-                        if (base_question[0] != None):
-                            random.seed(seed)
-                            distractor_question = generate_question(curr_proof_steps, next_concept_names, args.ordering, args.ontology, args.distractors, curr_deduction_rule,
-                                                                    args.proofs_only, args.DFS, curr_proof_width, args.no_adjectives, args.generate_non_atomic_steps, args.rule_types, seed=seed)
-                            if (distractor_question[0] != None):
-                                random.seed(seed)
-                                reverse_question = generate_question(curr_proof_steps, next_concept_names, args.ordering, args.ontology, args.distractors, curr_deduction_rule,
-                                                                     args.proofs_only, args.DFS, curr_proof_width, args.no_adjectives, args.generate_non_atomic_steps, args.rule_types, seed=seed)
-
-                                if (reverse_question[0] != None):
-                                    print("generate successfull for 1")
-                                    questions.extend(
-                                        [base_question[0], distractor_question[0], reverse_question[0]])
-                                    queries.extend(
-                                        [base_question[1], distractor_question[1], reverse_question[1]])
-                                    chains_of_thought.extend(
-                                        [base_question[3], distractor_question[3], reverse_question[3]])
-                                    answers.extend(
-                                        [base_question[4], distractor_question[4], reverse_question[4]])
-                                    proofs.extend(
-                                        [base_question[5], distractor_question[5], reverse_question[5]])
-                                    break
+                        base_question, distractor_question, reverse_question = generate_trio_question(curr_proof_steps, next_concept_names, args.ordering, args.ontology, args.distractors, curr_deduction_rule,
+                                                                                                      args.proofs_only, args.DFS, curr_proof_width, args.no_adjectives, args.generate_non_atomic_steps, args.rule_types)
+                        if (base_question[0] != None) and (distractor_question[0] != None) and (reverse_question[0] != None):
+                            print("generate successfull for 1")
+                            questions.extend(
+                                [base_question[0], distractor_question[0], reverse_question[0]])
+                            queries.extend(
+                                [base_question[1], distractor_question[1], reverse_question[1]])
+                            chains_of_thought.extend(
+                                [base_question[3], distractor_question[3], reverse_question[3]])
+                            answers.extend(
+                                [base_question[4], distractor_question[4], reverse_question[4]])
+                            proofs.extend(
+                                [base_question[5], distractor_question[5], reverse_question[5]])
+                            break
 
                 else:
                     # Normal
