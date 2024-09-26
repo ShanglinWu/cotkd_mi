@@ -1167,7 +1167,20 @@ def parse_log(log):
     return (trial, too_long_responses, results, label_results, resume_position, parse_errors)
 
 
-def generate_question(num_deduction_steps, available_concept_names, formula_ordering="postorder", ontology="fictional", distractors="relevant", deduction_rule="ModusPonens", proofs_only=False, dfs_mode="none", proof_width=2, no_adjectives=False, generate_non_atomic_steps=False, num_rule_types=3, seed=1000000):
+def preselect_properties(available_property_families, num_selections, seed):
+    random.seed(seed)
+    selected_properties = []
+    for _ in range(num_selections):
+        if not available_property_families:
+            break
+        family_index = random.randrange(len(available_property_families))
+        family = available_property_families[family_index]
+        property_index = random.randrange(len(family))
+        selected_properties.append((family_index, property_index))
+    return selected_properties
+
+
+def generate_question(num_deduction_steps, available_concept_names, formula_ordering="postorder", ontology="fictional", distractors="relevant", deduction_rule="ModusPonens", proofs_only=False, dfs_mode="none", proof_width=2, no_adjectives=False, generate_non_atomic_steps=False, num_rule_types=3, seed=100000, preselected_properties=None, available_property_families=None):
     if num_deduction_steps < 2:
         # `num_deduction_steps` includes the axiom step
         raise ValueError("num_deduction_steps must be at least 2.")
@@ -1679,6 +1692,21 @@ def run_experiment(model_name, args, num_proof_steps, test_num_proof_steps, log_
             raise Exception(
                 "Only the fictional ontology type is suppoted when `disjoint_concept_names` is set.")
     available_train_rules = list(AVAILABLE_DEDUCTION_RULES)
+    original_available_property_families = [
+        ["blue", "red", "brown", "orange"],
+        ["small", "large"],
+        ["metallic", "wooden", "luminous", "liquid"],
+        ["transparent", "opaque"],
+        ["nervous", "happy", "feisty", "shy"],
+        ["bright", "dull"],
+        ["sweet", "sour", "spicy", "bitter"],
+        ["floral", "fruity", "earthy"],
+        ["hot", "cold", "temperate"],
+        ["kind", "mean", "angry", "amenable", "aggressive"],
+        ["melodic", "muffled", "discordant", "loud"],
+        ["slow", "moderate", "fast"],
+        ["windy", "sunny", "overcast", "rainy", "snowy"]
+    ]
     if args.OOD:
         available_train_rules.remove(args.deduction_rule)
         if args.deduction_rule != "Composed":
@@ -1791,18 +1819,27 @@ def run_experiment(model_name, args, num_proof_steps, test_num_proof_steps, log_
                                               None else available_concept_names[i])
 
                         random.seed(seed)
+
+                        # Estimate the maximum number of property selections needed
+                        max_selections = curr_proof_steps * 5  # Adjust this multiplier as needed
+
+                        # Pre-select properties
+                        available_property_families = deepcopy(
+                            original_available_property_families)
+                        preselected_properties = preselect_properties(
+                            original_available_property_families, max_selections, seed)
                         # Generate trio questions
                         base_question = generate_question(curr_proof_steps, next_concept_names, args.ordering, args.ontology, "none", curr_deduction_rule,
-                                                          args.proofs_only, args.DFS, curr_proof_width, args.no_adjectives, args.generate_non_atomic_steps, args.rule_types, seed=seed)
+                                                          args.proofs_only, args.DFS, curr_proof_width, args.no_adjectives, args.generate_non_atomic_steps, args.rule_types, seed=seed, preselected_properties=preselected_properties, available_property_families=available_property_families)
 
                         if (base_question[0] != None):
                             random.seed(seed)
                             distractor_question = generate_question(curr_proof_steps, next_concept_names, args.ordering, args.ontology, args.distractors, curr_deduction_rule,
-                                                                    args.proofs_only, args.DFS, curr_proof_width, args.no_adjectives, args.generate_non_atomic_steps, args.rule_types, seed=seed)
+                                                                    args.proofs_only, args.DFS, curr_proof_width, args.no_adjectives, args.generate_non_atomic_steps, args.rule_types, seed=seed, preselected_properties=preselected_properties, available_property_families=available_property_families)
                             if (distractor_question[0] != None):
                                 random.seed(seed)
                                 reverse_question = generate_question(curr_proof_steps, next_concept_names, args.ordering, args.ontology, args.distractors, curr_deduction_rule,
-                                                                     args.proofs_only, args.DFS, curr_proof_width, args.no_adjectives, args.generate_non_atomic_steps, args.rule_types, seed=seed)
+                                                                     args.proofs_only, args.DFS, curr_proof_width, args.no_adjectives, args.generate_non_atomic_steps, args.rule_types, seed=seed, preselected_properties=preselected_properties, available_property_families=available_property_families)
 
                                 if (reverse_question[0] != None):
                                     print("generate successfull for 1")

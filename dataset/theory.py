@@ -2,6 +2,7 @@ import fol
 from random import randrange, shuffle, choice
 import random
 import numpy as np
+from copy import deepcopy
 
 
 class OntologyConfig(object):
@@ -80,7 +81,7 @@ def generate_concept_properties(node, num_properties, available_properties, avai
             del available_negative_properties[index]
 
 
-def generate_ontology(parent, level, available_concept_names, available_property_families, config, seed):
+def generate_ontology(parent, level, available_concept_names, available_property_families, config, seed, select_property):
     # print("seed in gen onto func:"+str(seed))
     if config.generate_distractor_branch:
         num_properties = max(2, config.proof_width) - 2
@@ -138,8 +139,12 @@ def generate_ontology(parent, level, available_concept_names, available_property
         # choose a property or negated property of this concept
         # print("calling 1")
         if config.generate_properties:
-            generate_concept_properties(new_child, num_properties, available_properties,
-                                        available_negative_properties, config.generate_negation, seed=seed)
+            for _ in range(num_properties):
+                property = select_property()
+                if random.random() < 0.5 and config.generate_negation:
+                    new_child.negated_properties.append(property)
+                else:
+                    new_child.properties.append(property)
 
     # generate a distractor parent for the child nodes
     if config.generate_distractor_parents and len(available_concept_names) != 0 and len(available_property_families) >= 1:
@@ -189,8 +194,12 @@ def generate_ontology(parent, level, available_concept_names, available_property
         second_distractor_parent.children = [distractor_child]
         # print("calling 3")
         if config.generate_properties:
-            generate_concept_properties(distractor_child, num_properties, available_properties,
-                                        available_negative_properties, config.generate_negation, seed=seed)
+            for _ in range(num_properties):
+                property = select_property()
+                if random.random() < 0.5 and config.generate_negation:
+                    new_child.negated_properties.append(property)
+                else:
+                    new_child.properties.append(property)
         for child in parent.children:
             child.parents.append(distractor_child)
             distractor_child.children.append(child)
@@ -208,19 +217,31 @@ def generate_ontology(parent, level, available_concept_names, available_property
     return distractor_roots
 
 
-def generate_theory(available_concept_names, available_property_families, config, seed=10000000):
-    # first generate the ontology tree
-    # print("seed in generate_theory is: "+str(seed))
-    # * I can sure the problem is in the first call from genque function, change the available properties differently
-    # print(available_property_families)
+def generate_theory(available_concept_names, available_property_families, config, seed=10000000, preselected_properties=None):
     random.seed(seed)
-    index = randrange(len(available_concept_names))
 
+    local_property_families = deepcopy(available_property_families)
+    property_selection_index = 0
+
+    def select_property():
+        nonlocal property_selection_index
+        if preselected_properties and property_selection_index < len(preselected_properties):
+            family_index, property_index = preselected_properties[property_selection_index]
+            property_selection_index += 1
+            return local_property_families[family_index][property_index]
+        else:
+            # Fallback to random selection if we run out of preselected properties
+            family_index = random.randrange(len(local_property_families))
+            family = local_property_families[family_index]
+            return random.choice(family)
+
+    index = randrange(len(available_concept_names))
     root = OntologyNode(available_concept_names[index], None)
     del available_concept_names[index]
 
     distractor_roots = generate_ontology(
-        root, 0, available_concept_names, available_property_families, config, seed=seed)
+        root, 0, available_concept_names, local_property_families, config, seed=seed, select_property=select_property)
+
     return [root] + distractor_roots
 
 
