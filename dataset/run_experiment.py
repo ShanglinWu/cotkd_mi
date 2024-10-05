@@ -342,9 +342,9 @@ gpt_api_key = None
 opt_server = None
 bad_patterns = []
 
-with open('bad_patterns.txt', 'r') as reader:
-    for line in reader:
-        bad_patterns.append(re.compile(line.strip()))
+# with open('bad_patterns.txt', 'r') as reader:
+#     for line in reader:
+#         bad_patterns.append(re.compile(line.strip()))
 
 
 def rindex(items, element):
@@ -1356,7 +1356,7 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
             current_config.generate_distractor_branch = (
                 distractors != "none") and (deduction_rule == "AndElim")
             # * for each time's running, available_property_families change differently, need to fix
-            print("calling 1 from genque")
+            # print("calling 1 from genque")
             random.seed(seed)
             theory = generate_theory(
                 available_concept_names,
@@ -1390,7 +1390,7 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
                                 # random.seed(seed)
                                 index = randrange(
                                     len(available_property_families))
-                                print(index)
+                                # print(index)
                                 available_properties = available_property_families[index]
                                 available_negative_properties = list(
                                     available_properties)
@@ -1411,7 +1411,7 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
                 current_config.generate_distractor_branch = False
                 # random.seed(seed)
                 # print(available_property_families)
-                print("calling 2 from genque")
+                # print("calling 2 from genque")
                 random.seed(seed)
                 distractor_root = generate_theory(
                     sample(available_concept_names, 2),
@@ -1467,6 +1467,7 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
             generate_questions_about_types = True
         (premises, conclusion, proof, num_steps, linearized_proof) = generate_membership_question(theory, formulas, selected_entity,
                                                                                                   irrelevant_entity, num_deduction_steps, generate_questions_about_types, True, deduction_rule, dfs_mode != "none", proof_width, distractors)
+        # ! DEBUG here the proof always be none
         if distractors == "none" and linearized_proof != None:
             # if we don't want distractors, remove parts of the ontology that are unused by the proof
             formulas = [formula for formula in formulas if any(
@@ -1512,6 +1513,7 @@ def generate_question(num_deduction_steps, available_concept_names, formula_orde
             for formula in formulas:
                 sentences.append(inflect(yield_tokens(formula_to_clause(
                     formula, morphology, no_adjectives)), end_punctuation='.'))
+    # ! Bug: If set hops >= 2 will always return None here.
     if proof == None or num_steps != num_deduction_steps:
         return (None, None, None, None, None, None)
     proof_formulas = [step.conclusion for step in linearized_proof]
@@ -1742,25 +1744,6 @@ def run_experiment(model_name, args, num_proof_steps, test_num_proof_steps, log_
     examples = {}
     while trial < args.num_trials * args.repetitions_per_test:
         for t in range(args.repetitions_per_test):
-            # if args.deduction_rule == "Composed" and args.OOD:
-            # # if we are testing compositional generalization, first generate the test example
-            # if t == 0:
-            #     while True:
-            #         next_concept_names = (None if available_concept_names ==
-            #                               None else available_concept_names[args.few_shot_examples])
-            #         test_question = generate_question(test_num_proof_steps, next_concept_names, args.test_ordering, args.ontology, args.test_distractors,
-            #                                           args.deduction_rule, args.proofs_only, False, args.proof_width + args.test_width_diff, args.no_adjectives, False, args.rule_types)
-            #         (question, query, question_lfs,
-            #          chain_of_thought, answer, proof) = test_question
-            #         if question != None:
-            #             break
-            # else:
-            #     # re-use the same test question from the first sub-iteration
-            #     (question, query, question_lfs,
-            #      chain_of_thought, answer, proof) = test_question
-            # # get the deduction rules used in the test proof
-            # available_train_rules = sorted(list(set(
-            #     [str(step.step_type) for step in proof if step.step_type != ProofStepType.AXIOM])))
 
             questions = []
             queries = []
@@ -1832,14 +1815,13 @@ def run_experiment(model_name, args, num_proof_steps, test_num_proof_steps, log_
                         random.seed(seed)
                         base_question = generate_question(curr_proof_steps, next_concept_names, args.ordering, args.ontology, "none", curr_deduction_rule,
                                                           args.proofs_only, args.DFS, curr_proof_width, args.no_adjectives, args.generate_non_atomic_steps, args.rule_types, seed=seed, preselected_properties=preselected_properties, available_property_families=available_property_families)
-
                         if (base_question[0] != None):
                             random.seed(seed)
-                            distractor_question = generate_question(curr_proof_steps, next_concept_names, args.ordering, args.ontology, args.distractors, curr_deduction_rule,
+                            distractor_question = generate_question(curr_proof_steps, next_concept_names, args.ordering, args.ontology, "irrelevant", curr_deduction_rule,
                                                                     args.proofs_only, args.DFS, curr_proof_width, args.no_adjectives, args.generate_non_atomic_steps, args.rule_types, seed=seed, preselected_properties=preselected_properties, available_property_families=available_property_families)
                             if (distractor_question[0] != None):
                                 random.seed(seed)
-                                reverse_question = generate_question(curr_proof_steps, next_concept_names, args.ordering, args.ontology, args.distractors, curr_deduction_rule,
+                                reverse_question = generate_question(curr_proof_steps, next_concept_names, args.ordering, args.ontology, "relevant", curr_deduction_rule,
                                                                      args.proofs_only, args.DFS, curr_proof_width, args.no_adjectives, args.generate_non_atomic_steps, args.rule_types, seed=seed, preselected_properties=preselected_properties, available_property_families=available_property_families)
 
                                 if (reverse_question[0] != None):

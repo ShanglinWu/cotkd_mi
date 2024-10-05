@@ -99,7 +99,7 @@ def generate_ontology(parent, level, available_concept_names, available_property
         return []
     # random.seed(seed)
     index = choice(valid_property_indices)
-    print(index)
+    # print(index)
     available_properties = available_property_families[index]
     available_negative_properties = list(available_properties)
     del available_property_families[index]
@@ -140,12 +140,8 @@ def generate_ontology(parent, level, available_concept_names, available_property
         # choose a property or negated property of this concept
         # print("calling 1")
         if config.generate_properties:
-            for _ in range(num_properties):
-                property = select_property()
-                if random.random() < 0.5 and config.generate_negation:
-                    new_child.negated_properties.append(property)
-                else:
-                    new_child.properties.append(property)
+            generate_concept_properties(new_child, num_properties, available_properties,
+                                        available_negative_properties, config.generate_negation)
 
     # generate a distractor parent for the child nodes
     if config.generate_distractor_parents and len(available_concept_names) != 0 and len(available_property_families) >= 1:
@@ -195,12 +191,8 @@ def generate_ontology(parent, level, available_concept_names, available_property
         second_distractor_parent.children = [distractor_child]
         # print("calling 3")
         if config.generate_properties:
-            for _ in range(num_properties):
-                property = select_property()
-                if random.random() < 0.5 and config.generate_negation:
-                    new_child.negated_properties.append(property)
-                else:
-                    new_child.properties.append(property)
+            generate_concept_properties(distractor_child, num_properties, available_properties,
+                                        available_negative_properties, config.generate_negation)
         for child in parent.children:
             child.parents.append(distractor_child)
             distractor_child.children.append(child)
@@ -208,10 +200,10 @@ def generate_ontology(parent, level, available_concept_names, available_property
     else:
         distractor_roots = []
 
-    # # recursively generate the descendants of this child node
-    # for child in parent.children:
-    #     distractor_roots.extend(generate_ontology(
-    #         child, level + 1, available_concept_names, available_property_families, config, seed+1))
+    # recursively generate the descendants of this child node
+    for child in parent.children:
+        distractor_roots.extend(generate_ontology(
+            child, level + 1, available_concept_names, available_property_families, config, seed, select_property))
     # TODO: if use the same seed, distractor_question would always be none, why?
     # # random.seed(seed)
     shuffle(parent.children)
