@@ -1,0 +1,1 @@
+python -u analyze_result.py >analyze_result_modified.log 2>&1 &
