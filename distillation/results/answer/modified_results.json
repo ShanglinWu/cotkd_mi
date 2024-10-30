@@ -1,0 +1,602 @@
+[
+  {
+    "question": "Impuses are not sunny. Each impus is a vumpus. Vumpuses are not amenable. Each vumpus is a rorpus. Scrompuses are bitter. Every tumpus is a numpus. Quimpuses are happy. Each numpus is a rompus. Every zhorpus is metallic. Rompuses are dumpuses. Every dumpus is large. Bompuses are zumpuses. Zumpuses are brown. Every wumpus is not large. Each zumpus is a yumpus. Each timpus is not earthy. Timpuses are gorpuses. Gorpuses are opaque. Each jelpus is not orange. Jelpuses are lempuses. Each lempus is bright. Boompuses are transparent. Each boompus is a grimpus. Grimpuses are fruity. Each chorpus is not bright. Chorpuses are brimpuses. Every brimpus is temperate. Every fompus is slow. Fompuses are shumpuses. Each shumpus is melodic. Each gwompus is not bitter. Gwompuses are lorpuses. Each lorpus is moderate. Sterpuses are small. Each sterpus is a jompus. Sam is a sterpus. Stella is a tumpus.",
+    "query": "True or false: Stella is not large.",
+    "generated_cot": "Stella is not large. Stella is a tumpus. Stella is a numpus. Stella is a rompus. Stella is a wumpus. Stella is a tumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a tumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a w",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is red or an impus is a tumpus. Everything that is large or a tumpus is a rompus. Everything that is dull or a rompus is a dumpus. Everything that is opaque or a dumpus is a zumpus. Everything that is fast or a jelpus is a yumpus. Everything that is amenable or a yumpus is a wumpus. Everything that is fruity or a wumpus is a brimpus. Everything that is fruity or a storpus is a numpus. Everything that is orange or a kerpus is a vumpus. Everything that is cold or a hilpus is a jompus. Everything that is liquid or a yerpus is a sterpus. Everything that is a quimpus or a bompus is a shumpus. Everything that is melodic or a scrompus is a grimpus. Everything that is spicy or a lempus is a gorpus. Stella is an impus. Fae is a lempus.",
+    "query": "Prove: Stella is fast or a zumpus.",
+    "generated_cot": "Stella is an impus. Fae is a lempus. Stella is fast or a zumpus. Stella is a zumpus. Fae is a rompus. Stella is a tumpus. Stella is a rompus. Stella is a tumpus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Fae is a rompus. Fae is a rompus. Fae is a tumpus. Fae is a tumpus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus is a rompus. Fa",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is loud or an impus is a yimpus. Everything that is small or a yumpus is a jompus. Everything that is feisty or a jompus is a rompus. Everything that is opaque or a rompus is a dumpus. Everything that is hot or a hilpus is a lorpus. Everything that is sour or a lorpus is a sterpus. Everything that is dull or a sterpus is a lempus. Everything that is earthy or a jelpus is a grimpus. Everything that is sunny or a gerpus is a brimpus. Everything that is fast or a worpus is a tumpus. Everything that is transparent or a fompus is a zumpus. Everything that is hot or a bompus is a gorpus. Everything that is brown or a boompus is a numpus. Everything that is shy or a vumpus is a wumpus. Sally is a vumpus. Stella is a yumpus.",
+    "query": "Prove: Stella is hot or a dumpus.",
+    "generated_cot": "Stella is a yumpus. Stella is a jompus. Stella is a rompus. Stella is a dumpus. Stella is a lorpus. Stella is a sterpus. Stella is a grimpus. Stella is a brimpus. Stella is a tumpus. Stella is a brimpus. Stella is a tumpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Sally is a tumpus. Sally is a brimpus. Sally is a rompus. Sally is a rompus. Sally is a wum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Every shumpus is a tumpus and a boompus. Gorpuses are impuses and yumpuses. Each hilpus is a rompus and a wumpus. Every wumpus is a sterpus and a brimpus. Each chorpus is a numpus and a zumpus. Every tumpus is a lorpus and a vumpus. Every grimpus is a small jompus. Fae is a gorpus and Stella is a yumpus. Stella is a brimpus and a sterpus.",
+    "query": "Prove: Fae is an impus.",
+    "generated_cot": "Fae is an impus. Stella is a brimpus and a sterpus. Fae is a gorpus. Stella is a tumpus. Fae is a yumpus. Stella is a brimpus. Stella is a sterpus. Stella is a wumpus. Stella is a numpus. Stella is a zumpus. Stella is a lorpus. Stella is a lorpus. Fae is a tumpus. Fae is a tumpus. Fae is a tumpus. Fae is a wumpus. Fae is a wumpus. Fae is a wumpus. Fae is a wumpus. Fae is a lorpus. Fae is a lorpus. Fae is a vumpus. Fae is a wumpus. Stell",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Tumpuses are wumpuses and impuses. Each impus is a numpus and a zumpus. Numpuses are shumpuses and yumpuses. Yumpuses are rompuses and sterpuses. Every zumpus is a lorpus and a vumpus. Wumpuses are brimpuses and jompuses. Each lempus is a bright dumpus. Rex is a sterpus and a rompus. Fae is a numpus and Rex is a yumpus.",
+    "query": "Prove: Fae is a numpus.",
+    "generated_cot": "Fae is a numpus. Rex is a yumpus. Fae is a sterpus. Rex is a rompus. Fae is a wumpus. Fae is a numpus. Fae is a yumpus. Fae is a wumpus. Fae is a numpus. Fae is a yumpus. Fae is a wumpus. Fae is a wumpus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fae is a yum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Vumpuses are dull. Felpuses are tumpuses. Tumpuses are muffled. Each tumpus is a dumpus. Every dumpus is snowy. Each dumpus is a zumpus. Zumpuses are not bitter. Zumpuses are numpuses. Each numpus is temperate. Every numpus is a yumpus. Each yumpus is slow. Each yumpus is a wumpus. Wumpuses are angry. Wumpuses are sterpuses. Gwompuses are not sour. Every gwompus is an impus. Every impus is luminous. Each timpus is transparent. Each timpus is a gorpus. Every lempus is not dull. Each gorpus is not transparent. Terpuses are not floral. Terpuses are rompuses. Rompuses are earthy. Every worpus is slow. Worpus are brimpuses. Brimpuses are large. Kerpuses are amenable. Kerpuses are shumpuses. Each shumpus is not happy. Each storpus is not bright. Each storpus is a lorpus. Lorpuses are orange. Grimpuses are hot. Each grimpus is a jompus. Polly is a vumpus. Fae is a grimpus.",
+    "query": "True or false: Polly is not dull.",
+    "generated_cot": "Polly is not dull. False. Polly is a vumpus. Fae is a grimpus. Polly is a tumpus. Tumpuses are muffled. Polly is a tumpus. Tumpuses are muffled. Polly is a tumpus. Tumpuses are muffled. Polly is a tumpus. Tumpuses are muffled. Polly is a tumpus. Fae is a tumpus. Fae is a tumpus. Tumpuses are muffled. Fae is a tumpus. Tumpuses are muffled. Fae is a tumpus. Tumpuses are muffled. Fae is a tumpus. Fae is a tumpuses are muffled. Fae is a tumpuses. Fa",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Every spicy vumpus is a rorpus. Every aggressive tumpus is a wumpus. Every fast wumpus is a numpus. Earthy bompuses are rompuses. Each snowy rompus is a dumpus. Melodic dumpuses are yumpuses. Temperate yumpuses are zumpuses. Every small yerpus is a jompus. Each temperate hilpus is a shumpus. Each fruity worpus is a sterpus. Each sunny gwompus is a lorpus. Each happy scrompus is a gorpus. Sweet quimpuses are grimpuses. Everything that is a boompus and a lempus is an impus. Rex is earthy. Rex is fast. Sally is a lempus. Rex is a tumpus. Rex is aggressive.",
+    "query": "Prove: Rex is an earthy numpus.",
+    "generated_cot": "Answer is N/A. Rex is an earthy numpus. Rex is fast. Sally is a lempus. Rex is a tumpus. Rex is aggressive. Rex is a wumpus. Rex is a numpus. Rex is a rompus. Rex is a yumpus. Rex is a sterpus. Rex is a gorpus. Rex is a lorpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a yumpus. Rex is a wumpus. Rex is a gorpus. Rex is a lorpus. Rex is a wum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Each yumpus is a dumpus and a lempus. Dumpuses are grimpuses and zumpuses. Zumpuses are impuses and brimpuses. Each brimpus is a gorpus and a shumpus. Each grimpus is a sterpus and a rompus. Every lempus is a numpus and a jompus. Every lorpus is a transparent wumpus. Rex is a zumpus and Max is a brimpus. Max is a shumpus and a gorpus.",
+    "query": "Prove: Rex is a zumpus.",
+    "generated_cot": "Answer is N/A. Rex is a zumpus and Max is a brimpus. Max is a shumpus and a gorpus. Rex is a brimpus. Max is a shumpus. Rex is a gorpus. Rex is a shumpus. Rex is a gorpus. Rex is a shumpus. Rex is a gorpus. Rex is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is slow or a yumpus is a rompus. Everything that is opaque or a rompus is a timpus. Everything that is bright or a zumpus is a shumpus. Everything that is shy or a yimpus is a jompus. Everything that is kind or a jompus is a vumpus. Everything that is hot or a vumpus is a numpus. Everything that is floral or a numpus is a brimpus. Everything that is floral or a storpus is a tumpus. Everything that is hot or a bompus is an impus. Everything that is small or a rempus is a gorpus. Everything that is sweet or a zhorpus is a lempus. Everything that is discordant or a gwompus is a dumpus. Everything that is dull or a terpus is a sterpus. Everything that is shy or a grimpus is a wumpus. Fae is a grimpus. Stella is a zumpus.",
+    "query": "Prove: Stella is shy or a shumpus.",
+    "generated_cot": "Stella is shy or a shumpus. Stella is a zumpus. Stella is a rompus. Stella is a yumpus. Stella is a rompus. Stella is a yumpus. Stella is a yumpus. Stella is a yumpus. Stella is a yumpus. Stella is a yumpus. Stella is a yumpus. Stella is a yumpus. Stella is a yumpus. Stella is a yumpus. Stella is a yumpus. Stella is a yumpus. Stella is a yumpus. Stella is a yumpus. Stella is a yumpus. Stella is a yumpus. Stell is a yumpus. Stell is a yumpus. Stell is a yum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Every grimpus is a scrompus and a wumpus. Each rompus is a brimpus and a vumpus. Kerpuses are zumpuses and sterpuses. Sterpuses are dumpuses and numpuses. Timpuses are tumpuses and impuses. Wumpuses are gorpuses and shumpuses. Lorpuses are orange jompuses. Sally is a vumpus and Fae is a rompus. Sally is a dumpus and a numpus.",
+    "query": "Prove: Fae is a brimpus.",
+    "generated_cot": "Fae is a brimpus. Sally is a dumpus and a numpus. Sally is a wumpus. Fae is a tumpus. Sally is a wumpus. Sally is a tumpus. Sally is a wumpus. Sally is a tumpus. Sally is a wumpus. Sally is a wumpus. Sally is a tumpus. Sally is a wumpus. Fae is a wumpus. Fae is a tumpus. Fae is a tumpus. Sally is a tumpus. Sally is a tumpus. Sally is a tumpus. Sally is a tumpus. Sally is a wumpus. Sally is a numpus. Sally is a wum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Each dumpus is a gorpus. Each rompus is a gorpus. Zumpuses are numpuses. Jelpuses are numpuses. Terpuses are numpuses. Each grimpus is a numpus. Every jompus is a numpus. Rex is a zumpus or a jelpus. Wren is a dumpus or a rompus.",
+    "query": "Prove: Wren is a gorpus.",
+    "generated_cot": "Wren is a dumpus or a rompus. Wren is a gorpus. Wren is a numpus. Wren is a jompus. Wren is a grimpus. Wren is a jompus. Wren is a numpus. Wren is a gorpus. Wren is a jompus. Wren is a numpus. Wren is a jompus. Wren is a numpus. Wren is a numpus. Wren is a numpus. Wren is a numpus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a numpus. Wren is a jompus. Wren is a a a numpus. Wren is a jompus. Wren is a numpus. Wren is a jo",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Lempuses are floral. Each wumpus is windy. Every wumpus is a tumpus. Tumpuses are not large. Every tumpus is a fompus. Each worpus is kind. Each yumpus is a numpus. Each numpus is not floral. Every jelpus is a rompus. Rompuses are melodic. Every rompus is a dumpus. Each dumpus is not hot. Dumpuses are zumpuses. Each zumpus is bitter. Every zumpus is a sterpus. Felpuses are opaque. Every felpus is a grimpus. Grimpuses are not happy. Bompuses are not luminous. Bompuses are brimpuses. Each brimpus is bright. Every zhorpus is loud. Zhorpuses are vumpuses. Vumpuses are not wooden. Every hilpus is aggressive. Hilpuses are jompuses. Every jompus is not slow. Boompuses are not scrompuses. Each boompus is a lorpus. Each lorpus is transparent. Gerpuses are not shy. Each gerpus is a gorpus. Gorpuses are not orange. Every shumpus is bitter. Every shumpus is an impus. Polly is a shumpus. Max is a yumpus.",
+    "query": "True or false: Max is floral.",
+    "generated_cot": "Max is floral. Max is floral. Max is a yumpus. Max is a numpus. Max is a tumpus. Max is a numpus. Max is a tumpus. Max is a numpus. Max is a numpus. Max is a numpus. Max is a numpus. Max is a numpus. Max is a numpus. Max is a numpus. Max is a yumpus. Max is a yumpus. Max is a numpus. Max is a tumpus. Max is a numpus. Max is a wumpus. Max is a wumpus. Max is a wumpus. Max is a wumpus. Max is a yumpus. Max is a yumpus. Max is a yumpus. Max is a",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Each vumpus is transparent. Vumpuses are zhorpuses. Each scrompus is small. Every tumpus is a numpus. Numpuses are red. Every storpus is a zumpus. Each kerpus is not spicy. Each kerpus is a shumpus. Every shumpus is liquid. Worpus are muffled. Worpus are sterpuses. Each sterpus is not shy. Each yumpus is not red. Each quimpus is cold. Quimpuses are lorpuses. Every lorpus is not spicy. Gorpuses are orange. Each gorpus is a wumpus. Sam is a tumpus. Rex is a gorpus.",
+    "query": "True or false: Sam is red.",
+    "generated_cot": "Sam is red. Sam is red. Sam is a tumpus. Rex is a gorpus. Sam is a numpus. Sam is a numpus. Sam is a numpus. Sam is a numpus. Sam is a numpus. Sam is a numpus. Sam is a numpus. Sam is a numpus. Sam is a numpus. Sam is a numpus. Sam is a numpus. Rex is a numpus. Rex is a numpus. Sam is a numpus. Sam is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus.",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Opaque yumpuses are zumpuses. Snowy zumpuses are dumpuses. Nervous dumpuses are tumpuses. Every muffled timpus is a jompus. Hot jompuses are vumpuses. Each bright vumpus is a numpus. Each slow numpus is a shumpus. Each sunny bompus is an impus. Each sour felpus is a lempus. Large boompuses are grimpuses. Loud rempuses are brimpuses. Floral yimpuses are rompuses. Aggressive rorpuses are lorpuses. Each cold sterpus is a wumpus. Polly is a sterpus. Sally is nervous. Sally is opaque. Sally is muffled. Sally is a yumpus. Sally is snowy.",
+    "query": "Prove: Sally is a muffled tumpus.",
+    "generated_cot": "Sally is a muffled tumpus. Sally is a muffled yumpus. Sally is a muffled tumpus. Sally is a muffled tumpus. Sally is a muffled tumpus. Sally is a muffled tumpus. Sally is a muffled tumpus. Sally is a muffled tumpus. Sally is a muffled tumpus. Sally is a muffled tumpus. Sally is a muffled. Sally is a muffled. Sally is a muffled. Sally is a muffled. Sally is a muffled. Sally is a tumpus. Sally is a tumpus. Sally is a tumpus. Sally is a tumpus. Sally. S",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is dull or an impus is a chorpus. Everything that is spicy or a rompus is a wumpus. Everything that is cold or a wumpus is a jompus. Everything that is muffled or a jompus is a dumpus. Everything that is fast or a dumpus is a zumpus. Everything that is amenable or a scrompus is a sterpus. Everything that is sunny or a sterpus is a lorpus. Everything that is earthy or a yerpus is a yumpus. Everything that is feisty or a rempus is a shumpus. Everything that is discordant or a gwompus is a grimpus. Everything that is a yimpus or a terpus is a vumpus. Everything that is brown or a worpus is a gorpus. Everything that is bright or a timpus is a numpus. Everything that is windy or a lempus is a tumpus. Stella is a rompus. Polly is a lempus.",
+    "query": "Prove: Stella is amenable or a zumpus.",
+    "generated_cot": "Stella is a rompus. Polly is a lempus. Stella is amenable or a zumpus. Stella is a zumpus. Polly is a lempus. Stella is a wumpus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jom",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is a jompus or a numpus is an impus. Everything that is a quimpus or a scrompus is a rompus. Everything that is a lorpus or a yumpus is a terpus. Sam is not a sterpus. Rex is not an impus.",
+    "query": "Prove: Rex is not a numpus and Rex is not a jompus.",
+    "generated_cot": "Rex is not a numpus and Rex is not a jompus. Rex is not a numpus. Rex is not a jompus. Rex is not a numpus. Rex is not a numpus. Rex is not a numpus. Rex is not a numpus. Rex is not a numpus. Rex is not a numpus. Rex is not a numpus. Rex is not a numpus. Rex is not a numpus. Rex is not a numpus. Rex is not a numpus. Rex is not a numpus. Rex is not a numpus. Rex is not a numpus. Rex is not a numpus. Rex is not a numpus. Rex is not a numpus. Rex is not",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is temperate or a vumpus is a worpus. Everything that is snowy or an impus is a gorpus. Everything that is feisty or a chorpus is a sterpus. Everything that is loud or a sterpus is a shumpus. Everything that is metallic or a shumpus is a lorpus. Everything that is orange or a lorpus is a jompus. Everything that is moderate or a jompus is a yumpus. Everything that is fruity or a timpus is a grimpus. Everything that is happy or a storpus is a tumpus. Everything that is cold or a rempus is a zumpus. Everything that is small or a bompus is a brimpus. Everything that is transparent or a zhorpus is a numpus. Everything that is metallic or a fompus is a lempus. Everything that is slow or a rompus is a dumpus. Max is a rompus. Stella is an impus.",
+    "query": "Prove: Stella is feisty or a gorpus.",
+    "generated_cot": "Stella is feisty or a gorpus. Stella is a gorpus. Stella is a sterpus. Stella is a lorpus. Stella is a jompus. Stella is a tumpus. Stella is a brimpus. Stella is a numpus. Stella is a brimpus. Stella is a tumpus. Stella is a brimpus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stell is a rompus. Max is a rompus. Max is a",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is snowy or a grimpus is a brimpus. Everything that is loud or a brimpus is a gorpus. Everything that is hot or a gorpus is a numpus. Everything that is spicy or a numpus is a lorpus. Everything that is amenable or a lorpus is a sterpus. Everything that is earthy or a sterpus is a jompus. Everything that is bright or a jompus is a lempus. Everything that is opaque or a jelpus is a yumpus. Everything that is metallic or a rorpus is a zumpus. Everything that is discordant or a rempus is a dumpus. Everything that is large or a boompus is a rompus. Everything that is kind or a gwompus is a wumpus. Everything that is blue or a terpus is a tumpus. Everything that is sweet or an impus is a vumpus. Polly is an impus. Max is a brimpus.",
+    "query": "Prove: Max is loud or a brimpus.",
+    "generated_cot": "Max is a brimpus. Max is loud or a brimpus. Max is a brimpus. Max is loud or a brimpus. Max is a brimpus. Max is loud or a brimpus. Max is a brimpus. Max is loud or a brimpus. Max is a brimpus. Max is loud or a brimpus. Max is a brimpus. Max is loud or a brimpus. Max is loud or a brimpus. Max is loud or a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Grimpuses are impuses and dumpuses. Each impus is a shumpus and a yumpus. Each yumpus is a zumpus and a sterpus. Dumpuses are vumpuses and rompuses. Every lorpus is a muffled tumpus. Rex is a sterpus and a zumpus. Sally is an impus and Rex is a yumpus.",
+    "query": "Prove: Sally is an impus.",
+    "generated_cot": "Answer is N/A. Sally is an impus. Sally is a sterpus and a zumpus. Sally is a yumpus. Sally is a zumpus. Sally is a sterpus. Sally is a yumpus. Sally is a zumpus. Sally is a sterpus. Sally is a yumpus. Sally is a zumpus. Sally is a sterpus. Sally is a sterpus. Sally is a sterpus. Sally is a sterpus. Sally is a sterpus. Sally is a sterpus. Sally is a sterpus. Sally is a yumpus. Sally is a yumpus. Sally is a yumpus. Sally is a yumpus. Sally is a yumpus. Sally is a yumpus. Sally is a y",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is small or a lorpus is a timpus. Everything that is discordant or a grimpus is an impus. Everything that is rainy or an impus is a sterpus. Everything that is temperate or a sterpus is a shumpus. Everything that is blue or a kerpus is a jompus. Everything that is slow or a jompus is a vumpus. Everything that is kind or a vumpus is a zumpus. Everything that is mean or a gwompus is a dumpus. Everything that is small or a bompus is a rompus. Everything that is fast or a felpus is a lempus. Everything that is sweet or a fompus is a numpus. Everything that is opaque or a zhorpus is a wumpus. Everything that is hot or a hilpus is a tumpus. Everything that is earthy or a brimpus is a gorpus. Rex is a brimpus. Sam is a grimpus.",
+    "query": "Prove: Sam is blue or a shumpus.",
+    "generated_cot": "Sam is blue or a shumpus. Sam is a shumpus. Rex is a brimpus. Sam is a grimpus. Rex is a lorpus. Rex is a sterpus. Rex is a jompus. Rex is a vumpus. Rex is a zumpus. Rex is a dumpus. Rex is a wumpus. Rex is a numpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Re is a wumpus. Re is w",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Every sterpus is a jompus and a yumpus. Every jompus is a brimpus and a lempus. Lempuses are wumpuses and zumpuses. Yumpuses are vumpuses and rompuses. Gorpuses are kind grimpuses. Fae is a wumpus and a zumpus. Fae is a lempus and Alex is a jompus.",
+    "query": "Prove: Alex is a jompus.",
+    "generated_cot": "Fae is a wumpus and a zumpus. Fae is a lempus. Alex is a jompus. Alex is a yumpus. Alex is a sterpus. Alex is a jompus. Alex is a yumpus. Alex is a sterpus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jo",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Rompuses are lorpuses. Tumpuses are lorpuses. Lempuses are jompuses. Worpus are jompuses. Kerpuses are jompuses. Every shumpus is a jompus. Gorpuses are jompuses. Max is a rompus or a tumpus. Rex is a lempus or a worpus.",
+    "query": "Prove: Max is a lorpus.",
+    "generated_cot": "Max is a rompus or a tumpus. Rex is a lempus or a worpus. Max is a lorpus. Max is a lorpus. Rex is a jompus. Rex is a lorpus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jo",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Each aggressive dumpus is a yerpus. Bright brimpuses are zumpuses. Sunny chorpuses are yumpuses. Each muffled yumpus is a vumpus. Overcast quimpuses are lorpuses. Every melodic scrompus is an impus. Each happy jelpus is a jompus. Each luminous kerpus is a shumpus. Dull lempuses are sterpuses. Sam is a brimpus. Rex is a lempus. Sam is sunny. Sam is bright.",
+    "query": "Prove: Sam is a sunny zumpus.",
+    "generated_cot": "Answer is N/A. Sam is a brimpus. Rex is a lempus. Sam is sunny. Sam is bright. Sam is a zumpus. Sam is a yumpus. Sam is a lorpus. Sam is a shumpus. Sam is a jompus. Sam is a lorpus. Sam is a jompus. Sam is a shumpus. Sam is a lorpus. Sam is a lorpus. Rex is a lorpus. Rex is a lorpus. Rex is a lorpus. Rex is a lorpus. Rex is a lorpus. Rex is a lorpus. Rex is a jompus. Rex is a lorpus. Rex is a lorpus. Rex is a lorpus. Rex is a lorpus. Rex is a yum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is transparent or a zumpus is an impus. Everything that is dull or an impus is a rompus. Everything that is windy or a rompus is a sterpus. Everything that is spicy or a sterpus is a lempus. Everything that is feisty or a lempus is a vumpus. Everything that is slow or a vumpus is a tumpus. Everything that is angry or a tumpus is a gorpus. Everything that is happy or a gwompus is a brimpus. Everything that is blue or a chorpus is a shumpus. Everything that is sunny or a rorpus is a wumpus. Everything that is small or a timpus is a lorpus. Everything that is metallic or a scrompus is a numpus. Everything that is cold or a rempus is a grimpus. Everything that is aggressive or a dumpus is a yumpus. Polly is a tumpus. Stella is a dumpus.",
+    "query": "Prove: Polly is angry or a tumpus.",
+    "generated_cot": "Polly is angry or a tumpus. Stella is a dumpus. Stella is a dumpus. Polly is a tumpus. Stella is a rompus. Polly is a rompus. Stella is a rompus. Polly is a rompus. Polly is a rompus. Polly is a rompus. Polly is a rompus. Polly is a rompus. Polly is a rompus. Polly is a rompus. Polly is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Polly is a rompus. Polly is a rompus. Polly is a rompus. Poll is a rompus. Poll is a rompus. Stell is a rompus.",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Each mean dumpus is an impus. Every liquid impus is a numpus. Every earthy numpus is a lorpus. Each dull lorpus is a brimpus. Sweet brimpuses are grimpuses. Feisty grimpuses are lempuses. Opaque lempuses are vumpuses. Discordant gerpuses are jompuses. Moderate rorpuses are gorpuses. Nervous boompuses are shumpuses. Luminous timpuses are sterpuses. Cold storpuses are zumpuses. Every mean quimpus is a rompus. Small yumpuses are wumpuses. Rex is a brimpus. Rex is sweet. Stella is a yumpus.",
+    "query": "Prove: Rex is a sweet brimpus.",
+    "generated_cot": "Rex is a brimpus. Rex is sweet. Stella is a yumpus. Rex is a brimpus. Rex is sweet. Stella is a yumpus. Rex is a brimpus. Rex is a brimpus. Rex is a brimpus. Rex is a brimpus. Rex is a brimpus. Rex is a brimpus. Rex is a brimpus. Rex is a brimpus. Rex is a brimpus. Rex is sweet. Rex is sweet. Stella is a brimpus. Rex is sweet. Stella is sweet. Stella is sweet. Stella is sweet. Stella is sweet. Stella is sweet. Stella is sweet. Rex is sweet. Rex is sweet. Rex is sweet. Rex is sweet. Rex is sweet. Rex is",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is a dumpus or a sterpus is a vumpus. Everything that is a zhorpus or a quimpus is a shumpus. Everything that is a lempus or a yumpus is a fompus. Max is not a rompus. Fae is not a vumpus.",
+    "query": "Prove: Fae is not a sterpus and Fae is not a dumpus.",
+    "generated_cot": "Fae is not a dumpus. Fae is not a sterpus. Fae is not a yumpus. Fae is not a lempus. Fae is not a yumpus. Fae is not a vumpus. Fae is not a zhorpus. Fae is not a quimpus. Fae is not a lempus. Fae is not a yumpus. Fae is not a yumpus. Fae is not a lempus. Fae is not a lempus. Fae is not a lempus. Fae is not a yumpus. Fae is not a yumpus. Fae is not a yumpus. Fae is not a yumpus. Fae is not a lempus. Fae is not a yumpus. Fae is not a yum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Brown wumpuses are chorpuses. Large tumpuses are yumpuses. Each transparent yumpus is a numpus. Luminous numpuses are rompuses. Every earthy rompus is a dumpus. Each dull hilpus is a zumpus. Feisty zumpuses are gorpuses. Every fruity zhorpus is a sterpus. Everything that is a yerpus and a timpus is a lorpus. Kind bompuses are vumpuses. Dull scrompuses are shumpuses. Each temperate rorpus is a brimpus. Snowy jelpuses are lempuses. Opaque grimpuses are impuses. Stella is transparent. Stella is dull. Stella is earthy. Stella is a tumpus. Fae is a grimpus. Stella is large. Stella is luminous.",
+    "query": "Prove: Stella is a dull dumpus.",
+    "generated_cot": "Stella is transparent. Stella is dull. Stella is earthy. Stella is a tumpus. Stella is a brimpus. Stella is a tumpus. Stella is a brimpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a brimpus. Stella is a yum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Zumpuses are fompuses and brimpuses. Rompuses are shumpuses and dumpuses. Timpuses are tumpuses and sterpuses. Sterpuses are lorpuses and jompuses. Yerpuses are yumpuses and vumpuses. Brimpuses are lempuses and impuses. Each grimpus is a luminous wumpus. Rex is a shumpus and Max is a rompus. Rex is a lorpus and a jompus.",
+    "query": "Prove: Max is a dumpus.",
+    "generated_cot": "Max is a dumpus. Max is a dumpus. Rex is a shumpus. Rex is a lorpus and a jompus. Rex is a jompus. Rex is a lorpus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a lorpus. Rex is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jom",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is a yumpus or a shumpus is a tumpus. Everything that is a scrompus or a boompus is a zumpus. Everything that is a grimpus or a vumpus is a zhorpus. Sam is not a tumpus. Alex is not an impus.",
+    "query": "Prove: Sam is not a shumpus and Sam is not a yumpus.",
+    "generated_cot": "Sam is not a tumpus. Alex is not an impus. Sam is not a shumpus and Sam is not a yumpus. Sam is not a tumpus. Alex is not an impus. Sam is not a scrompus. Alex is not a boompus. Alex is not a grimpus. Alex is not a vumpus. Alex is not a zhorpus. Sam is not a yumpus. Alex is not a shumpus. Alex is not a shumpus. Alex is not a grimpus. Alex is not a shumpus. Alex is not a grimpus. Alex is not a grimpus. Alex is not a grimpus. Alex is a yumpus. Alex is a yumpus. Alex is a yumpus. Alex is a yumpus. Alex is a yum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Every snowy yumpus is a numpus. Every small numpus is a dumpus. Hot dumpuses are lempuses. Transparent lempuses are gorpuses. Every fast gorpus is an impus. Kind impuses are vumpuses. Floral vumpuses are lorpuses. Sunny hilpuses are jompuses. Each floral yimpus is a shumpus. Every nervous rorpus is a sterpus. Each slow worpus is a rompus. Metallic fompuses are tumpuses. Every spicy zhorpus is a zumpus. Dull brimpuses are wumpuses. Rex is a brimpus. Fae is floral. Fae is a vumpus.",
+    "query": "Prove: Fae is a floral vumpus.",
+    "generated_cot": "Fae is a floral vumpus. Fae is a floral vumpus. Fae is a numpus. Fae is a dumpus. Fae is a numpus. Fae is a dumpus. Fae is a dumpus. Fae is a dumpus. Fae is a dumpus. Fae is a dumpus. Fae is a dumpus. Fae is a dumpus. Fae is a dumpus. Fae is a dumpus. Fae is a dumpus. Fae is a dumpus. Fae is a dumpus. Fae is a dumpus. Fae is a dumpus. Fae is a dumpus. Fae is a dumpus is a dumpus is a dumpus is a dumpus is a dumpus is a dumpus is a numpus. Fae is a numpus. Fae is a num",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Grimpuses are rompuses. Brimpuses are rompuses. Every zumpus is a shumpus. Gerpuses are shumpuses. Kerpuses are shumpuses. Dumpuses are shumpuses. Each impus is a shumpus. Max is a zumpus or a gerpus. Alex is a grimpus or a brimpus.",
+    "query": "Prove: Alex is a rompus.",
+    "generated_cot": "Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rom",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is blue or a wumpus is an impus. Everything that is large or an impus is a yumpus. Everything that is transparent or a yumpus is a vumpus. Everything that is moderate or a vumpus is a numpus. Everything that is temperate or a numpus is a rompus. Everything that is spicy or a rompus is a dumpus. Everything that is sunny or a dumpus is a shumpus. Everything that is sweet or a bompus is a grimpus. Everything that is angry or a kerpus is a lempus. Everything that is dull or a gwompus is a zumpus. Everything that is hot or a worpus is a tumpus. Everything that is small or a gerpus is a lorpus. Everything that is moderate or a quimpus is a sterpus. Everything that is overcast or a brimpus is a jompus. Polly is a yumpus. Max is a brimpus.",
+    "query": "Prove: Polly is transparent or a yumpus.",
+    "generated_cot": "Polly is a yumpus. Max is a brimpus. Polly is transparent or a yumpus. Polly is a yumpus. Max is a brimpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Max is a yumpus. Polly is a yumpus. Max is a yumpus. Max is a yumpus. Max is a yumpus. Max is a yumpus. Max is a yumpus. Max is a yumpus. Max is a yumpus. Max is a yumpus. Max is yum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is opaque or a gorpus is a lempus. Everything that is nervous or a lempus is a tumpus. Everything that is temperate or a tumpus is an impus. Everything that is bright or an impus is a sterpus. Everything that is fast or a sterpus is a shumpus. Everything that is kind or a shumpus is a jompus. Everything that is earthy or a jompus is a lorpus. Everything that is bitter or a hilpus is a numpus. Everything that is moderate or a quimpus is a yumpus. Everything that is cold or a rempus is a vumpus. Everything that is windy or a rorpus is a brimpus. Everything that is wooden or a storpus is a dumpus. Everything that is opaque or a terpus is a wumpus. Everything that is bright or a rompus is a zumpus. Polly is a lempus. Stella is a rompus.",
+    "query": "Prove: Polly is nervous or a lempus.",
+    "generated_cot": "Polly is a lempus. Stella is a rompus. Polly is a lempus. Stella is a rompus. Polly is a lempus. Stella is a rompus. Polly is a lempus. Polly is a lempus. Polly is a lempus. Polly is a lempus. Polly is a lempus. Polly is a lempus. Polly is a lempus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stell is a rompus. Stell",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is blue or a wumpus is a sterpus. Everything that is small or a sterpus is a yumpus. Everything that is transparent or a yumpus is a gorpus. Everything that is wooden or a gorpus is a tumpus. Everything that is sweet or a tumpus is a rompus. Everything that is bright or a rompus is a zumpus. Everything that is shy or a zumpus is a jompus. Everything that is floral or a scrompus is a dumpus. Everything that is metallic or a chorpus is a numpus. Everything that is overcast or a terpus is a vumpus. Everything that is bright or a storpus is a shumpus. Everything that is fast or a bompus is a lempus. Everything that is loud or a hilpus is a grimpus. Everything that is opaque or a brimpus is a lorpus. Stella is a sterpus. Polly is a brimpus.",
+    "query": "Prove: Stella is small or a sterpus.",
+    "generated_cot": "Stella is a sterpus. Polly is a brimpus. Stella is small or a sterpus. Stella is a sterpus. Polly is a brimpus. Stella is a sterpus. Polly is a yumpus. Stella is a yumpus. Stella is a yumpus. Stella is a yumpus. Stella is a yumpus. Stella is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is slow or an impus is a vumpus. Everything that is red or a vumpus is a grimpus. Everything that is bitter or a grimpus is a rompus. Everything that is small or a rompus is a dumpus. Everything that is feisty or a dumpus is a zumpus. Everything that is opaque or a zumpus is a brimpus. Everything that is liquid or a brimpus is a tumpus. Everything that is slow or a terpus is a yumpus. Everything that is small or a kerpus is a lorpus. Everything that is sweet or a rorpus is a sterpus. Everything that is melodic or a jelpus is a shumpus. Everything that is temperate or a chorpus is a wumpus. Everything that is wooden or a yimpus is a gorpus. Everything that is transparent or a lempus is a jompus. Stella is a grimpus. Max is a lempus.",
+    "query": "Prove: Stella is bitter or a grimpus.",
+    "generated_cot": "Stella is a grimpus. Max is a lempus. Stella is bitter or a grimpus. Stella is a grimpus. Max is a lempus. Stella is a lempus. Max is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Stella is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rom",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is a shumpus or a zumpus is a sterpus. Everything that is a gerpus or a boompus is a gorpus. Everything that is an impus or a numpus is a chorpus. Wren is not a lempus. Rex is not a sterpus.",
+    "query": "Prove: Rex is not a zumpus and Rex is not a shumpus.",
+    "generated_cot": "Rex is not a sterpus. Wren is not a lempus. Rex is not a shumpus. Rex is not a zumpus. Rex is not a gerpus. Rex is not a boompus. Rex is not an impus. Rex is not a numpus. Rex is not a sterpus. Rex is not a shumpus. Rex is not a zumpus. Rex is not a gerpus. Rex is not a sterpus. Rex is not a sterpus. Rex is not a sterpus. Rex is not a numpus. Rex is not a numpus. Rex is not a numpus. Rex is not a shumpus. Rex is not a shumpus. Rex is not a shumpus. Rex is not a shumpus. Re",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Every vumpus is a quimpus and a sterpus. Rompuses are grimpuses and wumpuses. Every yerpus is a zumpus and a gorpus. Every gorpus is a numpus and a dumpus. Every fompus is a tumpus and an impus. Each sterpus is a shumpus and a jompus. Every lorpus is an orange lempus. Fae is a dumpus and a numpus. Fae is a grimpus and Alex is a rompus.",
+    "query": "Prove: Alex is a wumpus.",
+    "generated_cot": "Fae is a dumpus and a numpus. Fae is a grimpus. Alex is a rompus. Alex is a sterpus. Alex is a wumpus. Alex is a numpus. Alex is a sterpus. Alex is a wumpus. Alex is a sterpus. Alex is a wumpus. Alex is a wumpus. Alex is a wumpus. Alex is a wumpus. Alex is a sterpus. Alex is a sterpus. Alex is a sterpus. Alex is a sterpus. Alex is a numpus. Alex is a numpus. Alex is a sterpus. Alex is a sterpus. Alex is a sterpus. Alex is a wumpus. Alex is a wumpus. Alex is a sterpus. Alex is a wumpus. Alex is a w",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Each quimpus is windy. Every shumpus is a vumpus. Kerpuses are slow. Vumpuses are numpuses. Rempuses are muffled. Every numpus is a dumpus. Every scrompus is fruity. Dumpuses are zumpuses. Bompuses are temperate. Each zumpus is a yumpus. Every yumpus is not sour. Yerpuses are wumpuses. Every wumpus is feisty. Each wumpus is a gorpus. Every zhorpus is not hot. Every zhorpus is a grimpus. Grimpuses are large. Timpuses are not spicy. Timpuses are brimpuses. Brimpuses are luminous. Terpuses are blue. Terpuses are rompuses. Jompuses are sour. Rompuses are not dull. Each felpus is transparent. Every felpus is a tumpus. Each tumpus is opaque. Each rorpus is discordant. Rorpuses are lorpuses. Every lorpus is brown. Each fompus is floral. Fompuses are impuses. Every impus is aggressive. Every sterpus is feisty. Sterpuses are lempuses. Wren is a shumpus. Fae is a sterpus.",
+    "query": "True or false: Wren is not sour.",
+    "generated_cot": "Wren is not sour. True. Wren is a shumpus. Fae is a sterpus. Wren is a numpus. Wren is a brimpus. Wren is a tumpus. Wren is a brimpus. Wren is a tumpus. Wren is a brimpus. Wren is a brimpus. Wren is a brimpus. Wren is a brimpus. Wren is a brimpus. Wren is a brimpus. Wren is a brimpus. Wren is a brimpus. Wren is a brimpus. Wren is a brimpus. Wren is a brimpus. Wren is a brimpus. Wren is a brimpus is a brimpus. Wren is a brim",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Every shumpus is an impus. Tumpuses are impuses. Vumpuses are gorpuses. Each rorpus is a gorpus. Zhorpuses are gorpuses. Dumpuses are gorpuses. Numpuses are gorpuses. Sam is a vumpus or a rorpus. Wren is a shumpus or a tumpus.",
+    "query": "Prove: Wren is an impus.",
+    "generated_cot": "Wren is a shumpus or a tumpus. Wren is an impus. Wren is a rorpus. Wren is a zhorpus. Wren is a gorpus. Wren is a vumpus. Wren is a rorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a shumpus. Wren is a shumpus. Wren is a shumpus. Wren is a shumpus. Wren is a shumpus. Wren is a shumpus. Wren is a shumpus. Wren is a shumpus. Wren is a shumpus. Wren is a shumpus. Wren is a shumpus. Wren is a t",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is bright or a numpus is a fompus. Everything that is feisty or a dumpus is a yumpus. Everything that is opaque or a rorpus is a vumpus. Everything that is kind or a rempus is a wumpus. Everything that is temperate or a yimpus is a zumpus. Everything that is dull or a terpus is a rompus. Everything that is opaque or a sterpus is a shumpus. Sam is a dumpus. Fae is a sterpus.",
+    "query": "Prove: Sam is opaque or a yumpus.",
+    "generated_cot": "Sam is a dumpus. Fae is a sterpus. Sam is opaque or a yumpus. Sam is a dumpus. Fae is a sterpus. Sam is a yumpus. Sam is a yumpus. Sam is a yumpus. Sam is a yumpus. Sam is a yumpus. Sam is a yumpus. Sam is a yumpus. Fae is a yumpus. Fae is a yumpus. Fae is a yumpus. Fae is a yumpus. Fae is a yumpus. Fae is a yumpus. Fae is a yumpus. Fae is a yumpus. Fae is a yumpus. Fae is a yumpus. Fae is a yum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Gorpuses are jompuses and scrompuses. Grimpuses are vumpuses and sterpuses. Each boompus is a shumpus and a rompus. Each shumpus is a tumpus and a lorpus. Gwompuses are impuses and brimpuses. Every jompus is a numpus and a zumpus. Every yumpus is a small wumpus. Polly is a grimpus and Max is a vumpus. Max is a lorpus and a tumpus.",
+    "query": "Prove: Polly is a sterpus.",
+    "generated_cot": "Polly is a grimpus and Max is a vumpus. Max is a lorpus and a tumpus. Polly is a sterpus. Polly is a numpus. Polly is a zumpus. Polly is a wumpus. Polly is a tumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Max is a wumpus. Max is a w",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is snowy or a yumpus is a numpus. Everything that is moderate or a numpus is a dumpus. Everything that is muffled or a dumpus is a grimpus. Everything that is fruity or a grimpus is a lempus. Everything that is cold or a lempus is an impus. Everything that is bitter or an impus is a tumpus. Everything that is nervous or a tumpus is a gorpus. Everything that is large or a zhorpus is a vumpus. Everything that is floral or a hilpus is a shumpus. Everything that is red or a storpus is a sterpus. Everything that is aggressive or a terpus is a lorpus. Everything that is muffled or a quimpus is a rompus. Everything that is bright or a boompus is a brimpus. Everything that is nervous or a zumpus is a wumpus. Rex is a grimpus. Fae is a zumpus.",
+    "query": "Prove: Rex is fruity or a grimpus.",
+    "generated_cot": "Rex is a grimpus. Fae is a zumpus. Rex is fruity or a grimpus. Rex is a grimpus. Fae is a zumpus. Rex is a zumpus. Rex is a zumpus. Rex is a zumpus. Rex is a zumpus. Rex is a zumpus. Rex is a zumpus. Rex is a zumpus. Rex is a zumpus. Rex is a zumpus. Fae is a zumpus. Rex is a zumpus. Rex is a zumpus. Fae is a zumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus.",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Each lorpus is a boompus and a tumpus. Every rompus is a grimpus and a numpus. Each scrompus is a dumpus and a brimpus. Every brimpus is a wumpus and a yumpus. Rempuses are impuses and vumpuses. Each tumpus is a shumpus and a jompus. Sterpuses are large gorpuses. Fae is a yumpus and a wumpus. Fae is a numpus and Rex is a rompus.",
+    "query": "Prove: Rex is a grimpus.",
+    "generated_cot": "Rex is a rompus. Fae is a yumpus and a wumpus. Fae is a numpus. Rex is a tumpus. Rex is a brimpus. Rex is a wumpus. Rex is a numpus. Rex is a brimpus. Rex is a wumpus. Rex is a numpus. Rex is a tumpus. Rex is a tumpus. Rex is a tumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a wumpus. Rex is a tumpus. Rex is a numpus. Re",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is bright or a gorpus is a jompus. Everything that is rainy or a jompus is a vumpus. Everything that is fruity or a vumpus is an impus. Everything that is amenable or an impus is a tumpus. Everything that is discordant or a tumpus is a numpus. Everything that is hot or a numpus is a rompus. Everything that is fast or a rompus is a lorpus. Everything that is slow or a hilpus is a shumpus. Everything that is metallic or a boompus is a sterpus. Everything that is snowy or a quimpus is a yumpus. Everything that is aggressive or a fompus is a dumpus. Everything that is red or a worpus is a brimpus. Everything that is dull or a felpus is a zumpus. Everything that is hot or a lempus is a wumpus. Sally is a lempus. Wren is a gorpus.",
+    "query": "Prove: Wren is bright or a gorpus.",
+    "generated_cot": "Wren is a gorpus. Wren is bright or a gorpus. Wren is a jompus. Wren is rainy or a jompus. Wren is a vumpus. Wren is fruity or a vumpus. Wren is a vumpus. Wren is fruity or a vumpus. Wren is a vumpus. Wren is a vumpus. Wren is a vumpus. Wren is a vumpus. Wren is a vumpus. Wren is a vumpus. Wren is a vumpus. Wren is a vumpus. Wren is a vumpus. Wren is a vumpus. Wren is a vumpus. Wren is a vumpus. Wren is a vumpus. W is a vumpus. W is a jom",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Each orange grimpus is a zumpus. Every kind zumpus is a brimpus. Feisty brimpuses are yumpuses. Every melodic yumpus is a jompus. Temperate terpuses are lorpuses. Each bitter lorpus is a wumpus. Each moderate wumpus is a shumpus. Spicy bompuses are vumpuses. Windy yimpuses are rompuses. Fast kerpuses are tumpuses. Each angry jelpus is an impus. Each happy hilpus is a dumpus. Temperate rorpuses are lempuses. Earthy sterpuses are numpuses. Polly is a grimpus. Sally is a sterpus. Polly is kind. Polly is orange. Polly is temperate. Polly is feisty. Polly is melodic.",
+    "query": "Prove: Polly is a temperate jompus.",
+    "generated_cot": "Polly is a grimpus. Sally is a sterpus. Polly is kind. Polly is orange. Polly is temperate. Polly is feisty. Polly is melodic. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jo",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is bitter or a tumpus is a zumpus. Everything that is orange or a zumpus is a gorpus. Everything that is bright or a gorpus is a jompus. Everything that is small or a jompus is a vumpus. Everything that is shy or a vumpus is a grimpus. Everything that is opaque or a grimpus is a sterpus. Everything that is metallic or a sterpus is a numpus. Everything that is kind or a worpus is a brimpus. Everything that is overcast or a gerpus is an impus. Everything that is floral or a storpus is a shumpus. Everything that is red or a timpus is a lorpus. Everything that is bitter or a kerpus is a dumpus. Everything that is small or a gwompus is a lempus. Everything that is transparent or a yumpus is a wumpus. Max is a yumpus. Fae is a sterpus.",
+    "query": "Prove: Fae is metallic or a sterpus.",
+    "generated_cot": "Fae is metallic or a sterpus. Fae is a sterpus. Fae is a sterpus. Fae is a sterpus. Fae is a sterpus. Fae is a sterpus. Fae is a sterpus. Fae is a sterpus. Fae is a sterpus. Fae is a sterpus. Fae is a sterpus. Fae is a sterpus. Fae is metallic or a sterpus. Fae is metallic or a sterpus. Fae is metallic or a sterpus. Fae is metallic or a sterpus. Fae is metallic or a sterpus. Fae is metallic or a sterpus. Fae is metallic or a sterpus. Fae is metallic or a sterpus. Fae is metallic or a sterpus. Fae is a",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Each moderate gorpus is a rorpus. Earthy impuses are rompuses. Every angry rompus is a lorpus. Sunny lorpuses are zumpuses. Each muffled zumpus is a yumpus. Hot yumpuses are wumpuses. Each sweet scrompus is a sterpus. Small felpuses are dumpuses. Every orange storpus is a numpus. Opaque worpus are vumpuses. Happy yimpuses are tumpuses. Spicy gerpuses are jompuses. Every temperate timpus is a shumpus. Snowy brimpuses are grimpuses. Rex is hot. Max is a brimpus. Rex is sweet. Rex is sunny. Rex is an impus. Rex is earthy. Rex is muffled. Rex is angry.",
+    "query": "Prove: Rex is a sweet wumpus.",
+    "generated_cot": "Rex is a sweet wumpus. Rex is sunny. Rex is a brimpus. Rex is a sterpus. Rex is a numpus. Rex is a vumpus. Rex is a tumpus. Rex is a jompus. Rex is a shumpus. Rex is a jompus. Rex is a shumpus. Rex is a tumpus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a jom",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is cold or a rompus is a chorpus. Everything that is discordant or a brimpus is a lempus. Everything that is wooden or a hilpus is a zumpus. Everything that is aggressive or a zumpus is a grimpus. Everything that is dull or a grimpus is a lorpus. Everything that is happy or a lorpus is a sterpus. Everything that is slow or a sterpus is a jompus. Everything that is cold or a scrompus is a yumpus. Everything that is windy or a fompus is a gorpus. Everything that is fruity or a worpus is a shumpus. Everything that is kind or a zhorpus is a numpus. Everything that is transparent or a boompus is a tumpus. Everything that is dull or a gwompus is a vumpus. Everything that is loud or a dumpus is a wumpus. Wren is a brimpus. Rex is a dumpus.",
+    "query": "Prove: Wren is wooden or a lempus.",
+    "generated_cot": "Wren is a brimpus. Rex is a dumpus. Everything that is discordant or a brimpus is a lempus. Everything that is wooden or a hilpus is a zumpus. Everything that is aggressive or a zumpus is a grimpus. Everything that is dull or a grimpus is a lorpus. Everything that is happy or a lorpus is a sterpus. Everything that is slow or a lorpus is a lorpus. Everything that is slow or a lorpus is a lorpus. Everything that is slow or a lorpus is a lorpus. Everything that is a lorpus is a lorpus. Everything that is a lorpus is a lorpus. Everything that is a lorpus is a lorpus. Everything is a lorpus is a lorpus is a lorpus. Everything is a jom. Everything is a jom. Everything is a jom. Everything is a jom. Everything",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Yumpuses are lorpuses. Every lempus is a lorpus. Every grimpus is a shumpus. Every rorpus is a shumpus. Boompuses are shumpuses. Impuses are shumpuses. Every gorpus is a shumpus. Max is a grimpus or a rorpus. Sam is a yumpus or a lempus.",
+    "query": "Prove: Sam is a lorpus.",
+    "generated_cot": "Max is a grimpus or a rorpus. Sam is a yumpus or a lempus. Sam is a lorpus. Every lempus is a lorpus. Every grimpus is a shumpus. Every rorpus is a shumpus. Every gorpus is a shumpus. Every gorpus is a lorpus. Every shumpus is a lorpus. Every lorpus is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shumpus. Max is a shum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Every jompus is sweet. Jompuses are vumpuses. Each vumpus is dull. Vumpuses are wumpuses. Every wumpus is not feisty. Each wumpus is a tumpus. Tumpuses are not brown. Tumpuses are numpuses. Numpuses are transparent. Every numpus is a yerpus. Felpuses are not luminous. Every zumpus is a yumpus. Every yumpus is small. Boompuses are rompuses. Fompuses are muffled. Every fompus is an impus. Every impus is discordant. Each worpus is slow. Every worpus is a gorpus. Every gorpus is windy. Every chorpus is not angry. Chorpuses are lempuses. Lempuses are mean. Yimpuses are bright. Yimpuses are grimpuses. Each grimpus is temperate. Every timpus is luminous. Every dumpus is not small. Timpuses are shumpuses. Each shumpus is slow. Each gwompus is blue. Gwompuses are lorpuses. Lorpuses are floral. Each brimpus is not large. Brimpuses are sterpuses. Alex is a zumpus. Rex is a brimpus.",
+    "query": "True or false: Alex is not small.",
+    "generated_cot": "Answer is False. Alex is a zumpus. Rex is a brimpus. Alex is a tumpus. Alex is a numpus. Alex is a wumpus. Alex is a numpus. Alex is a wumpus. Alex is a wumpus. Alex is a wumpus. Alex is a wumpus. Alex is a wumpus. Alex is a wumpus. Alex is a tumpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a wumpus. Alex is a wumpus. Alex is a wumpus. Alex is a wumpus. Alex is a wumpus. Alex is a w",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Nervous brimpuses are yumpuses. Dull yumpuses are gorpuses. Luminous gorpuses are lorpuses. Every loud lorpus is a grimpus. Opaque grimpuses are wumpuses. Slow wumpuses are jompuses. Windy yerpuses are tumpuses. Each moderate quimpus is a vumpus. Every blue hilpus is a sterpus. Liquid boompuses are dumpuses. Each muffled chorpus is a shumpus. Every cold worpus is a zumpus. Each bitter storpus is a rompus. Snowy lempuses are impuses. Stella is slow. Stella is loud. Stella is opaque. Stella is luminous. Stella is nervous. Stella is a brimpus. Fae is a lempus. Stella is windy. Stella is dull.",
+    "query": "Prove: Stella is a windy jompus.",
+    "generated_cot": "Stella is a windy jompus. Stella is opaque. Stella is luminous. Stella is nervous. Stella is a brimpus. Stella is a lorpus. Stella is a wumpus. Stella is a jompus. Stella is a lorpus. Stella is a wumpus. Stella is a jompus. Stella is a wumpus. Stella is a lorpus. Stella is a lorpus. Stella is a lorpus. Stella is a lorpus. Stella is a lorpus. Stella is a lorpus. Stella is a lorpus. Stella is a lorpus. Stella is a lorpus. Stella is a lorpus. Stella is a lorpus. Stella is a lorpus. Stella is a lorpus. Stella jo.",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Blue yumpuses are dumpuses. Every large dumpus is a zumpus. Every slow zumpus is an impus. Opaque chorpuses are tumpuses. Melodic tumpuses are numpuses. Every cold numpus is a rompus. Every spicy rompus is a sterpus. Each bitter felpus is a vumpus. Transparent scrompuses are jompuses. Each fruity jelpus is a shumpus. Every luminous storpus is a lorpus. Every amenable bompus is a gorpus. Sunny boompuses are brimpuses. Bright grimpuses are wumpuses. Polly is blue. Polly is opaque. Polly is large. Polly is a yumpus. Polly is slow. Rex is a grimpus.",
+    "query": "Prove: Polly is an opaque impus.",
+    "generated_cot": "Polly is blue. Polly is opaque. Polly is large. Polly is a yumpus. Polly is slow. Polly is a zumpus. Polly is a tumpus. Polly is a numpus. Polly is a rompus. Polly is a sterpus. Polly is a jompus. Polly is a lorpus. Polly is a wumpus. Polly is a tumpus. Polly is a wumpus. Polly is a wumpus. Polly is a tumpus. Polly is a tumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a tum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Orange yumpuses are dumpuses. Each small dumpus is a zumpus. Each transparent zumpus is a vumpus. Wooden vumpuses are tumpuses. Bitter tumpuses are numpuses. Bright numpuses are rompuses. Every happy rompus is a gorpus. Every overcast zhorpus is a sterpus. Happy chorpuses are lorpuses. Each temperate boompus is a lempus. Every fruity rorpus is a brimpus. Each dull worpus is a grimpus. Muffled gerpuses are shumpuses. Every metallic impus is a wumpus. Sam is small. Stella is an impus. Sam is a dumpus.",
+    "query": "Prove: Sam is a small dumpus.",
+    "generated_cot": "Sam is small. Stella is an impus. Sam is a dumpus. Sam is a zumpus. Sam is a wumpus. Sam is a tumpus. Sam is a numpus. Sam is a tumpus. Sam is a numpus. Sam is a tumpus. Sam is a tumpus. Sam is a tumpus. Sam is a tumpus. Sam is a tumpus. Sam is a tumpus. Sam is a tumpus. Sam is a wumpus. Sam is a tumpus. Sam is a tumpus. Sam is a tumpus. Sam is a tumpus. Sam is a tumpus. Sam is a tumpus. Sam is a wumpus. Sam is a wumpus. Sam is a wumpus. Sam is a wum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is a grimpus or a wumpus is a lorpus. Everything that is a boompus or a timpus is a gorpus. Everything that is a shumpus or a dumpus is a kerpus. Polly is not a lorpus. Wren is not a vumpus.",
+    "query": "Prove: Polly is not a wumpus and Polly is not a grimpus.",
+    "generated_cot": "Polly is not a wumpus and Polly is not a grimpus. Polly is not a wumpus. Polly is not a grimpus. Polly is not a lorpus. Wren is not a vumpus. Polly is not a shumpus. Polly is not a dumpus. Polly is not a lorpus. Polly is not a shumpus. Polly is not a dumpus. Wren is not a shumpus. Wren is not a shumpus. Wren is not a shumpus. Wren is not a shumpus. Wren is not a shumpus. Wren is not a shumpus. Wren is not a shumpus. Wren is not a shumpus. Wren is not a dumpus. Wren is not a shumpus. Wren is not",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is snowy or a jompus is a numpus. Everything that is orange or a numpus is a rompus. Everything that is angry or a rompus is a dumpus. Everything that is large or a dumpus is a zumpus. Everything that is earthy or a zumpus is a yumpus. Everything that is dull or a yumpus is a wumpus. Everything that is transparent or a wumpus is an impus. Everything that is wooden or a kerpus is a tumpus. Everything that is bitter or a zhorpus is a gorpus. Everything that is moderate or a gerpus is a lempus. Everything that is bright or a storpus is a grimpus. Everything that is sunny or a fompus is a shumpus. Everything that is red or a hilpus is a lorpus. Everything that is opaque or a brimpus is a sterpus. Fae is a brimpus. Sally is a wumpus.",
+    "query": "Prove: Sally is transparent or a wumpus.",
+    "generated_cot": "Sally is transparent or a wumpus. Sally is a wumpus. Sally is a numpus. Sally is a rompus. Sally is a dumpus. Sally is a yumpus. Sally is a zumpus. Sally is a yumpus. Sally is a zumpus. Sally is a yumpus. Sally is a zumpus. Sally is a yumpus. Sally is a yumpus. Sally is a yumpus. Sally is a yumpus. Sally is a yumpus. Sally is a yumpus. Sally is a yumpus. Sally is a yumpus. Sally is a yumpus. Sally is a yumpus. Sally is a yumpus. Sally is a y",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Every rompus is not floral. Rompuses are numpuses. Numpuses are large. Numpuses are lempuses. Every lempus is opaque. Lempuses are impuses. Every impus is metallic. Each impus is a yimpus. Each bompus is sweet. Each vumpus is a brimpus. Brimpuses are bright. Every chorpus is a grimpus. Grimpuses are not feisty. Every grimpus is a gorpus. Zhorpuses are not floral. Zhorpuses are yumpuses. Every yumpus is amenable. Each jompus is not bright. Boompuses are shy. Every boompus is a zumpus. Zumpuses are not moderate. Fompuses are muffled. Fompuses are sterpuses. Each sterpus is windy. Rorpuses are liquid. Rorpuses are lorpuses. Lorpuses are temperate. Every yerpus is not transparent. Yerpuses are wumpuses. Every wumpus is discordant. Kerpuses are mean. Every kerpus is a shumpus. Shumpuses are not red. Tumpuses are not dull. Tumpuses are dumpuses. Stella is a vumpus. Alex is a tumpus.",
+    "query": "True or false: Stella is bright.",
+    "generated_cot": "Stella is bright. Stella is bright. Stella is a vumpus. Stella is a tumpus. Stella is a wumpus. Stella is a lorpus. Stella is a tumpus. Stella is a wumpus. Stella is a lorpus. Stella is a lorpus. Stella is a lorpus. Stella is a lorpus. Stella is a wumpus. Stella is a wumpus. Alex is a wumpus. Alex is a wumpus. Alex is a lorpus. Alex is a lorpus. Alex is a lorpus. Alex is a lorpus. Alex is a lorpus. Alex is a lorpus. Alex is a lorpus. Alex is a wumpus. Alex is a wumpus. Alex is a",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Each zumpus is a sterpus and a worpus. Gorpuses are lempuses and vumpuses. Zhorpuses are numpuses and jompuses. Each jompus is a dumpus and a brimpus. Every bompus is an impus and a tumpus. Each sterpus is a yumpus and a shumpus. Lorpuses are luminous wumpuses. Fae is a brimpus and a dumpus. Fae is a lempus and Sally is a gorpus.",
+    "query": "Prove: Sally is a vumpus.",
+    "generated_cot": "Fae is a brimpus and a dumpus. Fae is a lempus and a dumpus. Sally is a gorpus. Sally is a vumpus. Sally is a vumpus.",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is a zumpus or a rompus is a yumpus. Everything that is a yerpus or a zhorpus is a shumpus. Everything that is a vumpus or a wumpus is a quimpus. Sally is not a yumpus. Wren is not a tumpus.",
+    "query": "Prove: Sally is not a rompus and Sally is not a zumpus.",
+    "generated_cot": "Sally is not a rompus and Sally is not a zumpus. Sally is not a yumpus. Wren is not a tumpus. Sally is not a vumpus. Sally is not a wumpus. Sally is not a yumpus. Sally is not a tumpus. Sally is not a rompus. Sally is not a zumpus. Sally is not a yumpus. Sally is not a wumpus. Wren is not a wumpus. Wren is not a wumpus. Sally is not a wumpus. Wren is not a wumpus. Wren is not a yumpus. Sally is not a yumpus. Sally is not a yumpus. Sally is not a yumpus. Sally is notpus. Sally is not",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is orange or a brimpus is a jompus. Everything that is metallic or a jompus is a lempus. Everything that is sweet or a lempus is a gorpus. Everything that is dull or a gorpus is a tumpus. Everything that is slow or a tumpus is a felpus. Everything that is angry or a sterpus is a shumpus. Everything that is fruity or a rorpus is a lorpus. Everything that is aggressive or a hilpus is a vumpus. Everything that is snowy or a kerpus is an impus. Everything that is opaque or a boompus is a dumpus. Everything that is temperate or a gerpus is a rompus. Everything that is slow or a bompus is a numpus. Everything that is nervous or a worpus is a yumpus. Everything that is bright or a zumpus is a wumpus. Max is a sterpus. Stella is a zumpus.",
+    "query": "Prove: Max is fruity or a shumpus.",
+    "generated_cot": "Max is a sterpus. Stella is a zumpus. Max is a sterpus. Stella is a zumpus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is a jompus. Max is",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Every sweet rompus is a vumpus. Dull vumpuses are tumpuses. Every happy rempus is a lorpus. Opaque lorpuses are sterpuses. Every liquid sterpus is a lempus. Each large lempus is a shumpus. Orange shumpuses are yumpuses. Wooden timpuses are grimpuses. Every aggressive quimpus is a brimpus. Floral hilpuses are impuses. Each large gwompus is a jompus. Happy gerpuses are gorpuses. Orange bompuses are numpuses. Transparent dumpuses are zumpuses. Sally is dull. Sally is happy. Sally is sweet. Sally is a rompus. Sam is a dumpus.",
+    "query": "Prove: Sally is a happy tumpus.",
+    "generated_cot": "Sally is a rompus. Sally is a vumpus. Sally is a tumpus. Sally is a lorpus. Sally is a sterpus. Sally is a numpus. Sally is a wumpus. Sally is a numpus. Sally is a wumpus. Sally is a wumpus. Sally is a wumpus. Sally is a wumpus. Sally is a wumpus. Sally is a wumpus. Sally is a wumpus. Sally is a wumpus. Sally is a wumpus. Sally is a wumpus. Sally is a wumpus. Sally is a wumpus. Sally is a wumpus. Sally is a wumpus. Sally is a w",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Each hilpus is not melodic. Impuses are vumpuses. Zhorpuses are bitter. Vumpuses are wumpuses. Rorpuses are shy. Each wumpus is a tumpus. Every tumpus is red. Gerpuses are numpuses. Every numpus is transparent. Every zumpus is not red. Each numpus is a rompus. Rompuses are wooden. Rompuses are yumpuses. Each yumpus is not small. Every yumpus is a dumpus. Every rempus is floral. Rempuses are jompuses. Each jompus is not dull. Terpuses are large. Each terpus is a shumpus. Each shumpus is floral. Storpuses are not bright. Storpuses are sterpuses. Every sterpus is kind. Timpuses are not transparent. Each timpus is a lorpus. Lorpuses are not temperate. Chorpuses are shy. Every chorpus is a lempus. Lempuses are slow. Every gwompus is not snowy. Gwompuses are brimpuses. Every brimpus is windy. Each grimpus is not brown. Each grimpus is a gorpus. Max is a grimpus. Stella is an impus.",
+    "query": "True or false: Stella is not red.",
+    "generated_cot": "Stella is an impus. Stella is not red. Stella is a wumpus. Stella is a numpus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus. Stella is a jompus is a jom",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Every wumpus is orange. Wumpuses are zumpuses. Zumpuses are not large. Each jompus is bright. Each zumpus is a yumpus. Yumpuses are transparent. Yumpuses are boompuses. Every worpus is not metallic. Tumpuses are numpuses. Every rorpus is not sour. Each numpus is a rompus. Rompuses are not bright. Timpuses are dumpuses. Each dumpus is happy. Every dumpus is a gorpus. Zhorpuses are muffled. Zhorpuses are shumpuses. Shumpuses are slow. Kerpuses are small. Every kerpus is a sterpus. Each sterpus is cold. Every storpus is earthy. Storpuses are lorpuses. Lorpuses are muffled. Each gerpus is not feisty. Gerpuses are grimpuses. Each grimpus is fruity. Each hilpus is not spicy. Each hilpus is a lempus. Every lempus is windy. Every rempus is dull. Rempuses are brimpuses. Brimpuses are kind. Impuses are not opaque. Every impus is a vumpus. Max is an impus. Polly is a tumpus.",
+    "query": "True or false: Polly is not bright.",
+    "generated_cot": "Answer is False. Polly is a tumpus. Polly is a jompus. Polly is a zumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a zumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Every numpus is a zumpus and a tumpus. Each zumpus is a grimpus and a dumpus. Every dumpus is a rompus and a gorpus. Each tumpus is a brimpus and a vumpus. Each lempus is a melodic lorpus. Sally is a zumpus and Max is a dumpus. Max is a gorpus and a rompus.",
+    "query": "Prove: Sally is a zumpus.",
+    "generated_cot": "Sally is a zumpus. Max is a dumpus. Max is a gorpus and a rompus. Sally is a zumpus. Max is a dumpus. Max is a gorpus. Sally is a rompus. Sally is a rompus. Sally is a rompus. Sally is a rompus. Sally is a rompus. Sally is a rompus. Sally is a gorpus. Max is a gorpus. Max is a dumpus. Max is a dumpus. Max is a dumpus. Max is a gorpus. Max is a gorpus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rom",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is orange or a dumpus is a rorpus. Everything that is large or a grimpus is a tumpus. Everything that is sour or a tumpus is a zumpus. Everything that is transparent or a zumpus is a sterpus. Everything that is angry or a sterpus is a shumpus. Everything that is hot or a shumpus is a jompus. Everything that is fruity or a terpus is a brimpus. Everything that is sweet or a storpus is a vumpus. Everything that is luminous or a quimpus is an impus. Everything that is aggressive or a zhorpus is a gorpus. Everything that is cold or a boompus is a numpus. Everything that is bright or a scrompus is a rompus. Everything that is melodic or a timpus is a lempus. Everything that is shy or a yumpus is a wumpus. Stella is a yumpus. Polly is a grimpus.",
+    "query": "Prove: Polly is fruity or a jompus.",
+    "generated_cot": "Stella is a yumpus. Polly is a grimpus. Stella is a tumpus. Stella is a numpus. Stella is a rompus. Stella is a wumpus. Stella is a numpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stella is a wumpus. Stell is a wumpus. Stell is a wumpus. Stell is a wumpus. Stell is a wum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Gorpuses are temperate. Each gorpus is a dumpus. Dumpuses are wooden. Each dumpus is a shumpus. Every shumpus is not sour. Every shumpus is a boompus. Every jompus is not large. Every rempus is an impus. Every impus is dull. Every impus is a lorpus. Each lorpus is not shy. Lorpuses are sterpuses. Each sterpus is transparent. Sterpuses are vumpuses. Every gerpus is not loud. Gerpuses are rompuses. Every rompus is fast. Every kerpus is snowy. Kerpuses are numpuses. Each numpus is sunny. Jelpuses are moderate. Jelpuses are brimpuses. Every tumpus is large. Each brimpus is discordant. Each gwompus is small. Each gwompus is a grimpus. Grimpuses are brown. Rorpuses are not shy. Every rorpus is a zumpus. Each zumpus is not aggressive. Yerpuses are wooden. Every yerpus is a lempus. Lempuses are floral. Each yumpus is opaque. Yumpuses are wumpuses. Max is a yumpus. Sam is a jompus.",
+    "query": "True or false: Sam is large.",
+    "generated_cot": "Answer is False. Sam is a jompus. Sam is a shumpus. Sam is a dumpus. Sam is a shumpus. Sam is a dumpus. Sam is a dumpus. Sam is a dumpus. Sam is a dumpus. Sam is a dumpus. Sam is a dumpus. Sam is a dumpus. Sam is a dumpus. Sam is a dumpus. Sam is a dumpus. Max is a dumpus. Max is a dumpus. Max is a dumpus. Max is a dumpus. Max is a dumpus. Max is a dumpus. Max is a dumpus is a dumpus is a dumpus is a dumpus is a dumpus is a dumpus is a dumpus is a wumpus. Max is a wumpus. Max is a wumpus. Max is wumpus. Max is",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Wooden yumpuses are dumpuses. Amenable dumpuses are zumpuses. Each fast zumpus is a jompus. Bright jompuses are impuses. Melodic impuses are tumpuses. Cold gwompuses are numpuses. Every spicy numpus is a grimpus. Mean chorpuses are vumpuses. Everything that is a timpus and a worpus is a lorpus. Happy hilpuses are gorpuses. Large yimpuses are lempuses. Hot felpuses are brimpuses. Every spicy fompus is a shumpus. Fruity rompuses are wumpuses. Sally is wooden. Sally is cold. Sally is bright. Sally is fast. Sally is melodic. Sally is amenable. Polly is a rompus. Sally is a yumpus.",
+    "query": "Prove: Sally is a cold tumpus.",
+    "generated_cot": "Sally is a tumpus. Sally is a jompus. Sally is a zumpus. Sally is a jompus. Sally is a zumpus. Sally is a zumpus. Sally is a zumpus. Sally is a zumpus. Sally is a zumpus. Sally is a zumpus. Sally is a zumpus. Sally is a zumpus. Sally is a zumpus. Sally is a zumpus. Sally is a zumpus. Sally is a zumpus. Sally is a zumpus. Sally is a zumpus. Sally is a zumpus. Sally is a zumpus. Sally is a zumpus. Sally is a zumpus. Sally is a zumpuses are zumpuses are zumpuses are zumpuses are wumpuses are wumpuses are wum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Each dumpus is discordant. Tumpuses are slow. Every tumpus is a rorpus. Numpuses are not discordant. Gwompuses are rompuses. Quimpuses are luminous. Each quimpus is an impus. Each impus is not snowy. Jelpuses are large. Jelpuses are zumpuses. Each zumpus is dull. Each grimpus is rainy. Each grimpus is a brimpus. Max is a numpus. Sally is a grimpus.",
+    "query": "True or false: Max is not discordant.",
+    "generated_cot": "Max is not discordant. Max is not discordant. Max is a numpus. Sally is a grimpus. Max is a rompus. Max is a tumpus. Max is a numpus. Max is a tumpus. Max is a tumpus. Max is a tumpus. Max is a tumpus. Max is a tumpus. Max is a tumpus. Sally is a rompus. Sally is a rompus. Sally is a rompus. Max is a rompus. Max is a tumpus. Max is a tumpus. Max is a tumpus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a rompus. Max is a",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Tumpuses are numpuses and rompuses. Rompuses are lorpuses and lempuses. Every lempus is a dumpus and a brimpus. Numpuses are shumpuses and yumpuses. Each gorpus is a muffled impus. Fae is a rompus and Rex is a lempus. Rex is a brimpus and a dumpus.",
+    "query": "Prove: Fae is a rompus.",
+    "generated_cot": "Fae is a rompus and Rex is a lempus. Rex is a brimpus and a dumpus. Fae is a rompus. Rex is a lempus. Rex is a brimpus. Rex is a dumpus. Rex is a brimpus. Rex is a dumpus. Rex is a brimpus. Rex is a dumpus. Rex is a brimpus. Rex is a dumpus. Fae is a lempus. Rex is a brimpus. Rex is a dumpus. Rex is a dumpus. Rex is a dumpus. Rex is a dumpus. Rex is a dumpus. Rex is a brimpus. Rex is a brimpus. Rex is a brimpus. Rex is a brimpus. Rex is",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is liquid or a wumpus is a hilpus. Everything that is spicy or a lempus is a numpus. Everything that is discordant or a numpus is a grimpus. Everything that is temperate or a grimpus is a dumpus. Everything that is happy or a dumpus is a gorpus. Everything that is moderate or a rempus is a jompus. Everything that is angry or a jompus is an impus. Everything that is transparent or a gwompus is a brimpus. Everything that is cold or a zhorpus is a shumpus. Everything that is windy or a storpus is a rompus. Everything that is a scrompus or a gerpus is a lorpus. Everything that is liquid or a boompus is a tumpus. Everything that is kind or a yimpus is a sterpus. Everything that is fruity or a zumpus is a yumpus. Alex is a zumpus. Sam is a lempus.",
+    "query": "Prove: Sam is moderate or a gorpus.",
+    "generated_cot": "Alex is a zumpus. Sam is a lempus. Sam is moderate or a gorpus. Sam is a gorpus. Alex is a zumpus. Sam is a lempus. Sam is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. Alex is a numpus. numpus. num",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Every cold zumpus is a numpus. Fruity numpuses are grimpuses. Each bright grimpus is a terpus. Wooden lempuses are gorpuses. Every happy kerpus is a jompus. Transparent jompuses are lorpuses. Every small lorpus is a rompus. Large fompuses are shumpuses. Hot storpuses are sterpuses. Each fast yimpus is a brimpus. Every bright yerpus is an impus. Melodic boompuses are tumpuses. Each sweet bompus is a wumpus. Each brown vumpus is a yumpus. Sally is a vumpus. Rex is a lempus. Rex is wooden. Rex is happy.",
+    "query": "Prove: Rex is a happy gorpus.",
+    "generated_cot": "Answer is N/A. chain-of-thought: Rex is a lempus. Rex is wooden. Rex is happy. Rex is a gorpus. Rex is a jompus. Rex is a lorpus. Rex is a shumpus. Rex is a sterpus. Rex is a wumpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a jompus. Rex is a jompus. Rex is a jompus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a wumpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a w",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Zumpuses are yumpuses and shumpuses. Yumpuses are wumpuses and lorpuses. Each wumpus is a brimpus and a rompus. Brimpuses are sterpuses and lempuses. Lorpuses are gorpuses and numpuses. Shumpuses are grimpuses and tumpuses. Each jompus is a small vumpus. Fae is a lempus and a sterpus. Rex is a wumpus and Fae is a brimpus.",
+    "query": "Prove: Rex is a wumpus.",
+    "generated_cot": "Rex is a wumpus. Fae is a brimpus. Rex is a sterpus. Rex is a lempus. Rex is a sterpus. Rex is a lempus. Rex is a sterpus. Rex is a lempus. Rex is a lempus. Rex is a lempus. Rex is a lempus. Rex is a lempus. Rex is a sterpus. Rex is a sterpus. Rex is a sterpus. Rex is a sterpus. Rex is a sterpus. Rex is a sterpus. Rex is a sterpus. Rex is a lempus. Rex is a lempus. Rex is a lempus. Rex is a lempus. Rex is a sterpus. Rex is a ster",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is a yumpus or a dumpus is a rompus. Everything that is a bompus or a timpus is a grimpus. Everything that is an impus or a zumpus is a scrompus. Fae is not a rompus. Polly is not a vumpus.",
+    "query": "Prove: Fae is not a dumpus and Fae is not a yumpus.",
+    "generated_cot": "Fae is not a dumpus and Fae is not a yumpus. Fae is not a yumpus. Fae is not a dumpus. Fae is not a yumpus. Fae is not a dumpus. Fae is not a yumpus. Fae is not a dumpus. Fae is not a yumpus. Fae is not a dumpus. Fae is not a yumpus. Fae is not a dumpus. Fae is not a dumpus. Fae is not a dumpus. Fae is not a dumpus. Fae is not a dumpus. Fae is not a dumpus. Fae is not a dumpus. Fae is not a dumpus. Fae is not a dumpus. Fae is not a yumpus. Fae is not a yumpus. Fae",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is sweet or a dumpus is a chorpus. Everything that is red or a jompus is a numpus. Everything that is metallic or a numpus is a lorpus. Everything that is large or a yimpus is a sterpus. Everything that is bright or a sterpus is a shumpus. Everything that is nervous or a shumpus is a gorpus. Everything that is opaque or a gorpus is an impus. Everything that is snowy or a kerpus is a lempus. Everything that is amenable or a gwompus is a grimpus. Everything that is hot or a quimpus is a brimpus. Everything that is transparent or a hilpus is a rompus. Everything that is slow or a worpus is a tumpus. Everything that is happy or a terpus is a zumpus. Everything that is small or a yumpus is a wumpus. Fae is a yumpus. Alex is a jompus.",
+    "query": "Prove: Alex is large or a lorpus.",
+    "generated_cot": "Alex is a jompus. Alex is large or a lorpus. Alex is a lorpus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a lorpus. Alex is",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Dumpuses are not slow. Every dumpus is an impus. Impuses are large. Every impus is a numpus. Each numpus is sweet. Every numpus is a gorpus. Gorpuses are not metallic. Gorpuses are sterpuses. Sterpuses are dull. Each sterpus is a boompus. Lempuses are not happy. Hilpuses are shumpuses. Shumpuses are opaque. Shumpuses are vumpuses. Each gerpus is not small. Gerpuses are grimpuses. Every grimpus is cold. Rorpuses are melodic. Every rorpus is a brimpus. Brimpuses are not discordant. Each yerpus is not sunny. Yerpuses are jompuses. Every jompus is brown. Every felpus is floral. Felpuses are wumpuses. Each wumpus is not floral. Every timpus is liquid. Every tumpus is happy. Every timpus is a lorpus. Lorpuses are windy. Each fompus is cold. Every fompus is a rompus. Every rompus is mean. Each zumpus is not transparent. Each zumpus is a yumpus. Rex is a lempus. Max is a zumpus.",
+    "query": "True or false: Rex is happy.",
+    "generated_cot": "Answer is False. Rex is a lempus. Max is a zumpus. Rex is a numpus. Rex is a sterpus. Rex is a numpus. Rex is a sterpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a numpus. Rex is a num",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Wumpuses are zumpuses. Grimpuses are zumpuses. Sterpuses are numpuses. Quimpuses are numpuses. Every gwompus is a numpus. Shumpuses are numpuses. Every lorpus is a numpus. Sam is a wumpus or a grimpus. Wren is a sterpus or a quimpus.",
+    "query": "Prove: Sam is a zumpus.",
+    "generated_cot": "Wren is a sterpus or a quimpus. Sam is a wumpus or a grimpus. Wren is a numpus. Wren is a numpus. Wren is a numpus. Wren is a numpus. Wren is a numpus. Wren is a numpus. Wren is a numpus. Wren is a numpus. Wren is a numpus. Wren is a numpus. Wren is a wumpus. Wren is a wumpus. Wren is a wumpus. Wren is a wumpus. Wren is a wumpus. Wren is a wumpus. Wren is a wumpus. Wren is a wumpus. Wren is a wumpus. Wren is a wumpus. Wren is a w",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Each orange shumpus is an impus. Large impuses are wumpuses. Dull wumpuses are tumpuses. Each opaque tumpus is a rompus. Every angry rompus is a zumpus. Every fruity zumpus is a yumpus. Sour yumpuses are grimpuses. Each transparent chorpus is a dumpus. Every cold fompus is a numpus. Muffled boompuses are vumpuses. Wooden kerpuses are jompuses. Small timpuses are gorpuses. Spicy jelpuses are lempuses. Each fruity brimpus is a lorpus. Stella is a brimpus. Max is opaque. Max is a tumpus.",
+    "query": "Prove: Max is an opaque tumpus.",
+    "generated_cot": "Max is an opaque tumpus. Max is an opaque tumpus. Max is an opaque tumpus. Max is an opaque tumpus. Max is an opaque tumpus. Max is an opaque tumpus. Max is an opaque tumpus. Max is an opaque tumpus. Max is an opaque tumpus. Max is an opaque tumpus. Max is an opaque tumpus. Max is an opaque tumpus. Max is an opaque tumpus. Max is an opaque tumpus. Max is an opaque tumpus. Max is an opaque tumpus. Max is an opaque wumpus. Max is a wumpus. Max is a wumpus. Max is a wumpus. Max is a wumpus. Max is a wum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Every sterpus is snowy. Sterpuses are quimpuses. Timpuses are not amenable. Every lorpus is a tumpus. Terpuses are spicy. Tumpuses are brimpuses. Every yerpus is orange. Each brimpus is a grimpus. Grimpuses are nervous. Each rorpus is a lempus. Lempuses are metallic. Every lempus is a gorpus. Gorpuses are not small. Every gorpus is a rompus. Each fompus is floral. Every fompus is a vumpus. Each vumpus is not transparent. Gwompuses are shy. Dumpuses are not nervous. Gwompuses are impuses. Every impus is dull. Each gerpus is melodic. Gerpuses are jompuses. Each jompus is fruity. Each rempus is opaque. Rempuses are shumpuses. Shumpuses are not cold. Worpus are spicy. Every worpus is a zumpus. Every zumpus is not melodic. Jelpuses are rainy. Each jelpus is a numpus. Numpuses are slow. Yumpuses are brown. Yumpuses are wumpuses. Stella is a lorpus. Fae is a yumpus.",
+    "query": "True or false: Stella is nervous.",
+    "generated_cot": "Stella is a lorpus. Fae is a yumpus. Stella is a tumpus. Stella is a brimpus. Stella is a tumpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a tumpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stell is a brimpus. Stell is a brimpus. Stell is a brimpus. Stell is a brim",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Each red wumpus is a vumpus. Every cold vumpus is a yumpus. Each spicy yumpus is a numpus. Every snowy numpus is a jelpus. Floral rompuses are dumpuses. Dull quimpuses are zumpuses. Shy zumpuses are gorpuses. Each shy zhorpus is a sterpus. Small terpuses are lorpuses. Luminous chorpuses are tumpuses. Brown timpuses are impuses. Opaque scrompuses are brimpuses. Angry gwompuses are shumpuses. Each sunny grimpus is a lempus. Alex is a rompus. Wren is a grimpus. Alex is dull. Alex is floral.",
+    "query": "Prove: Alex is a dull dumpus.",
+    "generated_cot": "Answer is N/A. Alex is a rompus. Wren is a grimpus. Alex is dull. Alex is floral. Alex is a dumpus. Alex is a zumpus. Alex is a sterpus. Alex is a lorpus. Alex is a tumpus. Alex is a brimpus. Alex is a shumpus. Alex is a wumpus. Alex is a numpus. Alex is a yumpus. Alex is a wumpus. Alex is a wumpus. Alex is a wumpus. Alex is a wumpus. Alex is a wumpus. Alex is a wumpus. Alex is a wumpus. Alex is a wumpus. Alex is a wumpus. Wren is a wumpus. Wren is a yumpus. Wren is a yum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is happy or a yumpus is a rompus. Everything that is blue or a rompus is a dumpus. Everything that is small or a dumpus is a lempus. Everything that is moderate or a lempus is a shumpus. Everything that is opaque or a shumpus is a zhorpus. Everything that is liquid or a gorpus is an impus. Everything that is rainy or a jelpus is a tumpus. Everything that is brown or a terpus is a jompus. Everything that is amenable or a chorpus is a grimpus. Everything that is sunny or a storpus is a brimpus. Everything that is dull or a quimpus is a sterpus. Everything that is bitter or a scrompus is a vumpus. Everything that is transparent or a gerpus is a lorpus. Everything that is fast or a zumpus is a wumpus. Polly is a zumpus. Fae is a gorpus.",
+    "query": "Prove: Fae is rainy or an impus.",
+    "generated_cot": "Fae is rainy or an impus. Fae is rainy or an impus. Fae is a gorpus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae is a rompus. Fae",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Red sterpuses are yimpuses. Every sour impus is a yumpus. Hot chorpuses are tumpuses. Floral tumpuses are rompuses. Melodic rompuses are dumpuses. Angry dumpuses are zumpuses. Fast zumpuses are lempuses. Aggressive yerpuses are numpuses. Every slow worpus is a vumpus. Every discordant zhorpus is a jompus. Each red bompus is a shumpus. Small gerpuses are gorpuses. Every wooden timpus is a grimpus. Hot lorpuses are wumpuses. Polly is hot. Polly is an impus. Polly is sour. Sally is a lorpus.",
+    "query": "Prove: Polly is a hot yumpus.",
+    "generated_cot": "Polly is hot. Polly is an impus. Polly is sour. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly is a yumpus. Polly yum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is overcast or a gorpus is a lempus. Everything that is angry or a lempus is a vumpus. Everything that is slow or a vumpus is a lorpus. Everything that is fruity or a lorpus is a shumpus. Everything that is melodic or a shumpus is a jompus. Everything that is hot or a jompus is an impus. Everything that is sweet or an impus is a grimpus. Everything that is windy or a chorpus is a brimpus. Everything that is transparent or a gwompus is a dumpus. Everything that is floral or a terpus is a rompus. Everything that is angry or a felpus is a numpus. Everything that is bright or a bompus is a yumpus. Everything that is discordant or a rorpus is a zumpus. Everything that is happy or a tumpus is a wumpus. Fae is a lempus. Alex is a tumpus.",
+    "query": "Prove: Fae is angry or a lempus.",
+    "generated_cot": "Fae is a lempus. Alex is a tumpus. Fae is angry or a lempus. Fae is a lempus. Alex is a tumpus. Alex is a wumpus. Alex is a numpus. Alex is a brimpus. Alex is a dumpus. Alex is a rompus. Alex is a tumpus. Alex is a wumpus. Fae is a rompus. Alex is a rompus. Alex is a wumpus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a tumpus. Alex is a wumpus. Alex is a rompus. a w",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Tumpuses are numpuses and rompuses. Rompuses are lorpuses and lempuses. Every lempus is a dumpus and a brimpus. Numpuses are shumpuses and yumpuses. Each gorpus is a muffled impus. Fae is a rompus and Rex is a lempus. Rex is a brimpus and a dumpus.",
+    "query": "Prove: Fae is a rompus.",
+    "generated_cot": "Fae is a rompus and Rex is a lempus. Rex is a brimpus and a dumpus. Fae is a rompus. Rex is a lempus. Rex is a brimpus. Rex is a dumpus. Rex is a brimpus. Rex is a dumpus. Rex is a brimpus. Rex is a dumpus. Rex is a brimpus. Rex is a dumpus. Fae is a lempus. Rex is a brimpus. Rex is a dumpus. Rex is a dumpus. Rex is a dumpus. Rex is a dumpus. Rex is a dumpus. Rex is a brimpus. Rex is a brimpus. Rex is a brimpus. Rex is a brimpus. Rex is",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Each brown vumpus is a numpus. Each mean numpus is a wumpus. Each shy wumpus is a rompus. Each loud rompus is a dumpus. Every fruity dumpus is a zumpus. Every sour zumpus is a yumpus. Rainy yumpuses are lempuses. Rainy jelpuses are gorpuses. Temperate rempuses are jompuses. Floral worpus are brimpuses. Opaque bompuses are lorpuses. Every dull rorpus is an impus. Muffled hilpuses are tumpuses. Moderate grimpuses are sterpuses. Rex is a grimpus. Sam is a yumpus. Sam is rainy.",
+    "query": "Prove: Sam is a rainy yumpus.",
+    "generated_cot": "Answer is N/A. Rex is a grimpus. Sam is a yumpus. Sam is rainy. Sam is a yumpus. Sam is rainy. Sam is a yumpus. Sam is a yumpus. Sam is a yumpus. Sam is a yumpus. Sam is a yumpus. Sam is a yumpus. Sam is a yumpus. Sam is a yumpus. Rex is a grimpus. Rex is a grimpus. Rex is a grimpus. Rex is a grimpus. Rex is a grimpus. Rex is a grimpus. Rex is a grimpus. Rex is a grimpus. Rex is a grimpus. Rex is a grimpus. Rex is a grimpus. Rex is a grimpus. Rex is a yumpus. Sam is y",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Dumpuses are not orange. Each dumpus is a rompus. Rompuses are not discordant. Rompuses are brimpuses. Brimpuses are small. Each brimpus is a sterpus. Each sterpus is windy. Sterpuses are quimpuses. Chorpuses are bitter. Each gorpus is a jompus. Each zhorpus is not transparent. Jompuses are numpuses. Numpuses are moderate. Every fompus is a vumpus. Gerpuses are sour. Gerpuses are wumpuses. Wumpuses are bright. Each boompus is orange. Each boompus is a lempus. Lempuses are not luminous. Rorpuses are floral. Tumpuses are not moderate. Rorpuses are grimpuses. Each grimpus is nervous. Terpuses are aggressive. Every terpus is a yumpus. Every yumpus is floral. Every yimpus is dull. Every yimpus is a shumpus. Each shumpus is not amenable. Every gwompus is large. Every gwompus is an impus. Impuses are cold. Every lorpus is windy. Lorpuses are zumpuses. Sam is a lorpus. Polly is a gorpus.",
+    "query": "True or false: Polly is not moderate.",
+    "generated_cot": "Polly is not moderate. Polly is a rompus. Polly is a sterpus. Polly is a jompus. Polly is a sterpus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jompus. Polly is a jom",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Lorpuses are not overcast. Each lorpus is a grimpus. Every grimpus is muffled. Every grimpus is a shumpus. Each shumpus is not cold. Shumpuses are lempuses. Lempuses are blue. Lempuses are felpuses. Boompuses are bright. Each gorpus is an impus. Each impus is transparent. Jelpuses are tumpuses. Every tumpus is not small. Tumpuses are rompuses. Dumpuses are not transparent. Each fompus is not brown. Every fompus is a wumpus. Wumpuses are metallic. Bompuses are small. Each bompus is a yumpus. Each yumpus is shy. Rempuses are temperate. Rempuses are zumpuses. Each zumpus is not sour. Each rorpus is not melodic. Every rorpus is a numpus. Numpuses are not floral. Quimpuses are angry. Quimpuses are vumpuses. Vumpuses are kind. Each gwompus is happy. Each gwompus is a jompus. Jompuses are not slow. Every brimpus is wooden. Each brimpus is a sterpus. Fae is a gorpus. Stella is a brimpus.",
+    "query": "True or false: Fae is transparent.",
+    "generated_cot": "Fae is transparent. False. Fae is a gorpus. Stella is a brimpus. Fae is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brimpus. Stella is a brim",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Sour wumpuses are tumpuses. Every orange tumpus is a yumpus. Each metallic yumpus is a numpus. Every small numpus is a rompus. Every bright rompus is a dumpus. Each happy dumpus is a zumpus. Every opaque scrompus is an impus. Blue kerpuses are lempuses. Everything that is a terpus and a worpus is a grimpus. Transparent boompuses are brimpuses. Every mean jelpus is a sterpus. Every melodic fompus is a shumpus. Every fruity chorpus is a lorpus. Everything that is a hilpus and a gorpus is a jompus. Fae is sour. Fae is opaque. Fae is small. Fae is orange. Stella is a gorpus. Fae is a wumpus. Fae is bright. Fae is happy. Fae is metallic.",
+    "query": "Prove: Fae is an opaque zumpus.",
+    "generated_cot": "Fae is an opaque zumpus. Fae is a wumpus. Fae is bright. Fae is happy. Fae is metallic. Fae is a numpus. Fae is a dumpus. Fae is a zumpus. Fae is a rompus. Fae is a numpus. Fae is a dumpus. Fae is a zumpus. Fae is a rompus. Fae is a dumpus. Fae is a rompus. Fae is a rompus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fae is a numpus. Fa",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is an impus or a zumpus is a jompus. Everything that is a quimpus or a boompus is a wumpus. Everything that is a shumpus or a sterpus is a storpus. Rex is not a jompus. Polly is not a numpus.",
+    "query": "Prove: Rex is not a zumpus and Rex is not an impus.",
+    "generated_cot": "Rex is not a jompus. Polly is not a numpus. Rex is not a zumpus and Rex is not an impus. Rex is not a zumpus. Polly is not a numpus. Rex is not a wumpus. Rex is not a sterpus. Rex is not a shumpus. Rex is not a sterpus. Rex is not a jompus. Polly is not a sterpus. Polly is not a sterpus. Polly is not a sterpus. Polly is not a sterpus. Polly is not a sterpus. Rex is not a sterpus. Rex is not a sterpus. Rex is not a sterpus. Rex is not a sterpus. Rex is not a jompus. Rex is not a.",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is fruity or a grimpus is a brimpus. Everything that is red or a brimpus is a gorpus. Everything that is liquid or a gorpus is a yumpus. Everything that is small or a yumpus is a lorpus. Everything that is dull or a scrompus is a sterpus. Everything that is shy or a sterpus is a shumpus. Everything that is transparent or a shumpus is an impus. Everything that is a timpus or a kerpus is a rompus. Everything that is loud or a rempus is a numpus. Everything that is dull or a bompus is a tumpus. Everything that is shy or a gerpus is a lempus. Everything that is hot or a rorpus is a dumpus. Everything that is a hilpus or a gwompus is a jompus. Everything that is metallic or a zumpus is a wumpus. Rex is a zumpus. Stella is a grimpus.",
+    "query": "Prove: Stella is dull or a lorpus.",
+    "generated_cot": "Stella is a grimpus. Stella is a brimpus. Stella is a lorpus. Stella is a tumpus. Stella is a numpus. Stella is a tumpus. Stella is a numpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a tumpus. Stella is a wumpus. Stell is a wumpus. Stell is a wumpus. Stell is a wumpus.",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is dull or a wumpus is an impus. Everything that is sour or an impus is a sterpus. Everything that is angry or a sterpus is a jompus. Everything that is fruity or a jompus is a vumpus. Everything that is snowy or a vumpus is a grimpus. Everything that is discordant or a grimpus is a shumpus. Everything that is hot or a storpus is a lempus. Everything that is muffled or a yerpus is a rompus. Everything that is happy or a jelpus is a numpus. Everything that is mean or a fompus is a zumpus. Everything that is floral or a hilpus is a dumpus. Everything that is small or a terpus is a tumpus. Everything that is bright or a scrompus is a yumpus. Everything that is temperate or a lorpus is a gorpus. Wren is a wumpus. Polly is a lorpus.",
+    "query": "Prove: Wren is hot or a shumpus.",
+    "generated_cot": "Wren is a wumpus. Polly is a lorpus. Everything that is dull or a wumpus is an impus. Wren is a wumpus. Polly is a lorpus. Everything that is sour or an impus is a sterpus. Wren is a sterpus. Everything that is angry or a sterpus is a jompus. Wren is a jompus. Everything that is fruity or a jompus. Wren is a jompus. Polly is a jompus. Polly is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Everything that is a jompus. Wren is a jompus is a jom",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Every angry tumpus is a numpus. Opaque numpuses are rompuses. Each nervous rompus is a dumpus. Wooden dumpuses are zumpuses. Each floral zumpus is a yumpus. Sour yumpuses are wumpuses. Each dull wumpus is a shumpus. Each slow bompus is a lorpus. Every feisty timpus is a sterpus. Each transparent terpus is a brimpus. Aggressive rorpuses are lempuses. Each temperate jelpus is a jompus. Fruity chorpuses are grimpuses. Metallic impuses are vumpuses. Sally is dull. Fae is an impus. Sally is a wumpus.",
+    "query": "Prove: Sally is a dull wumpus.",
+    "generated_cot": "Answer is N/A. chain-of-thought: Sally is a dull wumpus. Sally is a shumpus. Sally is a lorpus. Sally is a sterpus. Sally is a jompus. Sally is a grimpus. Sally is an impus. Sally is a jompus. Sally is a grimpus. Sally is a vumpus. Sally is a vumpus. Sally is a grimpus. Fae is a grimpus. Sally is a grimpus. Sally is a grimpus. Sally is a grimpus. Sally is a grimpus. Sally is a grimpus. Sally is a grimpus. Sally is a vumpus. Sally is a vumpus. Fae is an impus. Fae is a vumpus. Fae is an impus. Fae is a vu",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Aggressive impuses are scrompuses. Rainy vumpuses are wumpuses. Each spicy yerpus is a tumpus. Every muffled tumpus is a numpus. Each feisty numpus is a zumpus. Each metallic zumpus is a yumpus. Slow yumpuses are rompuses. Every hot fompus is a gorpus. Each liquid rempus is a lempus. Every transparent terpus is a grimpus. Orange gwompuses are brimpuses. Dull worpus are shumpuses. Every sour gerpus is a lorpus. Each fast sterpus is a jompus. Wren is rainy. Wren is a vumpus. Wren is spicy. Sam is a sterpus.",
+    "query": "Prove: Wren is a spicy wumpus.",
+    "generated_cot": "Wren is a spicy wumpus. Wren is a vumpus. Wren is a sterpus. Wren is a numpus. Wren is a tumpus. Wren is a numpus. Wren is a tumpus. Wren is a numpus. Wren is a numpus. Wren is a numpus. Wren is a numpus. Wren is a numpus. Wren is a tumpus. Wren is a tumpus. Wren is a tumpus. Wren is a tumpus. Wren is a tumpus. Wren is a tumpus. Wren is a tumpus. Wren is a tumpus. Wren is a tumpus. Wren is a tumpus. Wren is a tumpus. Wren is a w",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Jelpuses are loud. Each tumpus is a numpus. Numpuses are not opaque. Every fompus is a wumpus. Wumpuses are feisty. Every wumpus is a rompus. Rompuses are liquid. Every gorpus is opaque. Rompuses are dumpuses. Each dumpus is temperate. Dumpuses are zumpuses. Zumpuses are sweet. Zumpuses are yumpuses. Every yumpus is not bright. Each yumpus is a shumpus. Bompuses are shy. Bompuses are lempuses. Lempuses are floral. Rempuses are not floral. Rempuses are grimpuses. Every grimpus is angry. Each hilpus is brown. Each hilpus is a brimpus. Brimpuses are slow. Every worpus is not muffled. Worpus are sterpuses. Each sterpus is brown. Kerpuses are spicy. Each kerpus is a jompus. Every jompus is overcast. Each yimpus is not temperate. Each yimpus is a lorpus. Every lorpus is small. Impuses are not transparent. Impuses are vumpuses. Wren is an impus. Alex is a tumpus.",
+    "query": "True or false: Alex is not opaque.",
+    "generated_cot": "Answer is False. Alex is not opaque. Alex is a tumpus. Alex is a numpus. Alex is a wumpus. Alex is a rompus. Alex is a numpus. Alex is a wumpus. Alex is a rompus. Alex is a wumpus. Alex is a rompus. Alex is a rompus. Alex is a wumpus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a numpus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rompus. Alex is a rom",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Yumpuses are not blue. Lorpuses are not earthy. Every yumpus is a sterpus. Sterpuses are not small. Every sterpus is a numpus. Numpuses are bright. Every numpus is a chorpus. Terpuses are fast. Every zumpus is a gorpus. Each yimpus is discordant. Every gorpus is an impus. Every impus is earthy. Every hilpus is a jompus. Jompuses are not windy. Jompuses are brimpuses. Every storpus is angry. Storpuses are vumpuses. Every vumpus is not temperate. Rorpuses are moderate. Each rorpus is a lempus. Lempuses are not opaque. Yerpuses are cold. Each yerpus is a tumpus. Tumpuses are amenable. Gerpuses are not spicy. Every gerpus is a rompus. Rompuses are happy. Rempuses are bright. Rempuses are shumpuses. Every shumpus is spicy. Felpuses are floral. Every felpus is a grimpus. Every grimpus is liquid. Each dumpus is not windy. Each dumpus is a wumpus. Max is a dumpus. Sally is a zumpus.",
+    "query": "True or false: Sally is not earthy.",
+    "generated_cot": "Sally is not earthy. Sally is not earthy. Sally is a zumpus. Sally is a numpus. Sally is a sterpus. Sally is a numpus. Sally is a sterpus. Sally is a numpus. Sally is a numpus. Sally is a numpus. Sally is a numpus. Sally is a numpus. Sally is a numpus. Sally is a numpus. Sally is a numpus. Sally is a numpus. Sally is a sterpus. Sally is a numpus. Sally is a numpus is a numpus. Sally is a numpus. Sally is a numpus. Sally is a numpus. Sally is a numpus. Sally is a numpus. Sally is a num",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Small lorpuses are felpuses. Each wooden rompus is a sterpus. Fruity sterpuses are zumpuses. Each opaque hilpus is a brimpus. Each sour brimpus is a grimpus. Every bright grimpus is a lempus. Feisty lempuses are gorpuses. Every sour zhorpus is a tumpus. Slow terpuses are vumpuses. Everything that is a jelpus and a gerpus is an impus. Every loud yimpus is a wumpus. Every windy yerpus is a dumpus. Everything that is a gwompus and a chorpus is a yumpus. Opaque shumpuses are numpuses. Polly is a rompus. Polly is fruity. Polly is wooden. Rex is a shumpus. Polly is opaque.",
+    "query": "Prove: Polly is an opaque zumpus.",
+    "generated_cot": "Polly is a rompus. Polly is fruity. Polly is wooden. Polly is opaque. Polly is a zumpus. Polly is a sterpus. Polly is a shumpus. Polly is a wumpus. Polly is a tumpus. Polly is a wumpus. Polly is a tumpus. Polly is a wumpus. Polly is a tumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Grimpuses are wumpuses. Every numpus is a wumpus. Rompuses are brimpuses. Every terpus is a brimpus. Worpus are brimpuses. Lorpuses are brimpuses. Each jompus is a brimpus. Max is a grimpus or a numpus. Stella is a rompus or a terpus.",
+    "query": "Prove: Max is a wumpus.",
+    "generated_cot": "Max is a wumpus. Max is a numpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a brimpus. Max is a bri",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is snowy or a jompus is a vumpus. Everything that is hot or a vumpus is a wumpus. Everything that is sweet or a wumpus is a tumpus. Everything that is red or a tumpus is a numpus. Everything that is happy or a numpus is a rompus. Everything that is wooden or a rompus is a yumpus. Everything that is large or a yumpus is a dumpus. Everything that is discordant or a rempus is a lempus. Everything that is large or a yerpus is a grimpus. Everything that is dull or a gerpus is a brimpus. Everything that is spicy or a chorpus is an impus. Everything that is red or a quimpus is a sterpus. Everything that is slow or a bompus is a gorpus. Everything that is luminous or a lorpus is a shumpus. Wren is a lorpus. Sam is a rompus.",
+    "query": "Prove: Sam is wooden or a rompus.",
+    "generated_cot": "Sam is wooden or a rompus. Sam is a rompus. Wren is a lorpus. Sam is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jompus. Wren is a jom",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Every rompus is a lempus. Dumpuses are lempuses. Each lorpus is a shumpus. Zhorpuses are shumpuses. Worpus are shumpuses. Sterpuses are shumpuses. Every brimpus is a shumpus. Sally is a lorpus or a zhorpus. Sam is a rompus or a dumpus.",
+    "query": "Prove: Sam is a lempus.",
+    "generated_cot": "Sally is a lorpus or a zhorpus. Sam is a rompus or a dumpus. Sam is a lempus. Sally is a lorpus or a zhorpus. Sam is a rompus or a dumpus. Sam is a lempus. Sally is a shumpus. Sally is a shumpus. Sally is a shumpus. Sally is a lorpus. Sally is a shumpus. Sally is a shumpus. Sally is a shumpus. Sally is a shumpus. Sally is a shumpus. Sally is a shumpus. Sally is a shumpus. Sally is a shumpus. Sally is a shumpus. Sally is a shum",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Dumpuses are quimpuses and lempuses. Yumpuses are wumpuses and gorpuses. Rempuses are numpuses and tumpuses. Tumpuses are zumpuses and vumpuses. Yerpuses are impuses and shumpuses. Each lempus is a jompus and a grimpus. Lorpuses are luminous sterpuses. Rex is a vumpus and a zumpus. Alex is a yumpus and Rex is a gorpus.",
+    "query": "Prove: Alex is a wumpus.",
+    "generated_cot": "Answer is N/A. Alex is a wumpus. Alex is a yumpus. Alex is a gorpus. Alex is a vumpus. Alex is a zumpus. Alex is a jompus. Alex is a grimpus. Alex is a sterpus. Alex is a jompus. Alex is a grimpus. Alex is a sterpus. Alex is a jompus. Alex is a grimpus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a jompus. Alex is a sterpus. Alex is a sterpus. Alex is a sterpus. Alex is a sterpus. Alex is a sterpus. Alex is",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Everything that is fruity or a yumpus is a rompus. Everything that is spicy or a rompus is a brimpus. Everything that is shy or a brimpus is a gorpus. Everything that is orange or a gorpus is an impus. Everything that is transparent or an impus is a tumpus. Everything that is luminous or a tumpus is a lorpus. Everything that is large or a lorpus is a dumpus. Everything that is temperate or a rempus is a lempus. Everything that is happy or a scrompus is a vumpus. Everything that is moderate or a jelpus is a jompus. Everything that is floral or a fompus is a shumpus. Everything that is sunny or a timpus is a grimpus. Everything that is luminous or a terpus is a numpus. Everything that is orange or a sterpus is a wumpus. Wren is a gorpus. Rex is a sterpus.",
+    "query": "Prove: Wren is orange or a gorpus.",
+    "generated_cot": "Wren is a gorpus. Rex is a sterpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a gorpus. Wren is a go",
+    "generated_answer": "N/A"
+  },
+  {
+    "question": "Each snowy sterpus is a gorpus. Every bitter gorpus is a zumpus. Cold zumpuses are lempuses. Feisty lempuses are shumpuses. Each earthy shumpus is a jompus. Every dull jompus is a numpus. Transparent numpuses are impuses. Muffled kerpuses are dumpuses. Each bright jelpus is a rompus. Brown gerpuses are lorpuses. Slow felpuses are tumpuses. Each snowy zhorpus is a grimpus. Floral fompuses are yumpuses. Each luminous brimpus is a wumpus. Polly is a gorpus. Polly is bitter. Sam is a brimpus.",
+    "query": "Prove: Polly is a bitter gorpus.",
+    "generated_cot": "Polly is a gorpus. Polly is bitter. Polly is a zumpus. Polly is a brimpus. Polly is a wumpus. Polly is a brimpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a brimpus. Polly is a brimpus. Polly is a brimpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is a wumpus. Polly is",
+    "generated_answer": "N/A"
+  }
+]

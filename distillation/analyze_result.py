@@ -213,7 +213,7 @@ def plot_means(means):
 
 
 # 运行评估
-version = "modified"
+version = "base"
 checkpoint_dir = "./checkpoints/CounterCoTQA/"+version + \
     "/counterfactual0.5_t5-3b_bs8_gs1_lr1e-5_wd0_e3/checkpoints_seed42/"
 data_path = "./outputs/CounterCoTQA/dev."+version+".explanation.jsonl"

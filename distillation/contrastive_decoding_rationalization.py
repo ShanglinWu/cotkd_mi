@@ -8,6 +8,7 @@ from transformers import AutoConfig, AutoTokenizer, AutoModelForCausalLM, set_se
 from tqdm import tqdm
 import os
 import re
+from openai import OpenAI
 
 torch.set_num_threads(4)
 
@@ -103,32 +104,80 @@ def contrastive_decoding(input_seq1, input_seq2, model, tokenizer, indicator_tok
     return generation
 
 
+def openai_completion(client, input_seq1, input_seq2, model_name, args):
+    try:
+        if args.debug:
+            print("Input sequence 1:", input_seq1)
+            print("Input sequence 2:", input_seq2)
+            print("Starting generation")
+
+        print(input_seq1)
+
+        # First completion with input_seq1
+        response1 = client.chat.completions.create(
+            model='gpt-4o-mini',
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant providing chain-of-thought explanations"},
+                {"role": "user", "content": input_seq1}
+            ],
+            max_tokens=generation_length,
+            n=num_return_sequences
+        )
+
+        # # Second completion with input_seq2 (for contrast)
+        # response2 = client.chat.completions.create(
+        #     model=model_name,
+        #     messages=[
+        #         {"role": "system", "content": "You are a helpful assistant providing detailed explanations."},
+        #         {"role": "user", "content": input_seq2}
+        #     ],
+        #     temperature=args.temperature,
+        #     max_tokens=generation_length,
+        #     n=num_return_sequences
+        # )
+
+        # Get the generated text from the first response
+        generation = response1.choices[0].message.content.strip()
+
+        if args.debug:
+            print('-'*20)
+            print("Final generation:", generation)
+            print('-'*20)
+
+        # print(generation)
+
+        return generation
+
+    except Exception as e:
+        print(f"Error in OpenAI API call: {str(e)}")
+        return ""
+
+
 def main(args):
     # ----------------------------------------------------- #
     # load LM
-    model_path = 'EleutherAI/gpt-neox-20b'
-    model_name = "GPT-neox"
-    tokenizer = AutoTokenizer.from_pretrained(
-        model_path, cache_dir='../cache')  # , use_fast=False)
-    n_gpus = 3
-    free_in_GB = 49
-    max_memory = {i: "{}GB".format(free_in_GB)
-                  for i in range(args.gpu, args.gpu + n_gpus)}
+    if args.model == 'gpt-4o':
+        client = OpenAI()
+    else:
+        if args.model == 'google/gemma-2b':
+            from huggingface_hub import login
+            login("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")
+        model_path = args.model
+        tokenizer = AutoTokenizer.from_pretrained(
+            model_path, cache_dir='../cache')  # , use_fast=False)
+        n_gpus = 1
+        free_in_GB = 49
+        max_memory = {i: "{}GB".format(free_in_GB)
+                      for i in range(args.gpu, args.gpu + n_gpus)}
 
-    from transformers import GPTNeoXForCausalLM
-    model = GPTNeoXForCausalLM.from_pretrained(
-        model_path,
-        device_map='auto',
-        max_memory=max_memory,
-        cache_dir='../cache',
-        torch_dtype='auto'
-    )
+        model = AutoModelForCausalLM.from_pretrained(
+            model_path, torch_dtype=torch.float16).to(args.device)
 
-    indicator_token_ids = {
-        "stop": tokenizer.encode("\n\nQ")[-2],
-    }
+        indicator_token_ids = {
+            "stop": tokenizer.encode("\n\nQ")[-2],
+        }
 
-    model.eval()
+        model.eval()
 
     # ----------------------------------------------------- #
     # prepare data
@@ -137,110 +186,116 @@ def main(args):
 
     prompt_without_question = '\n\n'.join(prompt.split('\n\n')[:-1])+'\n\n'
 
-    for split in args.eval_split.split(','):
-        with open('./data/{}/{}.jsonl'.format(args.dataset, split), 'r') as fr:
-            examples = [json.loads(line) for line in fr.readlines()]
+    # for split in args.eval_split.split(','):
+    split = "dev"
+    with open('./data/{}/{}.jsonl'.format(args.dataset, split), 'r') as fr:
+        examples = [json.loads(line) for line in fr.readlines()]
 
-        output_path = os.path.join(args.output_prefix, '{}.{}.{}.jsonl'.format(
-            split, args.version, args.prompt))
+    output_path = os.path.join(args.output_prefix, '{}.{}.{}.jsonl'.format(
+        split, args.version, args.prompt))
 
-        fw = open(output_path, 'w', buffering=1)
-        for example in tqdm(examples):
-            if "distractor" in example:
-                question = example[args.version]["question"]
-                query = example[args.version]["query"]
+    fw = open(output_path, 'w', buffering=1)
+    for example in tqdm(examples):
+        if "distractor" in example:
+            question = example[args.version]["question"]
+            query = example[args.version]["query"]
 
-                answer = example[args.version]["answer"]
-                if answer == "true":
-                    wrong_answer = "false"
-                elif answer == "false":
-                    wrong_answer = "true"
-                else:  # N/A
-                    wrong_answer = "N/A"
+            answer = example[args.version]["answer"]
+            if answer == "true":
+                wrong_answer = "false"
+            elif answer == "false":
+                wrong_answer = "true"
+            else:  # N/A
+                wrong_answer = "N/A"
 
-                input_seq1 = prompt.format(question, query, answer)
-                input_seq2 = prompt.format(question, query, wrong_answer)
+            input_seq1 = prompt.format(question, query, answer)
+            input_seq2 = prompt.format(question, query, wrong_answer)
 
-                generation = contrastive_decoding(
-                    input_seq1, input_seq2, model, tokenizer, indicator_token_ids, args)
-
-                # Split the generation into chain of thought and answer
-
-                steps = re.findall(
-                    r'\d+\.\s*(.*?)(?=\s*\d+\.|$)', generation, re.DOTALL)
-
-                steps = [step.strip() for step in steps]
-
-                steps = [step for step in steps if step]
-
-                fw.write(json.dumps({
-                    "id": example["qid"],
-                    "version": args.version,
-                    "question": question,
-                    "query": query,
-                    "answer": answer,
-                    "chain_of_thought": steps
-                }) + "\n")
-
+            if args.model == "gpt-4o":
+                generation = openai_completion(
+                    client, input_seq1, input_seq2, args.model, args)
             else:
-                if "context" in example:
-                    formatted_question = example["context"]
-                    choices = ["false", "true"]
-                    if "counterfactual" in split:
-                        answer = "false" if example["answer"] == 1 else "true"
-                        wrong_answer = "false" if example["answer"] == 0 else "true"
-                    else:
-                        answer = "false" if example["answer"] == 0 else "true"
-                        wrong_answer = "false" if example["answer"] == 1 else "true"
-                    question = example["context"]
-                else:
-                    formatted_question = example["question"]
-                    choices = example["choices"] if "choices" in example else [
-                        "no", "yes"]
-                    question = example["question"]
-                    if "choices" in example and len(example["choices"]) > 2:
-                        if "counterfactual" in split:
-                            answer = random.choice(
-                                example["choices"][:example["answer"]] + example["choices"][example["answer"]+1:])
-                            wrong_answer = example["choices"][example["answer"]]
-                        else:
-                            answer = example["choices"][example["answer"]]
-                            wrong_answer = random.choice(
-                                example["choices"][:example["answer"]] + example["choices"][example["answer"]+1:])
-                    else:
-                        if "counterfactual" in split:
-                            answer = "yes" if example["answer"] == 0 else "no"
-                            wrong_answer = "yes" if example["answer"] == 1 else "no"
-                        else:
-                            answer = "yes" if example["answer"] == 1 else "no"
-                            wrong_answer = "yes" if example["answer"] == 0 else "no"
-
-                if "choices" in example and len(example["choices"]) > 2:
-                    choices_seq = ""
-                    formatted_question += "\nAnswer Choices:"
-                    for choice_id, choice in enumerate(example["choices"]):
-                        formatted_question += "\n({}) {}".format(
-                            chr(ord('a')+choice_id), choice)
-                        choices_seq += " ({}) {}".format(chr(ord('A') +
-                                                             choice_id), choice)
-
-                input_seq1 = prompt.format(formatted_question, answer)
-                # replace wrong_answer with "" if using empty string as the perturbed answer
-                input_seq2 = prompt.format(formatted_question, wrong_answer)
                 generation = contrastive_decoding(
                     input_seq1, input_seq2, model, tokenizer, indicator_token_ids, args)
 
-                if "context" in example:
-                    fw.write(json.dumps(
-                        {"id": example["id"], "answer": answer, "statement": question, "explanation": generation_list}) + "\n")
+            # Split the generation into chain of thought and answer
+
+            steps = re.findall(
+                r'\d+\.\s*(.*?)(?=\s*\d+\.|$)', generation, re.DOTALL)
+
+            steps = [step.strip() for step in steps]
+
+            steps = [step for step in steps if step]
+
+            fw.write(json.dumps({
+                "id": example["qid"],
+                "version": args.version,
+                "question": question,
+                "query": query,
+                "answer": answer,
+                "chain_of_thought": steps
+            }) + "\n")
+
+        # The code for using dataset other than CounterCoTQA, haven't add openai api feature
+        else:
+            if "context" in example:
+                formatted_question = example["context"]
+                choices = ["false", "true"]
+                if "counterfactual" in split:
+                    answer = "false" if example["answer"] == 1 else "true"
+                    wrong_answer = "false" if example["answer"] == 0 else "true"
                 else:
-                    if "choices" in example and len(example["choices"]) > 2:
-                        fw.write(json.dumps({"id": example["id"], "answer": answer, "question": question, "choices": choices_seq.strip(
-                        ), "explanation": generation.strip()}) + "\n")
+                    answer = "false" if example["answer"] == 0 else "true"
+                    wrong_answer = "false" if example["answer"] == 1 else "true"
+                question = example["context"]
+            else:
+                formatted_question = example["question"]
+                choices = example["choices"] if "choices" in example else [
+                    "no", "yes"]
+                question = example["question"]
+                if "choices" in example and len(example["choices"]) > 2:
+                    if "counterfactual" in split:
+                        answer = random.choice(
+                            example["choices"][:example["answer"]] + example["choices"][example["answer"]+1:])
+                        wrong_answer = example["choices"][example["answer"]]
                     else:
-                        fw.write(json.dumps(
-                            {"id": example["qid"], "answer": answer, "question": question, "explanation": generation.strip()}) + "\n")
-        fw.close()
+                        answer = example["choices"][example["answer"]]
+                        wrong_answer = random.choice(
+                            example["choices"][:example["answer"]] + example["choices"][example["answer"]+1:])
+                else:
+                    if "counterfactual" in split:
+                        answer = "yes" if example["answer"] == 0 else "no"
+                        wrong_answer = "yes" if example["answer"] == 1 else "no"
+                    else:
+                        answer = "yes" if example["answer"] == 1 else "no"
+                        wrong_answer = "yes" if example["answer"] == 0 else "no"
+
+            if "choices" in example and len(example["choices"]) > 2:
+                choices_seq = ""
+                formatted_question += "\nAnswer Choices:"
+                for choice_id, choice in enumerate(example["choices"]):
+                    formatted_question += "\n({}) {}".format(
+                        chr(ord('a')+choice_id), choice)
+                    choices_seq += " ({}) {}".format(chr(ord('A') +
+                                                         choice_id), choice)
+
+            input_seq1 = prompt.format(formatted_question, answer)
+            # replace wrong_answer with "" if using empty string as the perturbed answer
+            input_seq2 = prompt.format(formatted_question, wrong_answer)
+            generation = contrastive_decoding(
+                input_seq1, input_seq2, model, tokenizer, indicator_token_ids, args)
+
+            if "context" in example:
+                fw.write(json.dumps(
+                    {"id": example["id"], "answer": answer, "statement": question, "explanation": generation_list}) + "\n")
+            else:
+                if "choices" in example and len(example["choices"]) > 2:
+                    fw.write(json.dumps({"id": example["id"], "answer": answer, "question": question, "choices": choices_seq.strip(
+                    ), "explanation": generation.strip()}) + "\n")
+                else:
+                    fw.write(json.dumps(
+                        {"id": example["qid"], "answer": answer, "question": question, "explanation": generation.strip()}) + "\n")
+    fw.close()
     # ----------------------------------------------------- #
 
 
@@ -250,6 +305,7 @@ if __name__ == "__main__":
     parser.add_argument('--dataset', '-d', type=str)
     parser.add_argument('--output_prefix', '-o', type=str)
     parser.add_argument('--prompt', '-p', type=str)
+    parser.add_argument('--model', type=str)
     parser.add_argument('--num_process', type=int, default=1)
     parser.add_argument('--eval_split', type=str,
                         default='test,dev,train,train.counterfactual')

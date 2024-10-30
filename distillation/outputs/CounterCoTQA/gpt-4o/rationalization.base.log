@@ -1,0 +1,165 @@
+  0%|          | 0/551 [00:00<?, ?it/s]Here are some chain-of-thought explanation generation examples: 
+
+Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
+A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy.
+
+Q: Rompuses are dumpuses. Dumpuses are tumpuses. Tumpuses are numpuses. Each numpus is aggressive. Stella is a rompus. True or false: Stella is not aggressive.
+A: Answer is False. Chain of thought: 1. Stella is a rompus. 2. Rompuses are dumpuses. 3. Stella is a dumpus. 4. Dumpuses are tumpuses. 5. Stella is a tumpus. 6. Tumpuses are numpuses. 7. Stella is a numpus. 8. Each numpus is aggressive. 9. Stella is aggressive.
+
+Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
+A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
+
+ Now generate the chain-of-thought explanation that simple and clear like examples above: 
+
+Q: Each numpus is a rompus. Every rompus is a dumpus. Each dumpus is a zumpus. Zumpuses are orange. Stella is a numpus.True or false: Stella is not orange.
+A: Answer is False, Chain of thought:
+  0%|          | 1/551 [00:05<46:15,  5.05s/it]Here are some chain-of-thought explanation generation examples: 
+
+Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
+A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy.
+
+Q: Rompuses are dumpuses. Dumpuses are tumpuses. Tumpuses are numpuses. Each numpus is aggressive. Stella is a rompus. True or false: Stella is not aggressive.
+A: Answer is False. Chain of thought: 1. Stella is a rompus. 2. Rompuses are dumpuses. 3. Stella is a dumpus. 4. Dumpuses are tumpuses. 5. Stella is a tumpus. 6. Tumpuses are numpuses. 7. Stella is a numpus. 8. Each numpus is aggressive. 9. Stella is aggressive.
+
+Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
+A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
+
+ Now generate the chain-of-thought explanation that simple and clear like examples above: 
+
+Q: Everything that is sour or a jompus is an impus. Everything that is bright or an impus is a vumpus. Everything that is shy or a vumpus is a tumpus. Everything that is opaque or a tumpus is a numpus. Stella is a jompus.Prove: Stella is overcast or a numpus.
+A: Answer is N/A, Chain of thought:
+  0%|          | 2/551 [00:06<28:12,  3.08s/it]Here are some chain-of-thought explanation generation examples: 
+
+Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
+A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy.
+
+Q: Rompuses are dumpuses. Dumpuses are tumpuses. Tumpuses are numpuses. Each numpus is aggressive. Stella is a rompus. True or false: Stella is not aggressive.
+A: Answer is False. Chain of thought: 1. Stella is a rompus. 2. Rompuses are dumpuses. 3. Stella is a dumpus. 4. Dumpuses are tumpuses. 5. Stella is a tumpus. 6. Tumpuses are numpuses. 7. Stella is a numpus. 8. Each numpus is aggressive. 9. Stella is aggressive.
+
+Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
+A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
+
+ Now generate the chain-of-thought explanation that simple and clear like examples above: 
+
+Q: Everything that is wooden or a numpus is a rompus. Everything that is melodic or a rompus is a dumpus. Everything that is kind or a dumpus is a brimpus. Stella is a numpus.Prove: Stella is hot or a brimpus.
+A: Answer is N/A, Chain of thought:
+  1%|          | 3/551 [00:10<31:29,  3.45s/it]Here are some chain-of-thought explanation generation examples: 
+
+Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
+A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy.
+
+Q: Rompuses are dumpuses. Dumpuses are tumpuses. Tumpuses are numpuses. Each numpus is aggressive. Stella is a rompus. True or false: Stella is not aggressive.
+A: Answer is False. Chain of thought: 1. Stella is a rompus. 2. Rompuses are dumpuses. 3. Stella is a dumpus. 4. Dumpuses are tumpuses. 5. Stella is a tumpus. 6. Tumpuses are numpuses. 7. Stella is a numpus. 8. Each numpus is aggressive. 9. Stella is aggressive.
+
+Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
+A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
+
+ Now generate the chain-of-thought explanation that simple and clear like examples above: 
+
+Q: Gorpuses are transparent jompuses. Fae is a nervous gorpus.Prove: Fae is a jompus.
+A: Answer is N/A, Chain of thought:
+  1%|          | 4/551 [00:11<21:52,  2.40s/it]Here are some chain-of-thought explanation generation examples: 
+
+Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
+A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy.
+
+Q: Rompuses are dumpuses. Dumpuses are tumpuses. Tumpuses are numpuses. Each numpus is aggressive. Stella is a rompus. True or false: Stella is not aggressive.
+A: Answer is False. Chain of thought: 1. Stella is a rompus. 2. Rompuses are dumpuses. 3. Stella is a dumpus. 4. Dumpuses are tumpuses. 5. Stella is a tumpus. 6. Tumpuses are numpuses. 7. Stella is a numpus. 8. Each numpus is aggressive. 9. Stella is aggressive.
+
+Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
+A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
+
+ Now generate the chain-of-thought explanation that simple and clear like examples above: 
+
+Q:  Fae is a mean impus.Prove: Fae is an impus.
+A: Answer is N/A, Chain of thought:
+  1%|          | 5/551 [00:12<17:13,  1.89s/it]Here are some chain-of-thought explanation generation examples: 
+
+Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
+A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy.
+
+Q: Rompuses are dumpuses. Dumpuses are tumpuses. Tumpuses are numpuses. Each numpus is aggressive. Stella is a rompus. True or false: Stella is not aggressive.
+A: Answer is False. Chain of thought: 1. Stella is a rompus. 2. Rompuses are dumpuses. 3. Stella is a dumpus. 4. Dumpuses are tumpuses. 5. Stella is a tumpus. 6. Tumpuses are numpuses. 7. Stella is a numpus. 8. Each numpus is aggressive. 9. Stella is aggressive.
+
+Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
+A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
+
+ Now generate the chain-of-thought explanation that simple and clear like examples above: 
+
+Q: Every grimpus is not large. Polly is a grimpus.True or false: Polly is not large.
+A: Answer is True, Chain of thought:
+  1%|          | 6/551 [00:13<13:57,  1.54s/it]Here are some chain-of-thought explanation generation examples: 
+
+Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
+A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy.
+
+Q: Rompuses are dumpuses. Dumpuses are tumpuses. Tumpuses are numpuses. Each numpus is aggressive. Stella is a rompus. True or false: Stella is not aggressive.
+A: Answer is False. Chain of thought: 1. Stella is a rompus. 2. Rompuses are dumpuses. 3. Stella is a dumpus. 4. Dumpuses are tumpuses. 5. Stella is a tumpus. 6. Tumpuses are numpuses. 7. Stella is a numpus. 8. Each numpus is aggressive. 9. Stella is aggressive.
+
+Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
+A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
+
+ Now generate the chain-of-thought explanation that simple and clear like examples above: 
+
+Q: Every happy shumpus is a gorpus. Each red gorpus is a wumpus. Rex is red. Rex is fruity. Rex is a shumpus. Rex is happy.Prove: Rex is a fruity wumpus.
+A: Answer is N/A, Chain of thought:
+  1%|▏         | 7/551 [00:15<15:25,  1.70s/it]Here are some chain-of-thought explanation generation examples: 
+
+Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
+A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy.
+
+Q: Rompuses are dumpuses. Dumpuses are tumpuses. Tumpuses are numpuses. Each numpus is aggressive. Stella is a rompus. True or false: Stella is not aggressive.
+A: Answer is False. Chain of thought: 1. Stella is a rompus. 2. Rompuses are dumpuses. 3. Stella is a dumpus. 4. Dumpuses are tumpuses. 5. Stella is a tumpus. 6. Tumpuses are numpuses. 7. Stella is a numpus. 8. Each numpus is aggressive. 9. Stella is aggressive.
+
+Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
+A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
+
+ Now generate the chain-of-thought explanation that simple and clear like examples above: 
+
+Q:  Rex is a cold tumpus.Prove: Rex is a tumpus.
+A: Answer is N/A, Chain of thought:
+  1%|▏         | 8/551 [00:16<13:48,  1.53s/it]Here are some chain-of-thought explanation generation examples: 
+
+Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
+A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy.
+
+Q: Rompuses are dumpuses. Dumpuses are tumpuses. Tumpuses are numpuses. Each numpus is aggressive. Stella is a rompus. True or false: Stella is not aggressive.
+A: Answer is False. Chain of thought: 1. Stella is a rompus. 2. Rompuses are dumpuses. 3. Stella is a dumpus. 4. Dumpuses are tumpuses. 5. Stella is a tumpus. 6. Tumpuses are numpuses. 7. Stella is a numpus. 8. Each numpus is aggressive. 9. Stella is aggressive.
+
+Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
+A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
+
+ Now generate the chain-of-thought explanation that simple and clear like examples above: 
+
+Q: Everything that is blue or a yumpus is a sterpus. Stella is a yumpus.Prove: Stella is liquid or a sterpus.
+A: Answer is N/A, Chain of thought:
+  2%|▏         | 9/551 [00:18<13:58,  1.55s/it]Here are some chain-of-thought explanation generation examples: 
+
+Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
+A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy.
+
+Q: Rompuses are dumpuses. Dumpuses are tumpuses. Tumpuses are numpuses. Each numpus is aggressive. Stella is a rompus. True or false: Stella is not aggressive.
+A: Answer is False. Chain of thought: 1. Stella is a rompus. 2. Rompuses are dumpuses. 3. Stella is a dumpus. 4. Dumpuses are tumpuses. 5. Stella is a tumpus. 6. Tumpuses are numpuses. 7. Stella is a numpus. 8. Each numpus is aggressive. 9. Stella is aggressive.
+
+Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
+A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
+
+ Now generate the chain-of-thought explanation that simple and clear like examples above: 
+
+Q: Each dumpus is a happy lorpus. Fae is a bright dumpus.Prove: Fae is a lorpus.
+A: Answer is N/A, Chain of thought:
+  2%|▏         | 10/551 [00:19<13:15,  1.47s/it]Here are some chain-of-thought explanation generation examples: 
+
+Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
+A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy.
+
+Q: Rompuses are dumpuses. Dumpuses are tumpuses. Tumpuses are numpuses. Each numpus is aggressive. Stella is a rompus. True or false: Stella is not aggressive.
+A: Answer is False. Chain of thought: 1. Stella is a rompus. 2. Rompuses are dumpuses. 3. Stella is a dumpus. 4. Dumpuses are tumpuses. 5. Stella is a tumpus. 6. Tumpuses are numpuses. 7. Stella is a numpus. 8. Each numpus is aggressive. 9. Stella is aggressive.
+
+Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
+A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
+
+ Now generate the chain-of-thought explanation that simple and clear like examples above: 
+
+Q: Numpuses are rompuses. Grimpuses are rompuses. Wren is a numpus or a grimpus.Prove: Wren is a rompus.
+A: Answer is N/A, Chain of thought:
