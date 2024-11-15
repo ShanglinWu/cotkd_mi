@@ -1,0 +1,18 @@
+{"time":"2024-10-31T01:58:39.380285263-05:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2024-10-31T01:58:39.380308323-05:00","level":"INFO","msg":"created symlink","path":"/home/yh158/mikd/cotkd_mi/distillation/wandb/run-20241031_015839-6gqpvclo/logs/debug-core.log"}
+{"time":"2024-10-31T01:58:39.382185834-05:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-10-31T01:58:39.394394368-05:00","level":"INFO","msg":"created new stream","id":"6gqpvclo"}
+{"time":"2024-10-31T01:58:39.394434038-05:00","level":"INFO","msg":"stream: started","id":"6gqpvclo"}
+{"time":"2024-10-31T01:58:39.394450938-05:00","level":"INFO","msg":"handler: started","stream_id":{"value":"6gqpvclo"}}
+{"time":"2024-10-31T01:58:39.394443189-05:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"6gqpvclo"}}
+{"time":"2024-10-31T01:58:39.394468489-05:00","level":"INFO","msg":"sender: started","stream_id":{"value":"6gqpvclo"}}
+{"time":"2024-10-31T01:58:39.77740976-05:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-10-31T01:58:39.781590686-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-31T01:58:42.747124841-05:00","level":"INFO","msg":"stream: closing","id":"6gqpvclo"}
+{"time":"2024-10-31T01:58:42.747174842-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-31T01:58:42.750606652-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-31T01:58:43.080305911-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-31T01:58:43.211415505-05:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"6gqpvclo"}}
+{"time":"2024-10-31T01:58:43.211475846-05:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"6gqpvclo"}}
+{"time":"2024-10-31T01:58:43.211459836-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"6gqpvclo"}}
+{"time":"2024-10-31T01:58:43.213418987-05:00","level":"INFO","msg":"stream: closed","id":"6gqpvclo"}

@@ -105,48 +105,40 @@ def contrastive_decoding(input_seq1, input_seq2, model, tokenizer, indicator_tok
 
 
 def openai_completion(client, input_seq1, input_seq2, model_name, args):
+
     try:
-        if args.debug:
-            print("Input sequence 1:", input_seq1)
-            print("Input sequence 2:", input_seq2)
-            print("Starting generation")
+        # Add explicit contrastive instruction to the prompt
+        contrastive_prompt = f"""
+        Consider these two scenarios:
+        1: {input_seq1}
+        2: {input_seq2}
+        
+        Provide a response that follows the reasoning of scenario 1 while actively avoiding the reasoning pattern of scenario 2.
+        Focus on generating a clear chain-of-thought reasoning process with out explanation to your reasoning.
+        """
 
-        print(input_seq1)
-
-        # First completion with input_seq1
-        response1 = client.chat.completions.create(
-            model='gpt-4o-mini',
+        response = client.chat.completions.create(
+            model=model_name,
             messages=[
-                {"role": "system", "content": "You are a helpful assistant providing chain-of-thought explanations"},
-                {"role": "user", "content": input_seq1}
+                {"role": "system", "content": "You are a helpful assistant providing chain-of-thought reasoning process"},
+                {"role": "user", "content": contrastive_prompt}
             ],
             max_tokens=generation_length,
             n=num_return_sequences
         )
 
-        # # Second completion with input_seq2 (for contrast)
-        # response2 = client.chat.completions.create(
-        #     model=model_name,
-        #     messages=[
-        #         {"role": "system", "content": "You are a helpful assistant providing detailed explanations."},
-        #         {"role": "user", "content": input_seq2}
-        #     ],
-        #     temperature=args.temperature,
-        #     max_tokens=generation_length,
-        #     n=num_return_sequences
-        # )
-
-        # Get the generated text from the first response
-        generation = response1.choices[0].message.content.strip()
+        generation = response.choices[0].message.content.strip()
 
         if args.debug:
             print('-'*20)
             print("Final generation:", generation)
             print('-'*20)
 
-        # print(generation)
-
         return generation
+
+    except Exception as e:
+        print(f"Error in OpenAI API call: {str(e)}")
+        return ""
 
     except Exception as e:
         print(f"Error in OpenAI API call: {str(e)}")
@@ -156,7 +148,7 @@ def openai_completion(client, input_seq1, input_seq2, model_name, args):
 def main(args):
     # ----------------------------------------------------- #
     # load LM
-    if args.model == 'gpt-4o':
+    if args.model == 'gpt-4o-mini':
         client = OpenAI()
     else:
         if args.model == 'google/gemma-2b':
@@ -211,7 +203,7 @@ def main(args):
             input_seq1 = prompt.format(question, query, answer)
             input_seq2 = prompt.format(question, query, wrong_answer)
 
-            if args.model == "gpt-4o":
+            if args.model == "gpt-4o-mini":
                 generation = openai_completion(
                     client, input_seq1, input_seq2, args.model, args)
             else:

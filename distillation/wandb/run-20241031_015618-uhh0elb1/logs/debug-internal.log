@@ -1,0 +1,18 @@
+{"time":"2024-10-31T01:56:18.838555638-05:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2024-10-31T01:56:18.838583178-05:00","level":"INFO","msg":"created symlink","path":"/home/yh158/mikd/cotkd_mi/distillation/wandb/run-20241031_015618-uhh0elb1/logs/debug-core.log"}
+{"time":"2024-10-31T01:56:18.841160084-05:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-10-31T01:56:18.858744053-05:00","level":"INFO","msg":"created new stream","id":"uhh0elb1"}
+{"time":"2024-10-31T01:56:18.858783723-05:00","level":"INFO","msg":"stream: started","id":"uhh0elb1"}
+{"time":"2024-10-31T01:56:18.858805903-05:00","level":"INFO","msg":"handler: started","stream_id":{"value":"uhh0elb1"}}
+{"time":"2024-10-31T01:56:18.858800413-05:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"uhh0elb1"}}
+{"time":"2024-10-31T01:56:18.858814793-05:00","level":"INFO","msg":"sender: started","stream_id":{"value":"uhh0elb1"}}
+{"time":"2024-10-31T01:56:19.150528031-05:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-10-31T01:56:19.1552017-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-31T01:56:20.173144266-05:00","level":"INFO","msg":"stream: closing","id":"uhh0elb1"}
+{"time":"2024-10-31T01:56:20.173197586-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-31T01:56:20.177673024-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-31T01:56:21.214029033-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-31T01:56:21.527672256-05:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"uhh0elb1"}}
+{"time":"2024-10-31T01:56:21.527750836-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"uhh0elb1"}}
+{"time":"2024-10-31T01:56:21.527763697-05:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"uhh0elb1"}}
+{"time":"2024-10-31T01:56:21.52991455-05:00","level":"INFO","msg":"stream: closed","id":"uhh0elb1"}

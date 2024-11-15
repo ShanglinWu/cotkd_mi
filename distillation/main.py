@@ -11,7 +11,7 @@ import torch
 import torch.nn.functional as F
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler
 
-from transformers import set_seed, AutoConfig, AutoTokenizer, AutoModelForSeq2SeqLM, get_linear_schedule_with_warmup, get_constant_schedule_with_warmup
+from transformers import set_seed, AutoConfig, AutoTokenizer, AutoModelForCausalLM, AutoModelForSeq2SeqLM, get_linear_schedule_with_warmup, get_constant_schedule_with_warmup
 from transformers.optimization import Adafactor
 
 from data_helper import get_tensor_dataset, load_raw_dataset, format_input, format_output, Data_Collator_for_Training
@@ -222,8 +222,15 @@ def main(args, seed):
     # model
     tokenizer = AutoTokenizer.from_pretrained(
         args.model_name, cache_dir='../cache/')
-    model = AutoModelForSeq2SeqLM.from_pretrained(
-        args.model_name, cache_dir='../cache/')
+    if args.model_name == "gpt2":
+        model = AutoModelForCausalLM.from_pretrained(
+            args.model_name, torch_dtype=torch.float16).to(args.device)
+    else:
+        model = AutoModelForSeq2SeqLM.from_pretrained(
+            args.model_name, cache_dir='../cache/')
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+        model.resize_token_embeddings(len(tokenizer))
     model.to(args.device)
 
     # ----------------------------------------------------- #
@@ -326,7 +333,7 @@ def main(args, seed):
                 counterfactual_outputs = model(
                     input_ids=input_ids,
                     attention_mask=attention_mask,
-                    decoder_input_ids=decoder_input_ids,
+                    # decoder_input_ids=decoder_input_ids,
                     # labels=labels,
                 )
                 counterfactual_outputs_loss = loss_fct(
@@ -349,36 +356,36 @@ def main(args, seed):
                 counterfactual_loss += counterfactual_outputs_loss.item()
             global_step += 1
 
-            if global_step <= 200 and global_step % 30 == 0:
-                checkpoint_path = os.path.join(
-                    checkpoint_dir, f'checkpoint_{checkpoint_count}.ckpt')
-                torch.save({
-                    'epoch': epoch,
-                    'global_step': global_step,
-                    'model_state_dict': model.state_dict(),
-                    'optimizer_state_dict': optimizer.state_dict(),
-                    'scheduler_state_dict': scheduler.state_dict(),
-                    'train_loss': train_loss / (step + 1),
-                    'counterfactual_loss': counterfactual_loss / (step + 1) if args.counterfactual_alpha > 0 else 0,
-                    'args': args
-                }, checkpoint_path)
-                logger.info(f"Checkpoint saved to {checkpoint_path}")
-                checkpoint_count += 1
-            elif (global_step > 200 and global_step % 200 == 0) or (global_step == 700) :
-                checkpoint_path = os.path.join(
-                    checkpoint_dir, f'checkpoint_{checkpoint_count}.ckpt')
-                torch.save({
-                    'epoch': epoch,
-                    'global_step': global_step,
-                    'model_state_dict': model.state_dict(),
-                    'optimizer_state_dict': optimizer.state_dict(),
-                    'scheduler_state_dict': scheduler.state_dict(),
-                    'train_loss': train_loss / (step + 1),
-                    'counterfactual_loss': counterfactual_loss / (step + 1) if args.counterfactual_alpha > 0 else 0,
-                    'args': args
-                }, checkpoint_path)
-                logger.info(f"Checkpoint saved to {checkpoint_path}")
-                checkpoint_count += 1
+            # if global_step <= 200 and global_step % 30 == 0:
+            #     checkpoint_path = os.path.join(
+            #         checkpoint_dir, f'checkpoint_{checkpoint_count}.ckpt')
+            #     torch.save({
+            #         'epoch': epoch,
+            #         'global_step': global_step,
+            #         'model_state_dict': model.state_dict(),
+            #         'optimizer_state_dict': optimizer.state_dict(),
+            #         'scheduler_state_dict': scheduler.state_dict(),
+            #         'train_loss': train_loss / (step + 1),
+            #         'counterfactual_loss': counterfactual_loss / (step + 1) if args.counterfactual_alpha > 0 else 0,
+            #         'args': args
+            #     }, checkpoint_path)
+            #     logger.info(f"Checkpoint saved to {checkpoint_path}")
+            #     checkpoint_count += 1
+            # elif (global_step > 200 and global_step % 200 == 0) or (global_step == 700) :
+            #     checkpoint_path = os.path.join(
+            #         checkpoint_dir, f'checkpoint_{checkpoint_count}.ckpt')
+            #     torch.save({
+            #         'epoch': epoch,
+            #         'global_step': global_step,
+            #         'model_state_dict': model.state_dict(),
+            #         'optimizer_state_dict': optimizer.state_dict(),
+            #         'scheduler_state_dict': scheduler.state_dict(),
+            #         'train_loss': train_loss / (step + 1),
+            #         'counterfactual_loss': counterfactual_loss / (step + 1) if args.counterfactual_alpha > 0 else 0,
+            #         'args': args
+            #     }, checkpoint_path)
+            #     logger.info(f"Checkpoint saved to {checkpoint_path}")
+            #     checkpoint_count += 1
 
             if args.use_wandb:
                 wandb.log({
@@ -468,6 +475,7 @@ if __name__ == "__main__":
 
     # model
     parser.add_argument('--model_name', '-m', type=str)
+    parser.add_argument("--teacher_model", type=str)
     parser.add_argument('--max_enc_length', type=int, default=128)
     parser.add_argument('--max_dec_length', type=int, default=128)
 

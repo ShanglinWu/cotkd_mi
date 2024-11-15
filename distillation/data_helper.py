@@ -161,7 +161,7 @@ class Data_Collator_for_Training(object):
 
 def get_tensor_dataset(split, tokenizer, args, counterfactual=False):
     # data_path = os.path.join('./data', args.dataset, '{}.jsonl'.format(split))
-    data_path = "./outputs/"+args.dataset+"/"+split+'.' + \
+    data_path = "./outputs/"+args.dataset+"/"+args.teacher_model+'/'+split+'.' + \
         args.version+'.explanation.jsonl'  # ! should be this one !
 
     encoder_input_tensor = []

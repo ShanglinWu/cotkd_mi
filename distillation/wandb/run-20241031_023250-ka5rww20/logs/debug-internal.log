@@ -1,0 +1,18 @@
+{"time":"2024-10-31T02:32:50.594933349-05:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2024-10-31T02:32:50.594951079-05:00","level":"INFO","msg":"created symlink","path":"/home/yh158/mikd/cotkd_mi/distillation/wandb/run-20241031_023250-ka5rww20/logs/debug-core.log"}
+{"time":"2024-10-31T02:32:50.59706891-05:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-10-31T02:32:50.60960563-05:00","level":"INFO","msg":"created new stream","id":"ka5rww20"}
+{"time":"2024-10-31T02:32:50.60963633-05:00","level":"INFO","msg":"stream: started","id":"ka5rww20"}
+{"time":"2024-10-31T02:32:50.60964697-05:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"ka5rww20"}}
+{"time":"2024-10-31T02:32:50.60968427-05:00","level":"INFO","msg":"handler: started","stream_id":{"value":"ka5rww20"}}
+{"time":"2024-10-31T02:32:50.60967181-05:00","level":"INFO","msg":"sender: started","stream_id":{"value":"ka5rww20"}}
+{"time":"2024-10-31T02:32:50.901044245-05:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-10-31T02:32:50.905001764-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-31T02:33:56.207072976-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-31T02:33:56.211541048-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-31T02:33:57.484049951-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-31T02:33:58.633863167-05:00","level":"INFO","msg":"stream: closing","id":"ka5rww20"}
+{"time":"2024-10-31T02:33:58.633894367-05:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"ka5rww20"}}
+{"time":"2024-10-31T02:33:58.633917717-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"ka5rww20"}}
+{"time":"2024-10-31T02:33:58.633939547-05:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"ka5rww20"}}
+{"time":"2024-10-31T02:33:58.636103757-05:00","level":"INFO","msg":"stream: closed","id":"ka5rww20"}

@@ -6,21 +6,32 @@ import seaborn as sns
 import numpy as np
 from calculate_distance import compare_rationales
 from tqdm import tqdm
+import argparse
 import os
+from transformers import AutoConfig, AutoTokenizer, AutoModelForCausalLM, set_seed, AutoModelForSeq2SeqLM
+from tqdm import tqdm
+import re
+from openai import OpenAI
 
 
-def load_model_and_tokenizer(checkpoint_path,):
-    # 检查GPU是否可用
-    device = torch.device('cuda:{}'.format(gpu))
+def load_model_and_tokenizer(checkpoint_path, args):
+    device = torch.device('cuda:{}'.format(args.gpu))
     print(f"Using device: {device}")
 
-    # 加载预训练的T5模型和tokenizer
-    model = T5ForConditionalGeneration.from_pretrained("t5-3b")
-    tokenizer = T5Tokenizer.from_pretrained("t5-3b")
+    if args.model == "trained-t5":
+        model = T5ForConditionalGeneration.from_pretrained("t5-3b")
+        tokenizer = T5Tokenizer.from_pretrained("t5-3b")
+    elif args.model == "trained-gpt2":
+        model = AutoModelForCausalLM.from_pretrained(
+            "gpt2", torch_dtype=torch.float16)
+        tokenizer = AutoTokenizer.from_pretrained("gpt2", cache_dir='../cache')
+        if tokenizer.pad_token is None:
+            tokenizer.pad_token = tokenizer.eos_token
 
-    # 加载本地checkpoint
-    checkpoint = torch.load(checkpoint_path, map_location=device)
-    model.load_state_dict(checkpoint['model_state_dict'])
+    model.resize_token_embeddings(len(tokenizer))
+
+    checkpoint = torch.load(checkpoint_path)['ckpt']
+    model.load_state_dict(checkpoint)
 
     model = model.to(device)
     model.eval()
@@ -28,18 +39,33 @@ def load_model_and_tokenizer(checkpoint_path,):
     return model, tokenizer, device
 
 
-def generate_cot_and_answer(model, tokenizer, question, query, device):
-    prompt = question + query + "\nAnswer: "
-    inputs = tokenizer(prompt, return_tensors="pt",
-                       max_length=800, truncation=False).to(device)
+def generate_cot_and_answer(model, tokenizer, prompt, device, args):
+    if args.model == "gpt-4o-mini":
+        client = OpenAI()
+        response = client.chat.completions.create(
+            model=args.model,
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant providing chain-of-thought reasoning process"},
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=256,
+            n=1
+        )
 
-    with torch.no_grad():
-        outputs = model.generate(
-            **inputs, max_length=256, num_return_sequences=1)
+        generated_text = response.choices[0].message.content.strip()
 
-    generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    else:
+        inputs = tokenizer(prompt, return_tensors="pt",
+                           max_length=500, truncation=True).to(device)
 
-    # 解析生成的文本来提取chain-of-thought和answer
+        with torch.no_grad():
+            outputs = model.generate(
+                **inputs, pad_token_id=tokenizer.pad_token_id, max_length=800, num_return_sequences=1)
+
+        generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
+        print(generated_text)
+
+    # ---------------format the result-------------------
     answer_index = generated_text.find("answer is ")
     if answer_index == -1:
         chain_of_thought = generated_text
@@ -48,19 +74,46 @@ def generate_cot_and_answer(model, tokenizer, question, query, device):
         chain_of_thought = generated_text[:answer_index]
         answer = generated_text[answer_index+9:]
 
+    chain_of_thought_index = chain_of_thought.find("Chain of thought:")
+    chain_of_thought = chain_of_thought[chain_of_thought_index+17:]
+
+    prompt_index = chain_of_thought.find(
+        "You need to only generate the answer part:")
+    if prompt_index != -1:
+        chain_of_thought = chain_of_thought[prompt_index +
+                                            len("You need to only generate the answer part:"):]
+
+    prompt_str = "Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus."
+    prompt_index = chain_of_thought.find(prompt_str)
+    if prompt_index != -1:
+        chain_of_thought = chain_of_thought[prompt_index+len(prompt_str):]
+
     chain_of_thought = chain_of_thought.replace("Prove: ", '')
+    chain_of_thought = chain_of_thought.replace("\n: ", '')
+    chain_of_thought = chain_of_thought.replace("\n\n: ", '')
     chain_of_thought = chain_of_thought.replace("Answer: ", '')
     chain_of_thought = chain_of_thought.replace("Question: ", '')
     chain_of_thought = chain_of_thought.replace("True or False: ", '')
     chain_of_thought = chain_of_thought.replace("True or false: ", '')
     chain_of_thought = chain_of_thought.replace("So the", '')
+    chain_of_thought = chain_of_thought.replace("Therefore, ", '')
+    chain_of_thought = chain_of_thought.replace("By definition,", '')
+
+    steps = re.findall(
+        r'\d+\.\s*(.*?)(?=\s*\d+\.|$)', chain_of_thought, re.DOTALL)
+
+    steps = [step.strip() for step in steps]
+
+    steps = [step for step in steps if step]
+
+    chain_of_thought = steps
 
     # print(generated_text)
     # print('-'*20)
     # print(question+query)
 
-    # print("Chain-of-thought is :")
-    # print(chain_of_thought)
+    print("Chain-of-thought is :")
+    print(chain_of_thought)
     # print("answer is:")
     # print(answer)
     print("--------------------------")
@@ -68,8 +121,8 @@ def generate_cot_and_answer(model, tokenizer, question, query, device):
     return {"chain_of_thought": chain_of_thought, "answer": answer}
 
 
-def evaluate_checkpoint(checkpoint_path, data_path, version, gold_data_path, num_samples=100):
-    model, tokenizer, device = load_model_and_tokenizer(checkpoint_path)
+def evaluate_checkpoint(checkpoint_path, data_path, version, gold_data_path, args, num_samples=100):
+    model, tokenizer, device = load_model_and_tokenizer(checkpoint_path, args)
 
     with open(data_path, 'r') as f:
         data = [json.loads(line) for line in f]
@@ -82,40 +135,57 @@ def evaluate_checkpoint(checkpoint_path, data_path, version, gold_data_path, num
 
     distances = []
 
-    for item, gold_item in tqdm(zip(data, gold_data)):
+    for item, gold_item in tqdm(zip(data, gold_data), desc="Processing items", total=len(data)):
+
+        with open('./prompts/CounterCoTQA.evaluate.txt', 'r') as fr:
+            original_prompt = json.load(fr)["prompt"]
+        prompt = original_prompt.format(item["question"], item["query"])
+
         generated = generate_cot_and_answer(
-            model, tokenizer, item['question'], item['query'], device)
+            model, tokenizer, prompt, device, args)
 
         cot1 = {"chain_of_thought": item['chain_of_thought'],
                 "answer": item['answer'], "question": item['question']}
         cot2 = {"chain_of_thought": generated['chain_of_thought'],
                 "answer": generated['answer'], "question": item['question']}
 
-        expected_answer = ' '.join(
-            gold_item[version]["chain_of_thought"])+' '+gold_item[version]["answer"]
+        gold_cot = {"chain_of_thought": gold_item[version]['chain_of_thought'],
+                    "answer": gold_item[version]['answer'], "question": item['question']}
 
-        result = compare_rationales(cot1, cot2)
-        result = 1-(1-result)*10
-        print("Distance: " + str(result))
-        distances.append(result)
+        try:
+            result = compare_rationales(cot2, gold_cot)
+            print("Distance: " + str(result))
+            distances.append(result)
+        except:
+            continue
 
     mean_distance = np.mean(distances)
+    generate_ratio = len(distances)/len(data)
+    print("Mean Distance:" + str(mean_distance))
+    print("Genetate Ratio:" + str(generate_ratio))
 
     return distances, mean_distance
 
 
-def evaluate_all_checkpoints(checkpoint_dir, data_path, version, gold_data_path, num_samples=100):
+def evaluate_all_checkpoints(checkpoint_dir, data_path, version, gold_data_path, args, num_samples=100):
     all_distances = {}
     means = []
 
-    for i in range(10):
-        checkpoint_path = os.path.join(
-            checkpoint_dir, f"checkpoint_{i}.ckpt")
-        distances, mean_distance = evaluate_checkpoint(
-            checkpoint_path, data_path, version, gold_data_path, num_samples)
+    checkpoint_path = checkpoint_dir+"model_seed42.ckpt"
+    distances, mean_distance = evaluate_checkpoint(
+        checkpoint_path, data_path, version, gold_data_path, args, num_samples)
+    all_distances[0] = sorted(distances)
+    means.append(mean_distance)
 
-        all_distances[i] = sorted(distances)
-        means.append(mean_distance)
+    # for i in range(10):
+    # # ! Modified for only test the final model
+    #     checkpoint_path = os.path.join(
+    #         checkpoint_dir, f"checkpoint_{i}.ckpt")
+    #     distances, mean_distance = evaluate_checkpoint(
+    #         checkpoint_path, data_path, version, gold_data_path, num_samples)
+
+    #     all_distances[i] = sorted(distances)
+    #     means.append(mean_distance)
 
     return all_distances, means
 
@@ -212,24 +282,139 @@ def plot_means(means):
     plt.close()
 
 
-# 运行评估
-version = "base"
-checkpoint_dir = "./checkpoints/CounterCoTQA/"+version + \
-    "/counterfactual0.5_t5-3b_bs8_gs1_lr1e-5_wd0_e3/checkpoints_seed42/"
-data_path = "./outputs/CounterCoTQA/dev."+version+".explanation.jsonl"
-gold_data_path = "./data/CounterCoTQA/dev.jsonl"
-gpu = 3
+def main(args):
 
-all_distances, means = evaluate_all_checkpoints(
-    checkpoint_dir, data_path, version, gold_data_path, num_samples=100)
+    version = args.version
+    data_path = "./outputs/CounterCoTQA/gpt-neox-20b/dev."+version+".explanation.jsonl"
+    gold_data_path = "./data/CounterCoTQA/dev.jsonl"
 
-save_evaluation_results(all_distances, means, version)
-advanced_analysis(all_distances)
+    if args.model == "trained-t5":
 
-# 绘制直方图
-plot_sorted_distances(all_distances)
+        checkpoint_dir = "./checkpoints/CounterCoTQA/"+version + \
+            "/counterfactual0.5_t5-3b_bs8_gs1_lr1e-5_wd0_e3/"
 
-# 绘制均值折线图
-plot_means(means)
+        gpu = 3
 
-print("Evaluation complete. Plots have been saved.")
+        all_distances, means = evaluate_all_checkpoints(
+            checkpoint_dir, data_path, version, gold_data_path, args, num_samples=100)
+
+        print(means)
+
+        save_evaluation_results(all_distances, means, version)
+        advanced_analysis(all_distances)
+
+        plot_sorted_distances(all_distances)
+
+        plot_means(means)
+
+        print("Evaluation complete. Plots have been saved.")
+    elif args.model == "trained-gpt2":
+
+        checkpoint_dir = "./checkpoints/CounterCoTQA/"+version + \
+            "/counterfactual0.5_gpt2_bs8_gs1_lr1e-5_wd0_e3/"
+
+        gpu = 3
+
+        all_distances, means = evaluate_all_checkpoints(
+            checkpoint_dir, data_path, version, gold_data_path, args, num_samples=100)
+
+        print(means)
+
+        save_evaluation_results(all_distances, means, version)
+        advanced_analysis(all_distances)
+
+        plot_sorted_distances(all_distances)
+
+        plot_means(means)
+
+        print("Evaluation complete. Plots have been saved.")
+
+    else:
+        # for pre-trained model evaluation
+        # -----------------Load Model-----------------------
+        model_path = args.model
+        if args.model != "gpt-4o-mini":
+            tokenizer = AutoTokenizer.from_pretrained(
+                model_path, cache_dir='../cache')  # , use_fast=False)
+            n_gpus = 1
+            free_in_GB = 49
+            max_memory = {i: "{}GB".format(free_in_GB)
+                          for i in range(args.gpu, args.gpu + n_gpus)}
+
+        if "t5" in args.model:
+            model = AutoModelForSeq2SeqLM.from_pretrained(
+                model_path, torch_dtype=torch.float16).to(args.device)
+
+        else:
+            if args.model != "gpt-4o-mini":
+                model = AutoModelForCausalLM.from_pretrained(
+                    model_path, torch_dtype=torch.float16).to(args.device)
+
+        if args.model != "gpt-4o-mini":
+            indicator_token_ids = {
+                "stop": tokenizer.encode("\n\nQ")[-2],
+            }
+
+            model.eval()
+        else:
+            model = None
+            tokenizer = None
+
+        # -----------------data prepare------------------
+
+        with open('./prompts/CounterCoTQA.evaluate.txt', 'r') as fr:
+            original_prompt = json.load(fr)["prompt"]
+
+        with open(data_path, 'r') as f:
+            data = [json.loads(line) for line in f]
+
+        with open(gold_data_path, 'r') as f:
+            gold_data = [json.loads(line) for line in f]
+
+        data = data[:100]
+        gold_data = gold_data[:100]
+
+        # ---------------------evaluate-----------------
+
+        distances = []
+        for item, gold_item in tqdm(zip(data, gold_data), desc="Processing items", total=len(data)):
+            prompt = original_prompt.format(item["question"], item["query"])
+
+            generated = generate_cot_and_answer(
+                model, tokenizer, prompt, args.device, args)
+
+            #! chain_of_thought here need to be a list
+            cot1 = {"chain_of_thought": item['chain_of_thought'],
+                    "answer": item['answer'], "question": item['question']}
+            cot2 = {"chain_of_thought": generated['chain_of_thought'],
+                    "answer": generated['answer'], "question": item['question']}
+
+            gold_cot = {"chain_of_thought": gold_item[version]['chain_of_thought'],
+                        "answer": gold_item[version]['answer'], "question": item['question']}
+
+            # print(prompt)
+            # print(cot2)
+            # print(gold_cot)
+
+            # where the first input is the expected answer
+            try:
+                result = compare_rationales(cot2, gold_cot)
+                print("Distance: " + str(result))
+                distances.append(result)
+            except:
+                continue
+
+    mean_distance = np.mean(distances)
+    generate_ratio = len(distances)/len(data)
+    print("Mean Distance:" + str(mean_distance))
+    print("Genetate Ratio:" + str(generate_ratio))
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Run main.')
+    parser.add_argument('--model', type=str)
+    parser.add_argument('--gpu', type=int, default=0)
+    parser.add_argument('--version', type=str)
+    args = parser.parse_args()
+    args.device = torch.device('cuda:{}'.format(args.gpu))
+    main(args)

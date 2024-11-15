@@ -5,9 +5,9 @@ dataset="CounterCoTQA"
 prompt="explanation"
 version="base"
 gpu=1
-model='gpt-4o'
+model='trained-t5'
 
-output_prefix="outputs/${dataset}/gpt-4o"
+output_prefix="outputs/${dataset}/$model"
 mkdir -p $output_prefix
 
 python -u \

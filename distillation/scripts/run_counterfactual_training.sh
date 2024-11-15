@@ -1,8 +1,9 @@
 #!/bin/bash
 
 dataset="CounterCoTQA"
-version="modified"
-model_name="t5-3b"
+version="base"
+model_name="gpt2"
+teacher_model="gpt-neox-20b"
 max_enc_length=128
 max_dec_length=128
 train_batch_size=8
@@ -17,7 +18,7 @@ num_epoch_early_stopping=1
 
 counterfactual_alpha=0.5
 
-gpu=3
+gpu=2
 
 save_dir="checkpoints/${dataset}/$version/counterfactual${counterfactual_alpha}_${model_name}_bs${train_batch_size}_gs${grad_step}_lr${learning_rate}_wd${weight_decay}_e${num_epoch}"
 mkdir -p $save_dir
@@ -27,6 +28,7 @@ python -u \
     --num_epoch_early_stopping $num_epoch_early_stopping \
     --add_task_prefix \
     --use_wandb\
+    --teacher_model $teacher_model\
     --wandb_project mikd\
     --counterfactual_alpha $counterfactual_alpha \
     --dataset $dataset \

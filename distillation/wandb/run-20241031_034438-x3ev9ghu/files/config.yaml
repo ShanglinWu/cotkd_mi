@@ -1,0 +1,102 @@
+_wandb:
+    value:
+        cli_version: 0.18.3
+        m: []
+        python_version: 3.10.14
+        t:
+            "1":
+                - 1
+                - 11
+                - 49
+                - 55
+            "2":
+                - 1
+                - 11
+                - 49
+                - 55
+                - 71
+            "3":
+                - 16
+                - 17
+                - 23
+                - 24
+                - 55
+            "4": 3.10.14
+            "5": 0.18.3
+            "6": 4.44.2
+            "8":
+                - 5
+            "12": 0.18.3
+            "13": linux-x86_64
+add_task_prefix:
+    value: true
+counterfactual_alpha:
+    value: 0.5
+dataset:
+    value: CounterCoTQA
+debug:
+    value: false
+device:
+    value: cuda:2
+eval_batch_size:
+    value: 32
+eval_split:
+    value: test
+evaluate:
+    value: false
+gpu:
+    value: 2
+grad_step:
+    value: 1
+inference:
+    value: false
+learning_rate:
+    value: 1e-05
+max_dec_length:
+    value: 128
+max_enc_length:
+    value: 128
+max_grad_norm:
+    value: 1
+model_name:
+    value: gpt2
+num_beams:
+    value: 1
+num_epoch:
+    value: 3
+num_epoch_early_stopping:
+    value: 1
+num_return_sequences:
+    value: 1
+overwrite_output:
+    value: false
+sample:
+    value: false
+save_ckpt:
+    value: false
+save_dir:
+    value: checkpoints/CounterCoTQA/modified/counterfactual0.5_gpt2_bs8_gs1_lr1e-5_wd0_e3
+seed:
+    value: 42
+smoothing_factor:
+    value: 0
+teacher_model:
+    value: gpt-neox-20b
+top_k:
+    value: 0
+top_p:
+    value: 1
+train_batch_size:
+    value: 8
+use_wandb:
+    value: true
+version:
+    value: modified
+wandb_project:
+    value: mikd
+warmup_ratio:
+    value: 0.06
+weight_decay:
+    value: 0
+without_explanation:
+    value: false

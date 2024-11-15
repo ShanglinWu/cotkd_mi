@@ -1,0 +1,65 @@
+/home/yh158/.conda/envs/mikd/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+processing ./outputs/CounterCoTQA/gpt-neox-20b/train.modified.explanation.jsonl: 2201it [00:00, 2678.95it/s]
+*** Example ***
+encoder input: [factual] Everything that is rainy or a yumpus is a numpus. Everything that is melodic or a numpus is a dumpus. Everything that is fast or a numpus is an impus. Everything that is aggressive or a dumpus is a grimpus. Everything that is floral or a dumpus is a rompus. Everything that is bright or a grimpus is a lempus. Everything that is brown or a grimpus is a lorpus. Everything that is sour or a lempus is a gorpus. Everything that is luminous or a
+encoder attention mask: tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1])
+decoder output: [factual] Answer is N/A. chain-of-thought: Polly is a numpus. Polly is a zumpus. Polly is feisty or a gorpus. So the answer is N/A<|endoftext|>
+*** Example ***
+encoder input: [factual] Every moderate lempus is a shumpus. Orange shumpuses are jompuses. Every discordant shumpus is a yumpus. Every hot jompus is a gorpus. Each angry jompus is a brimpus. Large gorpuses are impuses. Each overcast gorpus is a dumpus. Bitter impuses are vumpuses. Every earthy impus is a zumpus. Every shy vumpus is a tumpus. Dull vumpuses are lorpuses. Each luminous tumpus is a numpus
+encoder attention mask: tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1])
+decoder output: [factual] Answer is N/A. chain-of-thought: Stella is overcast. Stella is hot. Stella is a jompus. Stella is angry. Stella is bitter. Stella is a grimpus. Stella is a gorpus. Stella is large. Stella is a bitter impus. Stella is a gorpus. Stella is a jompus. Stella is a gorpus. Stella is a gorpus. Stella is a gorpus. So the answer is N/A<|endoftext|>
+processing ./outputs/CounterCoTQA/gpt-neox-20b/train.counterfactual.modified.explanation.jsonl: 2201it [00:00, 2294.42it/s]
+*** Example ***
+encoder input: [counterfactual] Everything that is rainy or a yumpus is a numpus. Everything that is melodic or a numpus is a dumpus. Everything that is fast or a numpus is an impus. Everything that is aggressive or a dumpus is a grimpus. Everything that is floral or a dumpus is a rompus. Everything that is bright or a grimpus is a lempus. Everything that is brown or a grimpus is a lorpus. Everything that is sour or a lempus is a gorpus. Everything that is luminous or
+encoder attention mask: tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1])
+decoder output:  N/A<|endoftext|>
+*** Example ***
+encoder input: [counterfactual] Every moderate lempus is a shumpus. Orange shumpuses are jompuses. Every discordant shumpus is a yumpus. Every hot jompus is a gorpus. Each angry jompus is a brimpus. Large gorpuses are impuses. Each overcast gorpus is a dumpus. Bitter impuses are vumpuses. Every earthy impus is a zumpus. Every shy vumpus is a tumpus. Dull vumpuses are lorpuses. Each luminous tumpus is a nump
+encoder attention mask: tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1])
+decoder output:  N/A<|endoftext|>
+decoder input: [PAD][counterfactual] Answer is N/A. chain-of-thought: Polly is a numpus. Polly is a zumpus. Polly is feisty or a gorpus. So the answer is N/A<|endoftext|>[PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD]
+decoder input: [PAD][counterfactual] Answer is N/A. chain-of-thought: Stella is overcast. Stella is hot. Stella is a jompus. Stella is angry. Stella is bitter. Stella is a grimpus. Stella is a gorpus. Stella is large. Stella is a bitter impus. Stella is a gorpus. Stella is a jompus. Stella is a gorpus. Stella is a gorpus. Stella is a gorpus. So the answer is N/A<|endoftext|>[PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD][PAD]
+processing ./outputs/CounterCoTQA/gpt-neox-20b/dev.modified.explanation.jsonl: 551it [00:00, 3209.09it/s]
+*** Example ***
+encoder input: [factual] Impuses are not overcast. Each impus is a vumpus. Every vumpus is aggressive. Vumpuses are tumpuses. Vumpuses are lorpuses. Tumpuses are not spicy. Tumpuses are numpuses. Every tumpus is a shumpus. Numpuses are happy. Numpuses are rompuses. Numpuses are brimpuses. Every rompus is liquid. Rompuses are dumpuses. Rompuses are grimpuses. Dumpuses are large. Each dumpus is a zumpus. Each
+encoder attention mask: tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1])
+decoder output: [factual] Answer is False. chain-of-thought: Stella is a sterpus. Stella is a tumpus. Stella is not large. Stella is a sterpus. Stella is a tumpus. Stella is not large. Stella is a tumpus. Stella is a tumpus. Stella is not large. Stella is a tumpus. Stella is a tumpus. Stella is not large. Stella is a tumpus. Stella is a So the answer is False<|endoftext|>
+*** Example ***
+encoder input: [factual] Everything that is brown or an impus is a tumpus. Everything that is small or a tumpus is a rompus. Everything that is liquid or a tumpus is a grimpus. Everything that is bright or a rompus is a dumpus. Everything that is sunny or a rompus is a shumpus. Everything that is opaque or a dumpus is a zumpus. Everything that is shy or a dumpus is a sterpus. Everything that is slow or a zumpus is a yumpus. Everything that is loud or a zump
+encoder attention mask: tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1])
+decoder output: [factual] Answer is N/A. chain-of-thought: Stella is an impus. Stella is a lempus. Stella is slow or a zumpus. So the answer is N/A<|endoftext|>
+Epoch 0 loss 18.4554 counter 13.7219: 100%|██████████| 276/276 [00:19<00:00, 14.03it/s]
+Epoch 1 loss 6.8542 counter 2.7523: 100%|██████████| 276/276 [00:19<00:00, 14.28it/s]s]
+Epoch 2 loss 6.7242 counter 2.1799: 100%|██████████| 276/276 [00:19<00:00, 14.38it/s]
+Epoch: 100%|██████████| 3/3 [00:58<00:00, 19.40s/it] 276/276 [00:19<00:00, 14.38it/s]

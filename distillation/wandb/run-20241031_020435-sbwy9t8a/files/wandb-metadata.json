@@ -1,0 +1,125 @@
+{
+  "os":  "Linux-5.15.0-106-generic-x86_64-with-glibc2.35",
+  "python":  "3.10.14",
+  "startedAt":  "2024-10-31T07:04:36.034503Z",
+  "args":  [
+    "--num_epoch_early_stopping",
+    "1",
+    "--add_task_prefix",
+    "--use_wandb",
+    "--teacher_model",
+    "gpt-neox-20b",
+    "--wandb_project",
+    "mikd",
+    "--counterfactual_alpha",
+    "0.5",
+    "--dataset",
+    "CounterCoTQA",
+    "--save_dir",
+    "checkpoints/CounterCoTQA/modified/counterfactual0.5_gpt2_bs8_gs1_lr1e-5_wd0_e3",
+    "--model_name",
+    "gpt2",
+    "--max_enc_length",
+    "128",
+    "--max_dec_length",
+    "128",
+    "--train_batch_size",
+    "8",
+    "--eval_batch_size",
+    "32",
+    "--grad_step",
+    "1",
+    "--learning_rate",
+    "1e-5",
+    "--warmup_ratio",
+    "0.06",
+    "--weight_decay",
+    "0",
+    "--num_epoch",
+    "3",
+    "--version",
+    "modified",
+    "--gpu",
+    "3"
+  ],
+  "program":  "/home/yh158/mikd/cotkd_mi/distillation/main.py",
+  "codePath":  "distillation/main.py",
+  "git":  {
+    "remote":  "https://github.com/ShanglinWu/cotkd_mi.git",
+    "commit":  "5c1bd4f8133d965570525ab22a8f5817c0e246e1"
+  },
+  "email":  "jasonwu1017@gmail.com",
+  "root":  "/home/yh158/mikd/cotkd_mi/distillation",
+  "host":  "chili01.cs.rice.edu",
+  "username":  "yh158",
+  "executable":  "/home/yh158/.conda/envs/mikd/bin/python",
+  "codePathLocal":  "main.py",
+  "cpu_count":  64,
+  "cpu_count_logical":  128,
+  "gpu":  "[NVIDIA RTX A6000, NVIDIA RTX A6000, NVIDIA RTX A6000, NVIDIA RTX A6000, NVIDIA RTX A6000, NVIDIA RTX A6000, NVIDIA RTX A6000, NVIDIA RTX A6000]",
+  "gpu_count":  8,
+  "disk":  {
+    "/":  {
+      "total":  "1888558305280",
+      "used":  "161136324608"
+    }
+  },
+  "memory":  {
+    "total":  "1623026634752"
+  },
+  "cpu":  {
+    "count":  64,
+    "countLogical":  128
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA RTX A6000",
+      "memoryTotal":  "51527024640",
+      "cudaCores":  10752,
+      "architecture":  "Ampere"
+    },
+    {
+      "name":  "NVIDIA RTX A6000",
+      "memoryTotal":  "51527024640",
+      "cudaCores":  10752,
+      "architecture":  "Ampere"
+    },
+    {
+      "name":  "NVIDIA RTX A6000",
+      "memoryTotal":  "51527024640",
+      "cudaCores":  10752,
+      "architecture":  "Ampere"
+    },
+    {
+      "name":  "NVIDIA RTX A6000",
+      "memoryTotal":  "51527024640",
+      "cudaCores":  10752,
+      "architecture":  "Ampere"
+    },
+    {
+      "name":  "NVIDIA RTX A6000",
+      "memoryTotal":  "51527024640",
+      "cudaCores":  10752,
+      "architecture":  "Ampere"
+    },
+    {
+      "name":  "NVIDIA RTX A6000",
+      "memoryTotal":  "51527024640",
+      "cudaCores":  10752,
+      "architecture":  "Ampere"
+    },
+    {
+      "name":  "NVIDIA RTX A6000",
+      "memoryTotal":  "51527024640",
+      "cudaCores":  10752,
+      "architecture":  "Ampere"
+    },
+    {
+      "name":  "NVIDIA RTX A6000",
+      "memoryTotal":  "51527024640",
+      "cudaCores":  10752,
+      "architecture":  "Ampere"
+    }
+  ],
+  "cudaVersion":  "12.2"
+}

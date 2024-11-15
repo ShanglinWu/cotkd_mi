@@ -1,0 +1,18 @@
+{"time":"2024-10-31T04:42:07.720830737-05:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2024-10-31T04:42:07.720860157-05:00","level":"INFO","msg":"created symlink","path":"/home/yh158/mikd/cotkd_mi/distillation/wandb/run-20241031_044207-jfko4je6/logs/debug-core.log"}
+{"time":"2024-10-31T04:42:07.723931704-05:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-10-31T04:42:07.737605317-05:00","level":"INFO","msg":"created new stream","id":"jfko4je6"}
+{"time":"2024-10-31T04:42:07.737640827-05:00","level":"INFO","msg":"stream: started","id":"jfko4je6"}
+{"time":"2024-10-31T04:42:07.737655367-05:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"jfko4je6"}}
+{"time":"2024-10-31T04:42:07.737681958-05:00","level":"INFO","msg":"sender: started","stream_id":{"value":"jfko4je6"}}
+{"time":"2024-10-31T04:42:07.737676447-05:00","level":"INFO","msg":"handler: started","stream_id":{"value":"jfko4je6"}}
+{"time":"2024-10-31T04:42:08.034650197-05:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-10-31T04:42:08.041379753-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-31T04:43:15.096682995-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-31T04:43:15.101103679-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-31T04:43:15.528837469-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-31T04:43:16.690907848-05:00","level":"INFO","msg":"stream: closing","id":"jfko4je6"}
+{"time":"2024-10-31T04:43:16.690950258-05:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"jfko4je6"}}
+{"time":"2024-10-31T04:43:16.690994798-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"jfko4je6"}}
+{"time":"2024-10-31T04:43:16.691033968-05:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"jfko4je6"}}
+{"time":"2024-10-31T04:43:16.692661947-05:00","level":"INFO","msg":"stream: closed","id":"jfko4je6"}

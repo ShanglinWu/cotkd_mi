@@ -1,0 +1,18 @@
+{"time":"2024-10-31T03:44:50.354360169-05:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2024-10-31T03:44:50.354397409-05:00","level":"INFO","msg":"created symlink","path":"/home/yh158/mikd/cotkd_mi/distillation/wandb/run-20241031_034450-hf1mz84l/logs/debug-core.log"}
+{"time":"2024-10-31T03:44:50.356155207-05:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-10-31T03:44:50.369754993-05:00","level":"INFO","msg":"created new stream","id":"hf1mz84l"}
+{"time":"2024-10-31T03:44:50.369819694-05:00","level":"INFO","msg":"stream: started","id":"hf1mz84l"}
+{"time":"2024-10-31T03:44:50.369842824-05:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"hf1mz84l"}}
+{"time":"2024-10-31T03:44:50.369861894-05:00","level":"INFO","msg":"handler: started","stream_id":{"value":"hf1mz84l"}}
+{"time":"2024-10-31T03:44:50.369855414-05:00","level":"INFO","msg":"sender: started","stream_id":{"value":"hf1mz84l"}}
+{"time":"2024-10-31T03:44:50.704772246-05:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-10-31T03:44:50.723796778-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-31T03:44:53.035767829-05:00","level":"INFO","msg":"stream: closing","id":"hf1mz84l"}
+{"time":"2024-10-31T03:44:53.03582288-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-31T03:44:53.039610968-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-31T03:44:53.504686628-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-31T03:44:53.630855535-05:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"hf1mz84l"}}
+{"time":"2024-10-31T03:44:53.630942335-05:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"hf1mz84l"}}
+{"time":"2024-10-31T03:44:53.630931235-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"hf1mz84l"}}
+{"time":"2024-10-31T03:44:53.633110956-05:00","level":"INFO","msg":"stream: closed","id":"hf1mz84l"}

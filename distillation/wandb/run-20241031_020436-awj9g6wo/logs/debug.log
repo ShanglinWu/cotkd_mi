@@ -1,0 +1,16 @@
+2024-10-31 02:04:36,872 INFO    MainThread:3195333 [wandb_setup.py:_flush():79] Current SDK version is 0.18.3
+2024-10-31 02:04:36,872 INFO    MainThread:3195333 [wandb_setup.py:_flush():79] Configure stats pid to 3195333
+2024-10-31 02:04:36,873 INFO    MainThread:3195333 [wandb_setup.py:_flush():79] Loading settings from /home/yh158/.config/wandb/settings
+2024-10-31 02:04:36,873 INFO    MainThread:3195333 [wandb_setup.py:_flush():79] Loading settings from /home/yh158/mikd/cotkd_mi/distillation/wandb/settings
+2024-10-31 02:04:36,873 INFO    MainThread:3195333 [wandb_setup.py:_flush():79] Loading settings from environment variables: {}
+2024-10-31 02:04:36,873 INFO    MainThread:3195333 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'distillation/main.py', 'program_abspath': '/home/yh158/mikd/cotkd_mi/distillation/main.py', 'program': '/home/yh158/mikd/cotkd_mi/distillation/main.py'}
+2024-10-31 02:04:36,873 INFO    MainThread:3195333 [wandb_setup.py:_flush():79] Applying login settings: {'api_key': '***REDACTED***'}
+2024-10-31 02:04:36,873 INFO    MainThread:3195333 [wandb_setup.py:_flush():79] Applying login settings: {'api_key': '***REDACTED***'}
+2024-10-31 02:04:36,873 INFO    MainThread:3195333 [wandb_setup.py:_flush():79] Applying login settings: {}
+2024-10-31 02:04:36,873 INFO    MainThread:3195333 [wandb_init.py:_log_setup():532] Logging user logs to /home/yh158/mikd/cotkd_mi/distillation/wandb/run-20241031_020436-awj9g6wo/logs/debug.log
+2024-10-31 02:04:36,873 INFO    MainThread:3195333 [wandb_init.py:_log_setup():533] Logging internal logs to /home/yh158/mikd/cotkd_mi/distillation/wandb/run-20241031_020436-awj9g6wo/logs/debug-internal.log
+2024-10-31 02:04:36,873 INFO    MainThread:3195333 [wandb_init.py:init():617] calling init triggers
+2024-10-31 02:04:36,873 INFO    MainThread:3195333 [wandb_init.py:init():624] wandb.init called with sweep_config: {}
+config: {'dataset': 'CounterCoTQA', 'save_dir': 'checkpoints/CounterCoTQA/modified/counterfactual0.5_gpt2_bs8_gs1_lr1e-5_wd0_e3', 'debug': False, 'save_ckpt': False, 'add_task_prefix': True, 'model_name': 'gpt2', 'teacher_model': 'gpt-neox-20b', 'max_enc_length': 128, 'max_dec_length': 128, 'train_batch_size': 8, 'grad_step': 1, 'learning_rate': 1e-05, 'warmup_ratio': 0.06, 'weight_decay': 0.0, 'max_grad_norm': 1.0, 'num_epoch': 3.0, 'num_epoch_early_stopping': 1, 'without_explanation': False, 'counterfactual_alpha': 0.5, 'smoothing_factor': 0, 'inference': False, 'evaluate': False, 'eval_split': 'test', 'eval_batch_size': 32, 'sample': False, 'num_beams': 1, 'top_k': 0, 'top_p': 1.0, 'num_return_sequences': 1, 'overwrite_output': False, 'version': 'modified', 'seed': 42, 'use_wandb': True, 'wandb_project': 'mikd', 'gpu': 3, 'device': device(type='cuda', index=3)}
+2024-10-31 02:04:36,873 INFO    MainThread:3195333 [wandb_init.py:init():662] wandb.init() called when a run is still active
+2024-10-31 02:04:39,594 WARNING MsgRouterThr:3195333 [router.py:message_loop():77] message_loop has been closed

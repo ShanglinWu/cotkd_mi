@@ -1,0 +1,18 @@
+/home/yh158/.conda/envs/mikd/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/yh158/mikd/cotkd_mi/distillation/main.py", line 525, in <module>
+    main(args, args.seed)
+  File "/home/yh158/mikd/cotkd_mi/distillation/main.py", line 236, in main
+    trainset = get_tensor_dataset('train', tokenizer, args)
+  File "/home/yh158/mikd/cotkd_mi/distillation/data_helper.py", line 172, in get_tensor_dataset
+    with open(data_path, 'r') as fr:
+FileNotFoundError: [Errno 2] No such file or directory: './outputs/CounterCoTQA/train.modified.explanation.jsonl'
+Traceback (most recent call last):
+  File "/home/yh158/mikd/cotkd_mi/distillation/main.py", line 525, in <module>
+    main(args, args.seed)
+  File "/home/yh158/mikd/cotkd_mi/distillation/main.py", line 236, in main
+    trainset = get_tensor_dataset('train', tokenizer, args)
+  File "/home/yh158/mikd/cotkd_mi/distillation/data_helper.py", line 172, in get_tensor_dataset
+    with open(data_path, 'r') as fr:
+FileNotFoundError: [Errno 2] No such file or directory: './outputs/CounterCoTQA/train.modified.explanation.jsonl'
