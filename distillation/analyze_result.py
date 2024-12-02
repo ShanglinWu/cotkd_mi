@@ -40,7 +40,7 @@ def load_model_and_tokenizer(checkpoint_path, args):
 
 
 def generate_cot_and_answer(model, tokenizer, prompt, device, args):
-    if args.model == "gpt-4o-mini":
+    if args.model == "gpt-4o":
         client = OpenAI()
         response = client.chat.completions.create(
             model=args.model,
@@ -333,7 +333,7 @@ def main(args):
         # for pre-trained model evaluation
         # -----------------Load Model-----------------------
         model_path = args.model
-        if args.model != "gpt-4o-mini":
+        if args.model != "gpt-4o":
             tokenizer = AutoTokenizer.from_pretrained(
                 model_path, cache_dir='../cache')  # , use_fast=False)
             n_gpus = 1
@@ -346,11 +346,11 @@ def main(args):
                 model_path, torch_dtype=torch.float16).to(args.device)
 
         else:
-            if args.model != "gpt-4o-mini":
+            if args.model != "gpt-4o":
                 model = AutoModelForCausalLM.from_pretrained(
                     model_path, torch_dtype=torch.float16).to(args.device)
 
-        if args.model != "gpt-4o-mini":
+        if args.model != "gpt-4o":
             indicator_token_ids = {
                 "stop": tokenizer.encode("\n\nQ")[-2],
             }

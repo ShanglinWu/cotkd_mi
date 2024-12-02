@@ -1,1624 +1,403 @@
-Using device: cuda:2
-/home/yh158/.conda/envs/mikd/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:1601: FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
-  warnings.warn(
-/home/yh158/mikd/cotkd_mi/distillation/analyze_result.py:33: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
-  checkpoint = torch.load(checkpoint_path)['ckpt']
-Processing items:   0%|          | 0/100 [00:00<?, ?it/s]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Each numpus is a rompus. Every rompus is a dumpus. Each dumpus is a zumpus. Zumpuses are orange. Stella is a numpus.True or false: Stella is not orange. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:   1%|          | 1/100 [00:02<04:16,  2.59s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is sour or a jompus is an impus. Everything that is bright or an impus is a vumpus. Everything that is shy or a vumpus is a tumpus. Everything that is opaque or a tumpus is a numpus. Stella is a jompus.Prove: Stella is overcast or a numpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:   2%|▏         | 2/100 [00:04<03:07,  1.91s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is wooden or a numpus is a rompus. Everything that is melodic or a rompus is a dumpus. Everything that is kind or a dumpus is a brimpus. Stella is a numpus.Prove: Stella is hot or a brimpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:   3%|▎         | 3/100 [00:05<02:47,  1.73s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Gorpuses are transparent jompuses. Fae is a nervous gorpus.Prove: Fae is a jompus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:   4%|▍         | 4/100 [00:07<02:41,  1.69s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Fae is a mean impus.Prove: Fae is an impus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:   5%|▌         | 5/100 [00:08<02:39,  1.68s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Every grimpus is not large. Polly is a grimpus.True or false: Polly is not large. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:   6%|▌         | 6/100 [00:10<02:36,  1.67s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Every happy shumpus is a gorpus. Each red gorpus is a wumpus. Rex is red. Rex is fruity. Rex is a shumpus. Rex is happy.Prove: Rex is a fruity wumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is aususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususus
-Chain-of-thought is :
-[]
---------------------------
-Processing items:   7%|▋         | 7/100 [00:12<02:31,  1.63s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Rex is a cold tumpus.Prove: Rex is a tumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:   8%|▊         | 8/100 [00:13<02:31,  1.64s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is blue or a yumpus is a sterpus. Stella is a yumpus.Prove: Stella is liquid or a sterpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:   9%|▉         | 9/100 [00:15<02:28,  1.63s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Each dumpus is a happy lorpus. Fae is a bright dumpus.Prove: Fae is a lorpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is ausususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususus
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  10%|█         | 10/100 [00:16<02:27,  1.64s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Numpuses are rompuses. Grimpuses are rompuses. Wren is a numpus or a grimpus.Prove: Wren is a rompus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  11%|█         | 11/100 [00:18<02:24,  1.62s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Tumpuses are numpuses. Numpuses are not aggressive. Max is a tumpus.True or false: Max is aggressive. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  12%|█▏        | 12/100 [00:20<02:22,  1.62s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Every tumpus is a numpus. Every numpus is not red. Sam is a tumpus.True or false: Sam is red. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  13%|█▎        | 13/100 [00:21<02:20,  1.62s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Fruity lempuses are jompuses. Sour jompuses are impuses. Dull impuses are tumpuses. Sally is sour. Sally is fruity. Sally is a lempus. Sally is rainy. Sally is dull.Prove: Sally is a rainy tumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  14%|█▍        | 14/100 [00:23<02:16,  1.58s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is luminous or a tumpus is a jompus. Everything that is transparent or a jompus is a wumpus. Everything that is bright or a wumpus is a numpus. Everything that is feisty or a numpus is a shumpus. Stella is a tumpus.Prove: Stella is spicy or a shumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  15%|█▌        | 15/100 [00:24<02:10,  1.54s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is a shumpus or a rompus is a jompus. Rex is not a jompus.Prove: Rex is not a rompus and Rex is not a shumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  16%|█▌        | 16/100 [00:26<02:10,  1.55s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is bright or an impus is a vumpus. Stella is an impus.Prove: Stella is happy or a vumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  17%|█▋        | 17/100 [00:27<02:10,  1.57s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Max is a lorpus.Prove: Max is angry or a lorpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  18%|█▊        | 18/100 [00:29<02:10,  1.59s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Sally is an overcast jompus.Prove: Sally is a jompus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  19%|█▉        | 19/100 [00:31<02:10,  1.61s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is small or a lempus is a shumpus. Everything that is brown or a shumpus is a gorpus. Everything that is windy or a gorpus is a jompus. Sam is a lempus.Prove: Sam is moderate or a jompus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  20%|██        | 20/100 [00:32<02:06,  1.58s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Alex is a loud jompus.Prove: Alex is a jompus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  21%|██        | 21/100 [00:34<02:06,  1.60s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Vumpuses are dumpuses. Jompuses are dumpuses. Max is a vumpus or a jompus.Prove: Max is a dumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  22%|██▏       | 22/100 [00:35<02:04,  1.60s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Every moderate zumpus is a yumpus. Sam is moderate. Sam is discordant. Sam is a zumpus.Prove: Sam is a discordant yumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  23%|██▎       | 23/100 [00:37<02:02,  1.60s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Polly is a rompus.Prove: Polly is wooden or a rompus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  24%|██▍       | 24/100 [00:39<02:02,  1.61s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Rex is dull. Rex is a grimpus.Prove: Rex is a dull grimpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  25%|██▌       | 25/100 [00:40<02:01,  1.62s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is a shumpus or a lorpus is a tumpus. Fae is not a tumpus.Prove: Fae is not a lorpus and Fae is not a shumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  26%|██▌       | 26/100 [00:42<01:58,  1.60s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Every small sterpus is a lempus. Each slow lempus is a yumpus. Discordant yumpuses are shumpuses. Transparent shumpuses are impuses. Stella is luminous. Stella is small. Stella is a sterpus. Stella is discordant. Stella is transparent. Stella is slow.Prove: Stella is a luminous impus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus/Aus
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  27%|██▋       | 27/100 [00:43<01:53,  1.55s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Jompuses are bitter impuses. Max is a fruity jompus.Prove: Max is an impus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  28%|██▊       | 28/100 [00:45<01:53,  1.57s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is a sterpus or a lorpus is a jompus. Sam is not a jompus.Prove: Sam is not a lorpus and Sam is not a sterpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  29%|██▉       | 29/100 [00:47<01:51,  1.57s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Fae is liquid. Fae is a tumpus.Prove: Fae is a liquid tumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  30%|███       | 30/100 [00:48<01:51,  1.59s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Shumpuses are impuses. Rompuses are impuses. Alex is a shumpus or a rompus.Prove: Alex is an impus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  31%|███       | 31/100 [00:50<01:49,  1.59s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Polly is a wumpus.Prove: Polly is blue or a wumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  32%|███▏      | 32/100 [00:51<01:49,  1.61s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Polly is a zumpus.Prove: Polly is liquid or a zumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  33%|███▎      | 33/100 [00:53<01:48,  1.62s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Stella is a numpus.Prove: Stella is fruity or a numpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  34%|███▍      | 34/100 [00:55<01:47,  1.63s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Stella is a wumpus.Prove: Stella is muffled or a wumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  35%|███▌      | 35/100 [00:56<01:46,  1.64s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is a gorpus or a shumpus is a brimpus. Rex is not a brimpus.Prove: Rex is not a shumpus and Rex is not a gorpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  36%|███▌      | 36/100 [00:58<01:43,  1.62s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Each tumpus is a feisty numpus. Alex is a dull tumpus.Prove: Alex is a numpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is a N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  37%|███▋      | 37/100 [01:00<01:41,  1.61s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Shumpuses are impuses. Impuses are vumpuses. Each vumpus is a tumpus. Each tumpus is a numpus. Every numpus is a rompus. Each rompus is temperate. Wren is a shumpus.True or false: Wren is temperate. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  38%|███▊      | 38/100 [01:01<01:37,  1.57s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Every gorpus is a shumpus. Every brimpus is a shumpus. Wren is a gorpus or a brimpus.Prove: Wren is a shumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  39%|███▉      | 39/100 [01:03<01:35,  1.57s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is earthy or a numpus is a rompus. Sam is a numpus.Prove: Sam is sweet or a rompus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  40%|████      | 40/100 [01:04<01:34,  1.58s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Shumpuses are dull brimpuses. Polly is a bitter shumpus.Prove: Polly is a brimpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  41%|████      | 41/100 [01:06<01:33,  1.59s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Rex is an impus.Prove: Rex is spicy or an impus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  42%|████▏     | 42/100 [01:07<01:33,  1.61s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Each brimpus is a transparent lorpus. Rex is a feisty brimpus.Prove: Rex is a lorpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  43%|████▎     | 43/100 [01:09<01:31,  1.61s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Wren is a gorpus.Prove: Wren is bright or a gorpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A:  N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  44%|████▍     | 44/100 [01:11<01:30,  1.62s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Every hot jompus is an impus. Every floral impus is a brimpus. Spicy brimpuses are lorpuses. Each dull lorpus is a yumpus. Polly is floral. Polly is snowy. Polly is dull. Polly is a jompus. Polly is spicy. Polly is hot.Prove: Polly is a snowy yumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  45%|████▌     | 45/100 [01:12<01:26,  1.57s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Fae is a dumpus.Prove: Fae is fast or a dumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  46%|████▌     | 46/100 [01:14<01:25,  1.59s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Blue shumpuses are gorpuses. Each metallic gorpus is a jompus. Each small jompus is an impus. Bright impuses are vumpuses. Every nervous vumpus is a tumpus. Rex is blue. Rex is nervous. Rex is bright. Rex is a shumpus. Rex is metallic. Rex is small. Rex is opaque.Prove: Rex is an opaque tumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus isumpusususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususus
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  47%|████▋     | 47/100 [01:15<01:21,  1.53s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is happy or a lorpus is a grimpus. Wren is a lorpus.Prove: Wren is rainy or a grimpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  48%|████▊     | 48/100 [01:17<01:20,  1.55s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Shumpuses are vumpuses. Every yumpus is a vumpus. Sam is a shumpus or a yumpus.Prove: Sam is a vumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  49%|████▉     | 49/100 [01:18<01:19,  1.56s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Each lempus is a shumpus. Each shumpus is amenable. Alex is a lempus.True or false: Alex is not amenable. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  50%|█████     | 50/100 [01:20<01:18,  1.57s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Dull shumpuses are gorpuses. Small gorpuses are zumpuses. Every cold zumpus is a lempus. Each angry lempus is a lorpus. Nervous lorpuses are grimpuses. Transparent grimpuses are sterpuses. Stella is transparent. Stella is luminous. Stella is cold. Stella is nervous. Stella is small. Stella is angry. Stella is dull. Stella is a shumpus.Prove: Stella is a luminous sterpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  51%|█████     | 51/100 [01:21<01:13,  1.50s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Every muffled impus is a vumpus. Mean vumpuses are tumpuses. Hot tumpuses are numpuses. Polly is floral. Polly is mean. Polly is an impus. Polly is hot. Polly is muffled.Prove: Polly is a floral numpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  52%|█████▏    | 52/100 [01:23<01:11,  1.50s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Sam is bright. Sam is a numpus.Prove: Sam is a bright numpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  53%|█████▎    | 53/100 [01:24<01:12,  1.54s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is a gorpus or a wumpus is a lorpus. Polly is not a lorpus.Prove: Polly is not a wumpus and Polly is not a gorpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  54%|█████▍    | 54/100 [01:26<01:11,  1.54s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Sally is a numpus.Prove: Sally is hot or a numpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  55%|█████▌    | 55/100 [01:28<01:11,  1.58s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Rompuses are dumpuses. Dumpuses are small. Stella is a rompus.True or false: Stella is not small. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  56%|█████▌    | 56/100 [01:29<01:10,  1.59s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Shumpuses are bitter gorpuses. Sally is a fruity shumpus.Prove: Sally is a gorpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is aususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususus
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  57%|█████▋    | 57/100 [01:31<01:08,  1.60s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is a shumpus or a zumpus is a brimpus. Sally is not a brimpus.Prove: Sally is not a zumpus and Sally is not a shumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  58%|█████▊    | 58/100 [01:32<01:06,  1.59s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is overcast or a vumpus is a tumpus. Max is a vumpus.Prove: Max is slow or a tumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  59%|█████▉    | 59/100 [01:34<01:05,  1.59s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Each hot vumpus is a rompus. Floral rompuses are gorpuses. Sally is a vumpus. Sally is floral. Sally is sour. Sally is hot.Prove: Sally is a sour gorpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  60%|██████    | 60/100 [01:36<01:02,  1.57s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Impuses are vumpuses. Every vumpus is a tumpus. Each tumpus is a numpus. Numpuses are not opaque. Stella is an impus.True or false: Stella is not opaque. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  61%|██████    | 61/100 [01:37<01:01,  1.57s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Yumpuses are lempuses. Lempuses are shumpuses. Each shumpus is not metallic. Polly is a yumpus.True or false: Polly is not metallic. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  62%|██████▏   | 62/100 [01:39<00:59,  1.57s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Sally is a windy dumpus.Prove: Sally is a dumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  63%|██████▎   | 63/100 [01:40<00:59,  1.60s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is rainy or a grimpus is a sterpus. Everything that is moderate or a sterpus is a lempus. Everything that is discordant or a lempus is a shumpus. Everything that is angry or a shumpus is a gorpus. Everything that is temperate or a gorpus is a jompus. Polly is a grimpus.Prove: Polly is floral or a jompus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  64%|██████▍   | 64/100 [01:42<00:55,  1.53s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Every zumpus is red. Sam is a zumpus.True or false: Sam is not red. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  65%|██████▌   | 65/100 [01:43<00:54,  1.56s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Windy dumpuses are zumpuses. Bright zumpuses are lempuses. Each shy lempus is a shumpus. Opaque shumpuses are gorpuses. Each slow gorpus is a jompus. Sally is opaque. Sally is slow. Sally is discordant. Sally is shy. Sally is bright. Sally is a dumpus. Sally is windy.Prove: Sally is a discordant jompus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  66%|██████▌   | 66/100 [01:45<00:51,  1.51s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Vumpuses are not snowy. Max is a vumpus.True or false: Max is snowy. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  67%|██████▋   | 67/100 [01:46<00:51,  1.55s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Fae is an overcast numpus.Prove: Fae is a numpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  68%|██████▊   | 68/100 [01:48<00:50,  1.58s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is nervous or a rompus is a dumpus. Everything that is opaque or a dumpus is a lempus. Everything that is windy or a lempus is a shumpus. Everything that is moderate or a shumpus is a gorpus. Sam is a rompus.Prove: Sam is discordant or a gorpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  69%|██████▉   | 69/100 [01:49<00:47,  1.53s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Slow vumpuses are tumpuses. Rex is a vumpus. Rex is loud. Rex is slow.Prove: Rex is a loud tumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  70%|███████   | 70/100 [01:51<00:46,  1.55s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Rex is a dull numpus.Prove: Rex is a numpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  71%|███████   | 71/100 [01:53<00:45,  1.58s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is a grimpus or a sterpus is a lempus. Fae is not a lempus.Prove: Fae is not a sterpus and Fae is not a grimpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  72%|███████▏  | 72/100 [01:54<00:44,  1.57s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is muffled or a tumpus is a numpus. Everything that is aggressive or a numpus is a wumpus. Alex is a tumpus.Prove: Alex is metallic or a wumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  73%|███████▎  | 73/100 [01:56<00:42,  1.56s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Gorpuses are not liquid. Rex is a gorpus.True or false: Rex is not liquid. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  74%|███████▍  | 74/100 [01:57<00:41,  1.59s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Numpuses are brimpuses. Wumpuses are brimpuses. Sam is a numpus or a wumpus.Prove: Sam is a brimpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  75%|███████▌  | 75/100 [01:59<00:39,  1.59s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Max is a dumpus. Max is temperate.Prove: Max is a temperate dumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  76%|███████▌  | 76/100 [02:01<00:38,  1.60s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Numpuses are zumpuses. Zumpuses are jompuses. Jompuses are impuses. Each impus is not kind. Stella is a numpus.True or false: Stella is kind. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  77%|███████▋  | 77/100 [02:02<00:36,  1.59s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Each slow grimpus is a sterpus. Alex is slow. Alex is a grimpus. Alex is large.Prove: Alex is a large sterpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  78%|███████▊  | 78/100 [02:04<00:35,  1.59s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is sour or a sterpus is a lempus. Fae is a sterpus.Prove: Fae is dull or a lempus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  79%|███████▉  | 79/100 [02:05<00:33,  1.59s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Each temperate rompus is a dumpus. Polly is a rompus. Polly is temperate. Polly is rainy.Prove: Polly is a rainy dumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is aumpus/Aumpus/Aumpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  80%|████████  | 80/100 [02:07<00:31,  1.60s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Fae is a rompus.Prove: Fae is blue or a rompus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  81%|████████  | 81/100 [02:09<00:30,  1.61s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Fae is an overcast numpus.Prove: Fae is a numpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  82%|████████▏ | 82/100 [02:10<00:29,  1.62s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Sam is windy. Sam is a yumpus.Prove: Sam is a windy yumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  83%|████████▎ | 83/100 [02:12<00:27,  1.63s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Each jompus is an impus. Impuses are numpuses. Numpuses are not slow. Polly is a jompus.True or false: Polly is slow. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  84%|████████▍ | 84/100 [02:14<00:25,  1.62s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Each grimpus is a numpus. Numpuses are mean. Fae is a grimpus.True or false: Fae is not mean. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  85%|████████▌ | 85/100 [02:15<00:24,  1.61s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Every fast grimpus is a sterpus. Each orange sterpus is a lempus. Discordant lempuses are yumpuses. Mean yumpuses are shumpuses. Each wooden shumpus is a gorpus. Each large gorpus is a jompus. Fae is a grimpus. Fae is temperate. Fae is wooden. Fae is fast. Fae is orange. Fae is discordant. Fae is large. Fae is mean.Prove: Fae is a temperate jompus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  86%|████████▌ | 86/100 [02:16<00:21,  1.51s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is a brimpus or a rompus is a lempus. Rex is not a lempus.Prove: Rex is not a rompus and Rex is not a brimpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  87%|████████▋ | 87/100 [02:18<00:19,  1.53s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is melodic or a jompus is a tumpus. Everything that is aggressive or a tumpus is a zumpus. Everything that is wooden or a zumpus is a yumpus. Everything that is small or a yumpus is a brimpus. Stella is a jompus.Prove: Stella is cold or a brimpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  88%|████████▊ | 88/100 [02:19<00:17,  1.50s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Everything that is floral or a jompus is an impus. Everything that is dull or an impus is a vumpus. Everything that is happy or a vumpus is a zumpus. Everything that is spicy or a zumpus is a numpus. Everything that is overcast or a numpus is a lorpus. Everything that is fast or a lorpus is a grimpus. Wren is a jompus.Prove: Wren is discordant or a grimpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  89%|████████▉ | 89/100 [02:21<00:15,  1.44s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Sally is a wumpus. Sally is dull.Prove: Sally is a dull wumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  90%|█████████ | 90/100 [02:22<00:15,  1.51s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Transparent vumpuses are tumpuses. Wren is transparent. Wren is liquid. Wren is a vumpus.Prove: Wren is a liquid tumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  91%|█████████ | 91/100 [02:24<00:13,  1.53s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Sterpuses are lempuses. Every lempus is not small. Alex is a sterpus.True or false: Alex is small. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  92%|█████████▏| 92/100 [02:26<00:12,  1.56s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Every zumpus is a lempus. Every lempus is a shumpus. Shumpuses are not loud. Sally is a zumpus.True or false: Sally is loud. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  93%|█████████▎| 93/100 [02:27<00:10,  1.56s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Every sweet grimpus is a sterpus. Bright sterpuses are lempuses. Polly is feisty. Polly is sweet. Polly is bright. Polly is a grimpus.Prove: Polly is a feisty lempus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  94%|█████████▍| 94/100 [02:29<00:09,  1.55s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Wumpuses are sterpuses. Grimpuses are sterpuses. Max is a wumpus or a grimpus.Prove: Max is a sterpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  95%|█████████▌| 95/100 [02:30<00:07,  1.56s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Sam is a sterpus.Prove: Sam is slow or a sterpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  96%|█████████▌| 96/100 [02:32<00:06,  1.59s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Lempuses are numpuses. Tumpuses are numpuses. Sam is a lempus or a tumpus.Prove: Sam is a numpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  97%|█████████▋| 97/100 [02:34<00:04,  1.59s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q: Each dumpus is a bright zumpus. Alex is a sour dumpus.Prove: Alex is a zumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus is ausususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususususus
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  98%|█████████▊| 98/100 [02:35<00:03,  1.60s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Wren is a lorpus.Prove: Wren is large or a lorpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A:  N/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items:  99%|█████████▉| 99/100 [02:37<00:01,  1.61s/it]
-
-Q: Every yumpus is a numpus. Each numpus is a vumpus. Vumpuses are tumpuses. Tumpuses are wumpuses. Every wumpus is not shy. Fae is a yumpus. True or false: Fae is not shy.
-A: Answer is True. Chain of thought: 1. Fae is a yumpus. 2. Every yumpus is a numpus. 3. Fae is a numpus. 4. Each numpus is a vumpus. 5. Fae is a vumpus. 6. Vumpuses are tumpuses. 7. Fae is a tumpus. 8. Tumpuses are wumpuses. 9. Fae is a wumpus. 10. Every wumpus is not shy. 11. Fae is not shy. 
-
-Q:Everything that is bright or an impus is a vumpus. Stella is an impus. Prove: Stella is happy or a vumpus. 
-A: Answer is N/A. Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus. 
-
-  
-
-Q:  Polly is a shumpus. Polly is earthy.Prove: Polly is an earthy shumpus. 
- Generate chain-of-thought reasoning without explanation follow the format 1.step1 2.step2.... You need to only generate the answer part:
-A: umpus/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A/A
-Chain-of-thought is :
-[]
---------------------------
-Processing items: 100%|██████████| 100/100 [02:38<00:00,  1.62s/it]Processing items: 100%|██████████| 100/100 [02:38<00:00,  1.59s/it]
-/home/yh158/.conda/envs/mikd/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:3904: RuntimeWarning: Mean of empty slice.
-  return _methods._mean(a, axis=axis, dtype=dtype,
-/home/yh158/.conda/envs/mikd/lib/python3.10/site-packages/numpy/_core/_methods.py:147: RuntimeWarning: invalid value encountered in scalar divide
-  ret = ret.dtype.type(ret / rcount)
-Mean Distance:nan
-Genetate Ratio:0.0
-[np.float64(nan)]
-Evaluation results saved to evaluation_results.json
-Traceback (most recent call last):
-  File "/home/yh158/mikd/cotkd_mi/distillation/analyze_result.py", line 420, in <module>
-    main(args)
-  File "/home/yh158/mikd/cotkd_mi/distillation/analyze_result.py", line 324, in main
-    advanced_analysis(all_distances)
-  File "/home/yh158/mikd/cotkd_mi/distillation/analyze_result.py", line 221, in advanced_analysis
-    sns.boxplot(data=[all_distances[i] for i in range(10)])
-  File "/home/yh158/mikd/cotkd_mi/distillation/analyze_result.py", line 221, in <listcomp>
-    sns.boxplot(data=[all_distances[i] for i in range(10)])
-KeyError: 1
+Processing items:   0%|          | 0/100 [00:00<?, ?it/s]Chain-of-thought is :
+['Each numpus is a rompus.', 'Stella is a rompus.', 'Every rompus is a dumpus.', 'Stella is a dumpus.', 'Each dumpus is a zumpus.', 'Stella is a zumpus.', 'Zumpuses are orange.', 'Stella is orange.', 'The statement "Stella is not orange" is false.  \nAnswer is False.']
+--------------------------
+Distance: 0.11111111111111116
+Processing items:   1%|          | 1/100 [00:02<04:55,  2.98s/it]Chain-of-thought is :
+['Stella is a jompus.', 'Everything that is sour or a jompus is an impus.', 'Stella is an impus.', 'Everything that is bright or an impus is a vumpus.', 'Stella is a vumpus.', 'Everything that is shy or a vumpus is a tumpus.', 'Stella is a tumpus.', 'Everything that is opaque or a tumpus is a numpus.', 'Stella is a numpus.', 'Stella is overcast or a numpus.']
+--------------------------
+Distance: 0.2857142857142857
+Processing items:   2%|▏         | 2/100 [00:05<04:42,  2.88s/it]Chain-of-thought is :
+['Stella is a numpus.', 'Stella is wooden or a numpus.', 'Everything that is wooden or a numpus is a rompus.', 'Stella is a rompus.', 'Stella is melodic or a rompus.', 'Everything that is melodic or a rompus is a dumpus.', 'Stella is a dumpus.', 'Stella is kind or a dumpus.', 'Everything that is kind or a dumpus is a brimpus.', 'Stella is a brimpus.', 'Stella is hot or a brimpus.']
+--------------------------
+Distance: 0.0
+Processing items:   3%|▎         | 3/100 [00:10<05:43,  3.54s/it]Chain-of-thought is :
+['Fae is a gorpus.', 'Gorpuses are transparent jompuses.', 'Fae is a transparent jompus.', 'All transparent jompuses are jompuses.', 'Fae is a jompus.']
+--------------------------
+Distance: 0.19999999999999996
+Processing items:   4%|▍         | 4/100 [00:13<05:17,  3.30s/it]Chain-of-thought is :
+['Fae is a mean impus.', 'A mean impus is an impus.', 'Fae is an impus.']
+--------------------------
+Distance: 0.0
+Processing items:   5%|▌         | 5/100 [00:15<04:51,  3.07s/it]Chain-of-thought is :
+['Polly is a grimpus.', 'Every grimpus is not large.', 'Polly is not large.']
+--------------------------
+Distance: 0.0
+Processing items:   6%|▌         | 6/100 [00:17<04:23,  2.80s/it]Chain-of-thought is :
+['Rex is a shumpus.', 'Rex is happy.', 'Every happy shumpus is a gorpus.', 'Rex is a gorpus.', 'Rex is red.', 'Each red gorpus is a wumpus.', 'Rex is a wumpus.', 'Rex is fruity.', 'Rex is a fruity wumpus.']
+--------------------------
+Distance: 0.18181818181818177
+Processing items:   7%|▋         | 7/100 [00:21<04:27,  2.88s/it]Chain-of-thought is :
+['Rex is a cold tumpus.', 'A cold tumpus is a tumpus.', 'Rex is a tumpus.']
+--------------------------
+Distance: 0.0
+Processing items:   8%|▊         | 8/100 [00:22<03:49,  2.49s/it]Chain-of-thought is :
+['Stella is a yumpus.', 'Stella is blue or a yumpus.', 'Everything that is blue or a yumpus is a sterpus.', 'Stella is a sterpus.', 'Stella is liquid or a sterpus.']
+--------------------------
+Distance: 0.0
+Processing items:   9%|▉         | 9/100 [00:25<03:48,  2.51s/it]Chain-of-thought is :
+['Each dumpus is a happy lorpus.', 'Fae is a bright dumpus.', 'Fae is a dumpus.', 'Fae is a happy lorpus.', 'Fae is a lorpus.']
+--------------------------
+Distance: 0.0
+Processing items:  10%|█         | 10/100 [00:27<03:38,  2.43s/it]Chain-of-thought is :
+['Numpuses are rompuses.', 'Grimpuses are rompuses.', 'Wren is a numpus or a grimpus.', 'If Wren is a numpus, then Wren is a rompus because numpuses are rompuses.', 'If Wren is a grimpus, then Wren is a rompus because grimpuses are rompuses.', 'Wren is a rompus.']
+--------------------------
+Distance: 0.1428571428571429
+Processing items:  11%|█         | 11/100 [00:30<03:55,  2.65s/it]Chain-of-thought is :
+['Max is a tumpus.', 'Tumpuses are numpuses.', 'Max is a numpus.', 'Numpuses are not aggressive.', 'Max is not aggressive.']
+--------------------------
+Distance: 0.0
+Processing items:  12%|█▏        | 12/100 [00:32<03:33,  2.43s/it]Chain-of-thought is :
+['Sam is a tumpus.', 'Every tumpus is a numpus.', 'Sam is a numpus.', 'Every numpus is not red.', 'Sam is not red.']
+--------------------------
+Distance: 0.0
+Processing items:  13%|█▎        | 13/100 [00:34<03:19,  2.29s/it]Chain-of-thought is :
+['Sally is fruity.', 'Fruity lempuses are jompuses.', 'Sally is a lempus.', 'Sally is a jompus.', 'Sally is sour.', 'Sour jompuses are impuses.', 'Sally is an impus.', 'Sally is dull.', 'Dull impuses are tumpuses.', 'Sally is a tumpus.', 'Sally is rainy.', 'Sally is a rainy tumpus.']
+--------------------------
+Distance: 0.19999999999999996
+Processing items:  14%|█▍        | 14/100 [00:37<03:44,  2.60s/it]Chain-of-thought is :
+['Stella is a tumpus.', 'Everything that is luminous or a tumpus is a jompus.', 'Stella is a jompus.', 'Everything that is transparent or a jompus is a wumpus.', 'Stella is a wumpus.', 'Everything that is bright or a wumpus is a numpus.', 'Stella is a numpus.', 'Everything that is feisty or a numpus is a shumpus.', 'Stella is a shumpus.', 'Stella is spicy or a shumpus.']
+--------------------------
+Distance: 0.2857142857142857
+Processing items:  15%|█▌        | 15/100 [00:41<03:57,  2.79s/it]Chain-of-thought is :
+['Everything that is a shumpus or a rompus is a jompus.', 'Rex is not a jompus.', 'If Rex were a shumpus or a rompus, Rex would be a jompus.', 'Rex is not a shumpus and Rex is not a rompus.']
+--------------------------
+Distance: 0.8461538461538461
+Processing items:  16%|█▌        | 16/100 [00:43<03:45,  2.69s/it]Chain-of-thought is :
+['Stella is an impus.', 'Stella is bright or an impus.', 'Everything that is bright or an impus is a vumpus.', 'Stella is a vumpus.', 'Stella is happy or a vumpus.']
+--------------------------
+Distance: 0.0
+Processing items:  17%|█▋        | 17/100 [00:46<03:39,  2.65s/it]Chain-of-thought is :
+['Max is a lorpus.', 'Max is angry or a lorpus.']
+--------------------------
+Distance: 0.0
+Processing items:  18%|█▊        | 18/100 [00:47<03:05,  2.26s/it]Chain-of-thought is :
+['Sally is an overcast jompus.', 'Every overcast jompus is a jompus.', 'Sally is a jompus.']
+--------------------------
+Distance: 0.0
+Processing items:  19%|█▉        | 19/100 [00:49<02:51,  2.12s/it]Chain-of-thought is :
+['Sam is a lempus.', 'Sam is small or a lempus.', 'Everything that is small or a lempus is a shumpus.', 'Sam is a shumpus.', 'Sam is brown or a shumpus.', 'Everything that is brown or a shumpus is a gorpus.', 'Sam is a gorpus.', 'Sam is windy or a gorpus.', 'Everything that is windy or a gorpus is a jompus.', 'Sam is a jompus.', 'Sam is moderate or a jompus.']
+--------------------------
+Distance: 0.0
+Processing items:  20%|██        | 20/100 [00:52<03:20,  2.51s/it]Chain-of-thought is :
+['Alex is a loud jompus.', 'A loud jompus is a jompus.', 'Alex is a jompus.']
+--------------------------
+Distance: 0.0
+Processing items:  21%|██        | 21/100 [00:54<02:55,  2.22s/it]Chain-of-thought is :
+['Jompuses are dumpuses.', 'Max is a vumpus or a jompus.', 'If Max is a vumpus, then Max is a dumpus (since vumpuses are dumpuses).', 'If Max is a jompus, then Max is a dumpus (since jompuses are dumpuses).', 'Max is a dumpus.']
+--------------------------
+Distance: 0.2857142857142857
+Processing items:  22%|██▏       | 22/100 [00:56<02:56,  2.27s/it]Chain-of-thought is :
+['Sam is moderate.', 'Sam is a zumpus.', 'Every moderate zumpus is a yumpus.', 'Sam is a moderate zumpus.', 'Sam is a yumpus.', 'Sam is discordant.', 'Sam is a discordant yumpus.']
+--------------------------
+Distance: 0.0
+Processing items:  23%|██▎       | 23/100 [00:59<03:03,  2.38s/it]Chain-of-thought is :
+['Polly is a rompus.', 'Polly is wooden or a rompus.']
+--------------------------
+Distance: 0.0
+Processing items:  24%|██▍       | 24/100 [01:00<02:32,  2.00s/it]Chain-of-thought is :
+['Rex is dull.', 'Rex is a grimpus.', 'Rex is a dull grimpus.']
+--------------------------
+Distance: 0.0
+Processing items:  25%|██▌       | 25/100 [01:07<04:26,  3.55s/it]Chain-of-thought is :
+['Everything that is a shumpus or a lorpus is a tumpus.', 'If Fae is a shumpus or a lorpus, then Fae is a tumpus.', 'Fae is not a tumpus.', 'Fae is not a shumpus and Fae is not a lorpus.']
+--------------------------
+Distance: 0.8461538461538461
+Processing items:  26%|██▌       | 26/100 [01:12<05:00,  4.06s/it]Chain-of-thought is :
+['Stella is small.', 'Stella is a sterpus.', 'Every small sterpus is a lempus.', 'Stella is a lempus.', 'Stella is slow.', 'Each slow lempus is a yumpus.', 'Stella is a yumpus.', 'Stella is discordant.', 'Discordant yumpuses are shumpuses.', 'Stella is a shumpus.', 'Stella is transparent.', 'Transparent shumpuses are impuses.', 'Stella is an impus.', 'Stella is luminous.', 'Stella is a luminous impus.']
+--------------------------
+Distance: 0.21052631578947367
+Processing items:  27%|██▋       | 27/100 [01:15<04:33,  3.75s/it]Chain-of-thought is :
+['Max is a fruity jompus.', 'Jompuses are bitter impuses.', 'Max is a jompus.', 'Thus, Max is an impus.']
+--------------------------
+Distance: 0.4
+Processing items:  28%|██▊       | 28/100 [01:17<03:38,  3.04s/it]Chain-of-thought is :
+['Sam is not a jompus.', 'If Sam were a sterpus or a lorpus, Sam would be a jompus.', 'Sam is not a sterpus.', 'Sam is not a lorpus.']
+--------------------------
+Distance: 1.0
+Processing items:  29%|██▉       | 29/100 [01:18<03:05,  2.62s/it]Chain-of-thought is :
+['Fae is liquid.', 'Fae is a tumpus.', 'Fae is a liquid tumpus.']
+--------------------------
+Distance: 0.0
+Processing items:  30%|███       | 30/100 [01:20<02:33,  2.20s/it]Chain-of-thought is :
+['Shumpuses are impuses.', 'Rompuses are impuses.', 'Alex is a shumpus or a rompus.', 'If Alex is a shumpus, then Alex is an impus.', 'If Alex is a rompus, then Alex is an impus.', 'Alex is an impus.']
+--------------------------
+Distance: 0.1428571428571429
+Processing items:  31%|███       | 31/100 [01:22<02:35,  2.25s/it]Chain-of-thought is :
+['Polly is a wumpus.', 'Polly is blue or a wumpus.']
+--------------------------
+Distance: 0.0
+Processing items:  32%|███▏      | 32/100 [01:23<02:12,  1.95s/it]Chain-of-thought is :
+['Polly is a zumpus.', 'Polly is liquid or a zumpus.']
+--------------------------
+Distance: 0.0
+Processing items:  33%|███▎      | 33/100 [01:24<01:53,  1.70s/it]Chain-of-thought is :
+['Stella is a numpus.', 'Stella is fruity or a numpus.']
+--------------------------
+Distance: 0.0
+Processing items:  34%|███▍      | 34/100 [01:25<01:40,  1.52s/it]Chain-of-thought is :
+['Stella is a wumpus.', 'Stella is muffled or a wumpus.']
+--------------------------
+Distance: 0.0
+Processing items:  35%|███▌      | 35/100 [01:27<01:33,  1.43s/it]Chain-of-thought is :
+['Rex is not a brimpus.', 'Everything that is a gorpus or a shumpus is a brimpus.', 'If Rex were a gorpus or a shumpus, then Rex would be a brimpus.', 'Since Rex is not a brimpus, Rex cannot be a gorpus or a shumpus.', 'Rex is not a shumpus and Rex is not a gorpus.']
+--------------------------
+Distance: 0.7692307692307692
+Processing items:  36%|███▌      | 36/100 [01:29<01:53,  1.77s/it]Chain-of-thought is :
+['Alex is a dull tumpus.', 'Each tumpus is a feisty numpus.', 'Alex is a feisty numpus.', 'Alex is a numpus.']
+--------------------------
+Distance: 0.19999999999999996
+Processing items:  37%|███▋      | 37/100 [01:32<02:19,  2.22s/it]Chain-of-thought is :
+['Shumpuses are impuses.', 'Wren is an impus.', 'Impuses are vumpuses.', 'Wren is a vumpus.', 'Each vumpus is a tumpus.', 'Wren is a tumpus.', 'Each tumpus is a numpus.', 'Wren is a numpus.', 'Every numpus is a rompus.', 'Wren is a rompus.', 'Each rompus is temperate.', 'Wren is temperate.  \nAnswer is True.']
+--------------------------
+Distance: 0.07692307692307687
+Processing items:  38%|███▊      | 38/100 [01:38<03:25,  3.31s/it]Chain-of-thought is :
+['Every gorpus is a shumpus.', 'Every brimpus is a shumpus.', 'Wren is a gorpus or a brimpus.', 'If Wren is a gorpus, then Wren is a shumpus.', 'If Wren is a brimpus, then Wren is a shumpus.', 'Wren is a shumpus.']
+--------------------------
+Distance: 0.1428571428571429
+Processing items:  39%|███▉      | 39/100 [01:41<03:02,  2.99s/it]Chain-of-thought is :
+['Sam is a numpus.', 'Sam is earthy or a numpus.', 'Everything that is earthy or a numpus is a rompus.', 'Sam is a rompus.', 'Sam is sweet or a rompus.']
+--------------------------
+Distance: 0.0
+Processing items:  40%|████      | 40/100 [01:42<02:36,  2.62s/it]Chain-of-thought is :
+['Polly is a shumpus.', 'Shumpuses are dull brimpuses.', 'Polly is a dull brimpus.', 'A dull brimpus is a brimpus.', 'Polly is a brimpus.']
+--------------------------
+Distance: 0.19999999999999996
+Processing items:  41%|████      | 41/100 [01:44<02:25,  2.46s/it]Chain-of-thought is :
+['Rex is an impus.', 'Rex is spicy or an impus.']
+--------------------------
+Distance: 0.0
+Processing items:  42%|████▏     | 42/100 [01:45<01:58,  2.05s/it]Chain-of-thought is :
+['Rex is a brimpus.', 'Each brimpus is a transparent lorpus.', 'Rex is a transparent lorpus.', 'Rex is a lorpus.']
+--------------------------
+Distance: 0.19999999999999996
+Processing items:  43%|████▎     | 43/100 [01:47<01:47,  1.88s/it]Chain-of-thought is :
+['Wren is a gorpus.', 'Wren is bright or a gorpus.']
+--------------------------
+Distance: 0.0
+Processing items:  44%|████▍     | 44/100 [01:48<01:33,  1.67s/it]Chain-of-thought is :
+['Polly is hot.', 'Every hot jompus is an impus.', 'Polly is an impus.', 'Polly is floral.', 'Every floral impus is a brimpus.', 'Polly is a brimpus.', 'Polly is spicy.', 'Spicy brimpuses are lorpuses.', 'Polly is a lorpus.', 'Polly is dull.', 'Each dull lorpus is a yumpus.', 'Polly is a yumpus.', 'Polly is snowy.', 'Polly is a snowy yumpus.']
+--------------------------
+Distance: 0.26315789473684215
+Processing items:  45%|████▌     | 45/100 [01:51<01:49,  2.00s/it]Chain-of-thought is :
+['Fae is a dumpus.', 'Fae is fast or a dumpus.']
+--------------------------
+Distance: 0.0
+Processing items:  46%|████▌     | 46/100 [01:52<01:34,  1.76s/it]Chain-of-thought is :
+['Rex is a shumpus.', 'Rex is blue.', 'Blue shumpuses are gorpuses.', 'Rex is a gorpus.', 'Rex is metallic.', 'Each metallic gorpus is a jompus.', 'Rex is a jompus.', 'Rex is small.', 'Each small jompus is an impus.', 'Rex is an impus.', 'Rex is bright.', 'Bright impuses are vumpuses.', 'Rex is a vumpus.', 'Rex is nervous.', 'Every nervous vumpus is a tumpus.', 'Rex is a tumpus.', 'Rex is opaque.', 'Rex is an opaque tumpus.']
+--------------------------
+Distance: 0.21739130434782605
+Processing items:  47%|████▋     | 47/100 [01:56<02:01,  2.30s/it]Chain-of-thought is :
+['Wren is a lorpus.', 'Wren is happy or a lorpus.', 'Everything that is happy or a lorpus is a grimpus.', 'Wren is a grimpus.', 'Wren is rainy or a grimpus.']
+--------------------------
+Distance: 0.0
+Processing items:  48%|████▊     | 48/100 [01:57<01:50,  2.12s/it]Chain-of-thought is :
+['Sam is a shumpus or a yumpus.', 'Shumpuses are vumpuses.', 'Every yumpus is a vumpus.', 'If Sam is a shumpus, then Sam is a vumpus.', 'If Sam is a yumpus, then Sam is a vumpus.', 'Sam is a vumpus.']
+--------------------------
+Distance: 0.1428571428571429
+Processing items:  49%|████▉     | 49/100 [02:00<01:56,  2.29s/it]Chain-of-thought is :
+['Alex is a lempus.', 'Each lempus is a shumpus.', 'Alex is a shumpus.', 'Each shumpus is amenable.', 'Alex is amenable.', 'Alex is not not amenable.']
+--------------------------
+Distance: 0.0
+Processing items:  50%|█████     | 50/100 [02:03<01:58,  2.37s/it]Chain-of-thought is :
+['Stella is dull.', 'Stella is a shumpus.', 'Dull shumpuses are gorpuses.', 'Stella is a gorpus.', 'Stella is small.', 'Small gorpuses are zumpuses.', 'Stella is a zumpus.', 'Stella is cold.', 'Every cold zumpus is a lempus.', 'Stella is a lempus.', 'Stella is angry.', 'Each angry lempus is a lorpus.', 'Stella is a lorpus.', 'Stella is nervous.', 'Nervous lorpuses are grimpuses.', 'Stella is a grimpus.', 'Stella is transparent.', 'Transparent grimpuses are sterpuses.', 'Stella is a sterpus.', 'Stella is luminous.', 'Stella is a luminous sterpus.']
+--------------------------
+Distance: 0.2222222222222222
+Processing items:  51%|█████     | 51/100 [02:07<02:32,  3.12s/it]Chain-of-thought is :
+['Polly is an impus.', 'Polly is muffled.', 'Every muffled impus is a vumpus.', 'Polly is a vumpus.', 'Polly is mean.', 'Mean vumpuses are tumpuses.', 'Polly is a tumpus.', 'Polly is hot.', 'Hot tumpuses are numpuses.', 'Polly is a numpus.', 'Polly is floral.', 'Polly is a floral numpus.']
+--------------------------
+Distance: 0.19999999999999996
+Processing items:  52%|█████▏    | 52/100 [02:12<02:46,  3.46s/it]Chain-of-thought is :
+['Sam is bright.', 'Sam is a numpus.', 'Sam is a bright numpus.']
+--------------------------
+Distance: 0.0
+Processing items:  53%|█████▎    | 53/100 [02:13<02:17,  2.93s/it]Chain-of-thought is :
+['Everything that is a gorpus or a wumpus is a lorpus.', 'Polly is not a lorpus.', 'If Polly were a gorpus or a wumpus, Polly would be a lorpus.', 'Polly is neither a gorpus nor a wumpus.']
+--------------------------
+Distance: 0.8461538461538461
+Processing items:  54%|█████▍    | 54/100 [02:16<02:07,  2.78s/it]Chain-of-thought is :
+['Sally is a numpus.', 'Sally is hot or a numpus.']
+--------------------------
+Distance: 0.0
+Processing items:  55%|█████▌    | 55/100 [02:17<01:47,  2.40s/it]Chain-of-thought is :
+['Stella is a rompus.', 'Rompuses are dumpuses.', 'Stella is a dumpus.', 'Dumpuses are small.', 'Stella is small.']
+--------------------------
+Distance: 0.0
+Processing items:  56%|█████▌    | 56/100 [02:19<01:41,  2.32s/it]Chain-of-thought is :
+['Sally is a fruity shumpus.', 'Shumpuses are gorpuses.', 'Sally is a gorpus.']
+--------------------------
+Distance: 0.6
+Processing items:  57%|█████▋    | 57/100 [02:22<01:36,  2.25s/it]Chain-of-thought is :
+['Everything that is a shumpus or a zumpus is a brimpus.', 'If Sally were a shumpus or a zumpus, she would be a brimpus.', 'Sally cannot be a shumpus or a zumpus.', 'Sally is not a zumpus and Sally is not a shumpus.']
+--------------------------
+Distance: 0.7692307692307692
+Processing items:  58%|█████▊    | 58/100 [02:25<01:49,  2.60s/it]Chain-of-thought is :
+['Max is a vumpus.', 'Max is overcast or a vumpus.', 'Everything that is overcast or a vumpus is a tumpus.', 'Max is a tumpus.', 'Max is slow or a tumpus.']
+--------------------------
+Distance: 0.0
+Processing items:  59%|█████▉    | 59/100 [02:28<01:54,  2.79s/it]Chain-of-thought is :
+['Sally is a vumpus and Sally is hot.', 'Each hot vumpus is a rompus.', 'Sally is a rompus.', 'Sally is floral.', 'Floral rompuses are gorpuses.', 'Sally is a gorpus.', 'Sally is sour.', 'Sally is a sour gorpus.']
+--------------------------
+Distance: 0.36363636363636365
+Processing items:  60%|██████    | 60/100 [02:32<01:58,  2.97s/it]Chain-of-thought is :
+['Stella is an impus.', 'Impuses are vumpuses.', 'Stella is a vumpus.', 'Every vumpus is a tumpus.', 'Stella is a tumpus.', 'Each tumpus is a numpus.', 'Stella is a numpus.', 'Numpuses are not opaque.', 'Stella is not opaque.']
+--------------------------
+Distance: 0.0
+Processing items:  61%|██████    | 61/100 [02:36<02:09,  3.33s/it]Chain-of-thought is :
+['Polly is a yumpus.', 'Yumpuses are lempuses.', 'Polly is a lempus.', 'Lempuses are shumpuses.', 'Polly is a shumpus.', 'Each shumpus is not metallic.', 'Polly is not metallic.']
+--------------------------
+Distance: 0.0
+Processing items:  62%|██████▏   | 62/100 [02:39<02:03,  3.25s/it]Chain-of-thought is :
+['Sally is a windy dumpus.', 'A windy dumpus is a dumpus.', 'Sally is a dumpus.']
+--------------------------
+Distance: 0.0
+Processing items:  63%|██████▎   | 63/100 [02:42<01:58,  3.19s/it]Chain-of-thought is :
+['Polly is a grimpus.', 'Polly is rainy or a grimpus.', 'Everything that is rainy or a grimpus is a sterpus.', 'Polly is a sterpus.', 'Polly is moderate or a sterpus.', 'Everything that is moderate or a sterpus is a lempus.', 'Polly is a lempus.', 'Polly is discordant or a lempus.', 'Everything that is discordant or a lempus is a shumpus.', 'Polly is a shumpus.', 'Polly is angry or a shumpus.', 'Everything that is angry or a shumpus is a gorpus.', 'Polly is a gorpus.', 'Polly is temperate or a gorpus.', 'Everything that is temperate or a gorpus is a jompus.', 'Polly is a jompus.', 'Polly is floral or a jompus.']
+--------------------------
+Distance: 0.0
+Processing items:  64%|██████▍   | 64/100 [02:49<02:39,  4.44s/it]Chain-of-thought is :
+['Sam is a zumpus.', 'Sam is red.', 'It is false that Sam is not red.', 'Answer is False.']
+--------------------------
+Distance: 0.33333333333333337
+Processing items:  65%|██████▌   | 65/100 [02:52<02:13,  3.82s/it]Chain-of-thought is :
+['Sally is a dumpus.', 'Sally is windy.', 'Windy dumpuses are zumpuses.', 'Sally is a zumpus.', 'Sally is bright.', 'Bright zumpuses are lempuses.', 'Sally is a lempus.', 'Sally is shy.', 'Each shy lempus is a shumpus.', 'Sally is a shumpus.', 'Sally is opaque.', 'Opaque shumpuses are gorpuses.', 'Sally is a gorpus.', 'Sally is slow.', 'Each slow gorpus is a jompus.', 'Sally is a jompus.', 'Sally is discordant.', 'Sally is a discordant jompus.']
+--------------------------
+Distance: 0.21739130434782605
+Processing items:  66%|██████▌   | 66/100 [02:58<02:33,  4.51s/it]Chain-of-thought is :
+['Vumpuses are not snowy.', 'Max is a vumpus.', 'Max is not snowy.']
+--------------------------
+Distance: 0.0
+Processing items:  67%|██████▋   | 67/100 [03:00<02:02,  3.72s/it]Chain-of-thought is :
+['Fae is an overcast numpus.', 'Fae is a numpus.']
+--------------------------
+Distance: 0.0
+Processing items:  68%|██████▊   | 68/100 [03:01<01:37,  3.05s/it]Chain-of-thought is :
+['Sam is a rompus.', 'Sam is nervous or a rompus.', 'Everything that is nervous or a rompus is a dumpus.', 'Sam is a dumpus.', 'Sam is opaque or a dumpus.', 'Everything that is opaque or a dumpus is a lempus.', 'Sam is a lempus.', 'Sam is windy or a lempus.', 'Everything that is windy or a lempus is a shumpus.', 'Sam is a shumpus.', 'Sam is moderate or a shumpus.', 'Everything that is moderate or a shumpus is a gorpus.', 'Sam is a gorpus.', 'Sam is discordant or a gorpus.']
+--------------------------
+Distance: 0.0
+Processing items:  69%|██████▉   | 69/100 [03:07<01:57,  3.79s/it]Chain-of-thought is :
+['Rex is a vumpus.', 'Rex is slow.', 'Slow vumpuses are tumpuses.', 'Rex is a tumpus.', 'Rex is loud.', 'Rex is a loud tumpus.']
+--------------------------
+Distance: 0.1428571428571429
+Processing items:  70%|███████   | 70/100 [03:09<01:38,  3.27s/it]Chain-of-thought is :
+['Rex is a dull numpus.', 'Rex is a numpus.']
+--------------------------
+Distance: 0.0
+Processing items:  71%|███████   | 71/100 [03:10<01:20,  2.77s/it]Chain-of-thought is :
+['Fae is not a lempus.', 'Fae is not a grimpus.', 'Fae is not a sterpus.']
+--------------------------
+Distance: 1.0
+Processing items:  72%|███████▏  | 72/100 [03:15<01:30,  3.24s/it]Chain-of-thought is :
+['Alex is a tumpus.', 'Alex is muffled or a tumpus.', 'Everything that is muffled or a tumpus is a numpus.', 'Alex is a numpus.', 'Alex is aggressive or a numpus.', 'Everything that is aggressive or a numpus is a wumpus.', 'Alex is a wumpus.', 'Alex is metallic or a wumpus.']
+--------------------------
+Distance: 0.0
+Processing items:  73%|███████▎  | 73/100 [03:20<01:47,  3.99s/it]Chain-of-thought is :
+['Rex is a gorpus.', 'Gorpuses are not liquid.', 'Rex is not liquid.']
+--------------------------
+Distance: 0.0
+Processing items:  74%|███████▍  | 74/100 [03:22<01:23,  3.20s/it]Chain-of-thought is :
+['Numpuses are brimpuses.', 'Wumpuses are brimpuses.', 'Sam is a numpus or a wumpus.', 'If Sam is a numpus, then Sam is a brimpus.', 'If Sam is a wumpus, then Sam is a brimpus.', 'Sam is a brimpus.']
+--------------------------
+Distance: 0.1428571428571429
+Processing items:  75%|███████▌  | 75/100 [03:25<01:19,  3.17s/it]Chain-of-thought is :
+['Max is a dumpus.', 'Max is temperate.', 'Max is a temperate dumpus.']
+--------------------------
+Distance: 0.0
+Processing items:  76%|███████▌  | 76/100 [03:27<01:06,  2.78s/it]Chain-of-thought is :
+['Stella is a numpus.', 'Numpuses are zumpuses.', 'Stella is a zumpus.', 'Zumpuses are jompuses.', 'Stella is a jompus.', 'Jompuses are impuses.', 'Stella is an impus.', 'Each impus is not kind.', 'Stella is not kind.']
+--------------------------
+Distance: 0.0
+Processing items:  77%|███████▋  | 77/100 [03:31<01:14,  3.24s/it]Chain-of-thought is :
+['Alex is slow.', 'Alex is a grimpus.', 'Each slow grimpus is a sterpus.', 'Alex is a slow grimpus.', 'Alex is a sterpus.', 'Alex is large.', 'Alex is a large sterpus.']
+--------------------------
+Distance: 0.0
+Processing items:  78%|███████▊  | 78/100 [03:34<01:08,  3.13s/it]Chain-of-thought is :
+['Fae is sour or a sterpus.', 'Everything that is sour or a sterpus is a lempus.', 'Fae is a lempus.', 'Fae is dull or a lempus.']
+--------------------------
+Distance: 0.19999999999999996
+Processing items:  79%|███████▉  | 79/100 [03:36<00:58,  2.80s/it]Chain-of-thought is :
+['Polly is a rompus.', 'Polly is temperate.', 'Each temperate rompus is a dumpus.', 'Polly is a temperate rompus.', 'Polly is a dumpus.', 'Polly is rainy.', 'Polly is a rainy dumpus.']
+--------------------------
+Distance: 0.0
+Processing items:  80%|████████  | 80/100 [03:38<00:53,  2.68s/it]Chain-of-thought is :
+['Fae is blue or a rompus.']
+--------------------------
+Distance: 0.5
+Processing items:  81%|████████  | 81/100 [03:40<00:47,  2.52s/it]Chain-of-thought is :
+['Fae is an overcast numpus.', 'If Fae is an overcast numpus, then Fae is a numpus.']
+--------------------------
+Distance: 0.5
+Processing items:  82%|████████▏ | 82/100 [03:42<00:40,  2.26s/it]Chain-of-thought is :
+['Sam is windy.', 'Sam is a yumpus.', 'Sam is a windy yumpus.']
+--------------------------
+Distance: 0.0
+Processing items:  83%|████████▎ | 83/100 [03:44<00:35,  2.07s/it]Chain-of-thought is :
+['Each jompus is an impus.', 'Polly is an impus.', 'Impuses are numpuses.', 'Polly is a numpus.', 'Numpuses are not slow.', 'Polly is not slow.  \n\nAnswer is False.']
+--------------------------
+Distance: 0.1428571428571429
+Processing items:  84%|████████▍ | 84/100 [03:46<00:33,  2.09s/it]Chain-of-thought is :
+['Fae is a grimpus.', 'Each grimpus is a numpus.', 'Fae is a numpus.', 'Numpuses are mean.', 'Fae is mean.']
+--------------------------
+Distance: 0.0
+Processing items:  85%|████████▌ | 85/100 [03:48<00:31,  2.12s/it]Chain-of-thought is :
+['Fae is a grimpus.', 'Fae is fast.', 'Every fast grimpus is a sterpus.', 'Fae is a sterpus.', 'Fae is orange.', 'Each orange sterpus is a lempus.', 'Fae is a lempus.', 'Fae is discordant.', 'Discordant lempuses are yumpuses.', 'Fae is a yumpus.', 'Fae is mean.', 'Mean yumpuses are shumpuses.', 'Fae is a shumpus.', 'Fae is wooden.', 'Each wooden shumpus is a gorpus.', 'Fae is a gorpus.', 'Fae is large.', 'Each large gorpus is a jompus.', 'Fae is a jompus.', 'Fae is temperate.', 'Fae is a temperate jompus.\n  \n- Fae']
+--------------------------
+Distance: 0.2222222222222222
+Processing items:  86%|████████▌ | 86/100 [03:54<00:47,  3.37s/it]Chain-of-thought is :
+['Everything that is a brimpus or a rompus is a lempus.', 'Rex is not a lempus.', 'If Rex were a brimpus or a rompus, Rex would be a lempus.', 'Rex is not a brimpus and Rex is not a rompus.']
+--------------------------
+Distance: 0.8461538461538461
+Processing items:  87%|████████▋ | 87/100 [03:57<00:39,  3.04s/it]Chain-of-thought is :
+['Stella is melodic or a jompus.', 'Everything that is melodic or a jompus is a tumpus.', 'Stella is a tumpus.', 'Stella is aggressive or a tumpus.', 'Everything that is aggressive or a tumpus is a zumpus.', 'Stella is a zumpus.', 'Stella is wooden or a zumpus.', 'Everything that is wooden or a zumpus is a yumpus.', 'Stella is a yumpus.', 'Stella is small or a yumpus.', 'Everything that is small or a yumpus is a brimpus.', 'Stella is a brimpus.', 'Stella is cold or a brimpus.  \n\nAnswer is Stella is cold or a brimpus.']
+--------------------------
+Distance: 0.0714285714285714
+Processing items:  88%|████████▊ | 88/100 [04:06<01:00,  5.05s/it]Chain-of-thought is :
+['Wren is a jompus.', 'Everything that is floral or a jompus is an impus.', 'Wren is an impus.', 'Everything that is dull or an impus is a vumpus.', 'Wren is a vumpus.', 'Everything that is happy or a vumpus is a zumpus.', 'Wren is a zumpus.', 'Everything that is spicy or a zumpus is a numpus.', 'Wren is a numpus.', 'Everything that is overcast or a numpus is a lorpus.', 'Wren is a lorpus.', 'Everything that is fast or a lorpus is a grimpus.', 'Wren is a grimpus.', 'Wren is discordant or a grimpus.']
+--------------------------
+Distance: 0.30000000000000004
+Processing items:  89%|████████▉ | 89/100 [04:12<00:58,  5.31s/it]Chain-of-thought is :
+['Sally is a wumpus.', 'Sally is dull.', 'Sally is a dull wumpus.']
+--------------------------
+Distance: 0.0
+Processing items:  90%|█████████ | 90/100 [04:14<00:42,  4.22s/it]Chain-of-thought is :
+['Wren is transparent.', 'Wren is a vumpus.', 'Transparent vumpuses are tumpuses.', 'Wren is a tumpus.', 'Wren is liquid.', 'Wren is a liquid tumpus.']
+--------------------------
+Distance: 0.1428571428571429
+Processing items:  91%|█████████ | 91/100 [04:17<00:33,  3.73s/it]Chain-of-thought is :
+['Alex is a sterpus.', 'Sterpuses are lempuses.', 'Alex is a lempus.', 'Every lempus is not small.', 'Alex is not small.']
+--------------------------
+Distance: 0.0
+Processing items:  92%|█████████▏| 92/100 [04:19<00:26,  3.36s/it]Chain-of-thought is :
+['Sally is a zumpus.', 'Every zumpus is a lempus.', 'Sally is a lempus.', 'Every lempus is a shumpus.', 'Sally is a shumpus.', 'Shumpuses are not loud.', 'Sally is not loud.']
+--------------------------
+Distance: 0.0
+Processing items:  93%|█████████▎| 93/100 [04:21<00:21,  3.02s/it]Chain-of-thought is :
+['Polly is sweet.', 'Polly is a grimpus.', 'Every sweet grimpus is a sterpus.', 'Polly is a sterpus.', 'Polly is bright.', 'Bright sterpuses are lempuses.', 'Polly is a lempus.', 'Polly is feisty.', 'Polly is a feisty lempus.']
+--------------------------
+Distance: 0.18181818181818177
+Processing items:  94%|█████████▍| 94/100 [04:24<00:17,  2.89s/it]Chain-of-thought is :
+['Wumpuses are sterpuses.', 'Grimpuses are sterpuses.', 'Max is a wumpus or a grimpus.', 'If Max is a wumpus, Max is a sterpus.', 'If Max is a grimpus, Max is a sterpus.', 'Max is a sterpus.']
+--------------------------
+Distance: 0.1428571428571429
+Processing items:  95%|█████████▌| 95/100 [04:28<00:16,  3.25s/it]Chain-of-thought is :
+['Sam is a sterpus.', 'Sam is slow or a sterpus.']
+--------------------------
+Distance: 0.0
+Processing items:  96%|█████████▌| 96/100 [04:30<00:11,  2.82s/it]Chain-of-thought is :
+['Lempuses are numpuses.', 'Tumpuses are numpuses.', 'Sam is a lempus or a tumpus.', 'If Sam is a lempus, then Sam is a numpus because lempuses are numpuses.', 'If Sam is a tumpus, then Sam is a numpus because tumpuses are numpuses.', 'whether Sam is a lempus or a tumpus, Sam is a numpus.']
+--------------------------
+Distance: 0.5714285714285714
+Processing items:  97%|█████████▋| 97/100 [04:34<00:09,  3.16s/it]Chain-of-thought is :
+['Alex is a sour dumpus.', 'Each dumpus is a bright zumpus.', 'Alex is a bright zumpus.', 'Alex is a zumpus.']
+--------------------------
+Distance: 0.19999999999999996
+Processing items:  98%|█████████▊| 98/100 [04:35<00:05,  2.76s/it]Chain-of-thought is :
+['Wren is large or a lorpus.']
+--------------------------
+Distance: 0.5
+Processing items:  99%|█████████▉| 99/100 [04:37<00:02,  2.29s/it]Chain-of-thought is :
+['Polly is a shumpus.', 'Polly is earthy.', 'Polly is an earthy shumpus.']
+--------------------------
+Distance: 0.0
+Processing items: 100%|██████████| 100/100 [04:38<00:00,  2.06s/it]Processing items: 100%|██████████| 100/100 [04:38<00:00,  2.79s/it]
+Mean Distance:0.1671034272109787
+Genetate Ratio:1.0

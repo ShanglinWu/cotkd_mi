@@ -2,10 +2,10 @@
 
 
 dataset="CounterCoTQA"
-prompt="explanation"
+prompt="evaluate"
 version="base"
 gpu=1
-model='trained-t5'
+model='gpt-4o'
 
 output_prefix="outputs/${dataset}/$model"
 mkdir -p $output_prefix

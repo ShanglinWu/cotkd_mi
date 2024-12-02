@@ -12,6 +12,7 @@ from openai import OpenAI
 
 torch.set_num_threads(4)
 
+
 # for REPRODUCIBILITY
 set_seed(42)
 
@@ -104,51 +105,63 @@ def contrastive_decoding(input_seq1, input_seq2, model, tokenizer, indicator_tok
     return generation
 
 
-def openai_completion(client, input_seq1, input_seq2, model_name, args):
+def openai_completion(client, input_seq1, model_name, args):
 
-    try:
-        # Add explicit contrastive instruction to the prompt
-        contrastive_prompt = f"""
-        Consider these two scenarios:
-        1: {input_seq1}
-        2: {input_seq2}
-        
-        Provide a response that follows the reasoning of scenario 1 while actively avoiding the reasoning pattern of scenario 2.
-        Focus on generating a clear chain-of-thought reasoning process with out explanation to your reasoning.
-        """
+    response = client.chat.completions.create(
+        model=args.model,
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant providing chain-of-thought reasoning process"},
+            {"role": "user", "content": input_seq1}
+        ],
+        max_tokens=256,
+        n=1
+    )
 
-        response = client.chat.completions.create(
-            model=model_name,
-            messages=[
-                {"role": "system", "content": "You are a helpful assistant providing chain-of-thought reasoning process"},
-                {"role": "user", "content": contrastive_prompt}
-            ],
-            max_tokens=generation_length,
-            n=num_return_sequences
-        )
+    generated_text = response.choices[0].message.content.strip()
+    
+    # ---------------format the result-------------------
+    answer_index = generated_text.find("answer is ")
+    if answer_index == -1:
+        chain_of_thought = generated_text
+        answer = "N/A"
+    else:
+        chain_of_thought = generated_text[:answer_index]
+        answer = generated_text[answer_index+9:]
 
-        generation = response.choices[0].message.content.strip()
+    chain_of_thought_index = chain_of_thought.find("Chain of thought:")
+    chain_of_thought = chain_of_thought[chain_of_thought_index+17:]
+    
+    answer_index = chain_of_thought.find("Answer is")
+    chain_of_thought = chain_of_thought[:answer_index]
 
-        if args.debug:
-            print('-'*20)
-            print("Final generation:", generation)
-            print('-'*20)
+    prompt_index = chain_of_thought.find(
+        "You need to only generate the answer part:")
+    if prompt_index != -1:
+        chain_of_thought = chain_of_thought[prompt_index +
+                                            len("You need to only generate the answer part:"):]
 
-        return generation
+    prompt_str = "Chain of thought: 1. Stella is an impus. 2. Stella is bright or an impus. 3. Everything that is bright or an impus is a vumpus. 4. Stella is a vumpus. 5. Stella is happy or a vumpus."
+    prompt_index = chain_of_thought.find(prompt_str)
+    if prompt_index != -1:
+        chain_of_thought = chain_of_thought[prompt_index+len(prompt_str):]
 
-    except Exception as e:
-        print(f"Error in OpenAI API call: {str(e)}")
-        return ""
+    chain_of_thought = chain_of_thought.replace("Prove: ", '')
+    chain_of_thought = chain_of_thought.replace("\n", '')
+    chain_of_thought = chain_of_thought.replace("Answer: ", '')
+    chain_of_thought = chain_of_thought.replace("Question: ", '')
+    chain_of_thought = chain_of_thought.replace("True or False: ", '')
+    chain_of_thought = chain_of_thought.replace("True or false: ", '')
+    chain_of_thought = chain_of_thought.replace("So the", '')
+    chain_of_thought = chain_of_thought.replace("Therefore, ", '')
+    chain_of_thought = chain_of_thought.replace("By definition,", '')
 
-    except Exception as e:
-        print(f"Error in OpenAI API call: {str(e)}")
-        return ""
+    return chain_of_thought
 
 
 def main(args):
     # ----------------------------------------------------- #
     # load LM
-    if args.model == 'gpt-4o-mini':
+    if args.model == 'gpt-4o':
         client = OpenAI()
     else:
         if args.model == 'google/gemma-2b':
@@ -179,7 +192,7 @@ def main(args):
     prompt_without_question = '\n\n'.join(prompt.split('\n\n')[:-1])+'\n\n'
 
     # for split in args.eval_split.split(','):
-    split = "dev"
+    split = "train"
     with open('./data/{}/{}.jsonl'.format(args.dataset, split), 'r') as fr:
         examples = [json.loads(line) for line in fr.readlines()]
 
@@ -203,9 +216,9 @@ def main(args):
             input_seq1 = prompt.format(question, query, answer)
             input_seq2 = prompt.format(question, query, wrong_answer)
 
-            if args.model == "gpt-4o-mini":
+            if args.model == "gpt-4o":
                 generation = openai_completion(
-                    client, input_seq1, input_seq2, args.model, args)
+                    client, input_seq1, args.model, args)
             else:
                 generation = contrastive_decoding(
                     input_seq1, input_seq2, model, tokenizer, indicator_token_ids, args)
